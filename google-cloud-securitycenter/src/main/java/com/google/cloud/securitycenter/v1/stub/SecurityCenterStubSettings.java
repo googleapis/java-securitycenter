@@ -59,8 +59,10 @@ import com.google.cloud.securitycenter.v1.GroupFindingsResponse;
 import com.google.cloud.securitycenter.v1.GroupResult;
 import com.google.cloud.securitycenter.v1.ListAssetsRequest;
 import com.google.cloud.securitycenter.v1.ListAssetsResponse;
+import com.google.cloud.securitycenter.v1.ListAssetsResponse.ListAssetsResult;
 import com.google.cloud.securitycenter.v1.ListFindingsRequest;
 import com.google.cloud.securitycenter.v1.ListFindingsResponse;
+import com.google.cloud.securitycenter.v1.ListFindingsResponse.ListFindingsResult;
 import com.google.cloud.securitycenter.v1.ListSourcesRequest;
 import com.google.cloud.securitycenter.v1.ListSourcesResponse;
 import com.google.cloud.securitycenter.v1.OrganizationSettings;
@@ -469,8 +471,7 @@ public class SecurityCenterStubSettings extends StubSettings<SecurityCenterStubS
           ListFindingsRequest, ListFindingsResponse, ListFindingsResponse.ListFindingsResult>
       LIST_FINDINGS_PAGE_STR_DESC =
           new PagedListDescriptor<
-              ListFindingsRequest,
-              ListFindingsResponse,
+              ListFindingsRequest, ListFindingsResponse,
               ListFindingsResponse.ListFindingsResult>() {
             @Override
             public String emptyToken() {
@@ -607,8 +608,7 @@ public class SecurityCenterStubSettings extends StubSettings<SecurityCenterStubS
                 ApiCallContext context,
                 ApiFuture<ListFindingsResponse> futureResponse) {
               PageContext<
-                      ListFindingsRequest,
-                      ListFindingsResponse,
+                      ListFindingsRequest, ListFindingsResponse,
                       ListFindingsResponse.ListFindingsResult>
                   pageContext =
                       PageContext.create(callable, LIST_FINDINGS_PAGE_STR_DESC, request, context);
