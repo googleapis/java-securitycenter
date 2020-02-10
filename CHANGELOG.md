@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.118.2](https://www.github.com/googleapis/java-securitycenter/compare/v0.118.1...v0.118.2) (2020-02-10)
+
+
+### Documentation
+
+* **regen:** update sample code to set total timeout, add API client header test ([36e7eee](https://www.github.com/googleapis/java-securitycenter/commit/36e7eee5c3d886c02cef9b07c852012ea88bf3f8))
+
 ### [0.118.1](https://www.github.com/googleapis/java-securitycenter/compare/v0.118.0...v0.118.1) (2020-02-04)
 
 
