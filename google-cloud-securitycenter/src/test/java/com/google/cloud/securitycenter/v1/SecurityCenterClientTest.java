@@ -29,6 +29,7 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.api.gax.rpc.StatusCode;
+import com.google.api.resourcenames.ResourceName;
 import com.google.common.collect.Lists;
 import com.google.iam.v1.GetIamPolicyRequest;
 import com.google.iam.v1.Policy;
@@ -207,7 +208,7 @@ public class SecurityCenterClientTest {
     Policy expectedResponse = Policy.newBuilder().setVersion(version).setEtag(etag).build();
     mockSecurityCenter.addResponse(expectedResponse);
 
-    SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
 
     Policy actualResponse = client.getIamPolicy(resource);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -230,7 +231,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addException(exception);
 
     try {
-      SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
 
       client.getIamPolicy(resource);
       Assert.fail("No exception raised");
@@ -242,11 +243,11 @@ public class SecurityCenterClientTest {
   @Test
   @SuppressWarnings("all")
   public void getOrganizationSettingsTest() {
-    String name2 = "name2-1052831874";
+    OrganizationSettingsName name2 = OrganizationSettingsName.of("[ORGANIZATION]");
     boolean enableAssetDiscovery = false;
     OrganizationSettings expectedResponse =
         OrganizationSettings.newBuilder()
-            .setName(name2)
+            .setName(name2.toString())
             .setEnableAssetDiscovery(enableAssetDiscovery)
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -711,7 +712,7 @@ public class SecurityCenterClientTest {
     Policy expectedResponse = Policy.newBuilder().setVersion(version).setEtag(etag).build();
     mockSecurityCenter.addResponse(expectedResponse);
 
-    SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
     Policy policy = Policy.newBuilder().build();
 
     Policy actualResponse = client.setIamPolicy(resource, policy);
@@ -736,7 +737,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addException(exception);
 
     try {
-      SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
       Policy policy = Policy.newBuilder().build();
 
       client.setIamPolicy(resource, policy);
@@ -752,7 +753,7 @@ public class SecurityCenterClientTest {
     TestIamPermissionsResponse expectedResponse = TestIamPermissionsResponse.newBuilder().build();
     mockSecurityCenter.addResponse(expectedResponse);
 
-    SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
     List<String> permissions = new ArrayList<>();
 
     TestIamPermissionsResponse actualResponse = client.testIamPermissions(resource, permissions);
@@ -777,7 +778,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addException(exception);
 
     try {
-      SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
       List<String> permissions = new ArrayList<>();
 
       client.testIamPermissions(resource, permissions);
@@ -840,11 +841,11 @@ public class SecurityCenterClientTest {
   @Test
   @SuppressWarnings("all")
   public void updateOrganizationSettingsTest() {
-    String name = "name3373707";
+    OrganizationSettingsName name = OrganizationSettingsName.of("[ORGANIZATION]");
     boolean enableAssetDiscovery = false;
     OrganizationSettings expectedResponse =
         OrganizationSettings.newBuilder()
-            .setName(name)
+            .setName(name.toString())
             .setEnableAssetDiscovery(enableAssetDiscovery)
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -931,8 +932,8 @@ public class SecurityCenterClientTest {
   @Test
   @SuppressWarnings("all")
   public void updateSecurityMarksTest() {
-    String name = "name3373707";
-    SecurityMarks expectedResponse = SecurityMarks.newBuilder().setName(name).build();
+    SecurityMarksName name = AssetSecurityMarksName.of("[ORGANIZATION]", "[ASSET]");
+    SecurityMarks expectedResponse = SecurityMarks.newBuilder().setName(name.toString()).build();
     mockSecurityCenter.addResponse(expectedResponse);
 
     SecurityMarks securityMarks = SecurityMarks.newBuilder().build();
