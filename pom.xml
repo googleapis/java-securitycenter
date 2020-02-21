@@ -212,7 +212,7 @@
     <module>grpc-google-cloud-securitycenter-v1beta1</module>
     <module>grpc-google-cloud-securitycenter-v1p1beta1</module>
     <module>google-cloud-securitycenter</module>
-  <module>google-cloud-securitycenter-bom</module>
+    <module>google-cloud-securitycenter-bom</module>
   </modules>
 
   <reporting>
@@ -284,4 +284,13 @@
       </plugin>
     </plugins>
   </reporting>
+
+  <profiles>
+    <profile>
+      <id>enable-samples</id>
+      <modules>
+        <module>samples</module>
+      </modules>
+    </profile>
+  </profiles>
 </project>
