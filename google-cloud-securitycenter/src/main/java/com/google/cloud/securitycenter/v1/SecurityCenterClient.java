@@ -27,6 +27,7 @@ import com.google.api.gax.paging.AbstractPagedListResponse;
 import com.google.api.gax.rpc.OperationCallable;
 import com.google.api.gax.rpc.PageContext;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.api.resourcenames.ResourceName;
 import com.google.cloud.securitycenter.v1.stub.SecurityCenterStub;
 import com.google.cloud.securitycenter.v1.stub.SecurityCenterStubSettings;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -411,7 +412,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   Policy response = securityCenterClient.getIamPolicy(resource);
    * }
    * </code></pre>
@@ -420,7 +421,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *     operation documentation for the appropriate value for this field.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final Policy getIamPolicy(SourceName resource) {
+  public final Policy getIamPolicy(ResourceName resource) {
     GetIamPolicyRequest request =
         GetIamPolicyRequest.newBuilder()
             .setResource(resource == null ? null : resource.toString())
@@ -436,7 +437,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   Policy response = securityCenterClient.getIamPolicy(resource.toString());
    * }
    * </code></pre>
@@ -458,7 +459,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   GetIamPolicyRequest request = GetIamPolicyRequest.newBuilder()
    *     .setResource(resource.toString())
    *     .build();
@@ -481,7 +482,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   GetIamPolicyRequest request = GetIamPolicyRequest.newBuilder()
    *     .setResource(resource.toString())
    *     .build();
@@ -1508,7 +1509,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   Policy policy = Policy.newBuilder().build();
    *   Policy response = securityCenterClient.setIamPolicy(resource, policy);
    * }
@@ -1521,7 +1522,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *     Platform services (such as Projects) might reject them.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
-  public final Policy setIamPolicy(SourceName resource, Policy policy) {
+  public final Policy setIamPolicy(ResourceName resource, Policy policy) {
     SetIamPolicyRequest request =
         SetIamPolicyRequest.newBuilder()
             .setResource(resource == null ? null : resource.toString())
@@ -1538,7 +1539,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   Policy policy = Policy.newBuilder().build();
    *   Policy response = securityCenterClient.setIamPolicy(resource.toString(), policy);
    * }
@@ -1565,7 +1566,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   Policy policy = Policy.newBuilder().build();
    *   SetIamPolicyRequest request = SetIamPolicyRequest.newBuilder()
    *     .setResource(resource.toString())
@@ -1590,7 +1591,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   Policy policy = Policy.newBuilder().build();
    *   SetIamPolicyRequest request = SetIamPolicyRequest.newBuilder()
    *     .setResource(resource.toString())
@@ -1614,7 +1615,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   List&lt;String&gt; permissions = new ArrayList&lt;&gt;();
    *   TestIamPermissionsResponse response = securityCenterClient.testIamPermissions(resource, permissions);
    * }
@@ -1628,7 +1629,7 @@ public class SecurityCenterClient implements BackgroundResource {
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final TestIamPermissionsResponse testIamPermissions(
-      SourceName resource, List<String> permissions) {
+      ResourceName resource, List<String> permissions) {
     TestIamPermissionsRequest request =
         TestIamPermissionsRequest.newBuilder()
             .setResource(resource == null ? null : resource.toString())
@@ -1645,7 +1646,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   SourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   List&lt;String&gt; permissions = new ArrayList&lt;&gt;();
    *   TestIamPermissionsResponse response = securityCenterClient.testIamPermissions(resource.toString(), permissions);
    * }
@@ -1676,7 +1677,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   List&lt;String&gt; permissions = new ArrayList&lt;&gt;();
    *   TestIamPermissionsRequest request = TestIamPermissionsRequest.newBuilder()
    *     .setResource(resource.toString())
@@ -1701,7 +1702,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * <pre><code>
    * try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
-   *   ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+   *   ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
    *   List&lt;String&gt; permissions = new ArrayList&lt;&gt;();
    *   TestIamPermissionsRequest request = TestIamPermissionsRequest.newBuilder()
    *     .setResource(resource.toString())
