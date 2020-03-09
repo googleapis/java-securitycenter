@@ -97,111 +97,6 @@ public class SecurityCenterClientTest {
 
   @Test
   @SuppressWarnings("all")
-  public void createSourceTest() {
-    SourceName name = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-    String displayName = "displayName1615086568";
-    String description = "description-1724546052";
-    Source expectedResponse =
-        Source.newBuilder()
-            .setName(name.toString())
-            .setDisplayName(displayName)
-            .setDescription(description)
-            .build();
-    mockSecurityCenter.addResponse(expectedResponse);
-
-    OrganizationName parent = OrganizationName.of("[ORGANIZATION]");
-    Source source = Source.newBuilder().build();
-
-    Source actualResponse = client.createSource(parent, source);
-    Assert.assertEquals(expectedResponse, actualResponse);
-
-    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
-    Assert.assertEquals(1, actualRequests.size());
-    CreateSourceRequest actualRequest = (CreateSourceRequest) actualRequests.get(0);
-
-    Assert.assertEquals(parent, OrganizationName.parse(actualRequest.getParent()));
-    Assert.assertEquals(source, actualRequest.getSource());
-    Assert.assertTrue(
-        channelProvider.isHeaderSent(
-            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
-            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void createSourceExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
-    mockSecurityCenter.addException(exception);
-
-    try {
-      OrganizationName parent = OrganizationName.of("[ORGANIZATION]");
-      Source source = Source.newBuilder().build();
-
-      client.createSource(parent, source);
-      Assert.fail("No exception raised");
-    } catch (InvalidArgumentException e) {
-      // Expected exception
-    }
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void createFindingTest() {
-    FindingName name = FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
-    String parent2 = "parent21175163357";
-    String resourceName = "resourceName979421212";
-    String category = "category50511102";
-    String externalUri = "externalUri-1385596168";
-    Finding expectedResponse =
-        Finding.newBuilder()
-            .setName(name.toString())
-            .setParent(parent2)
-            .setResourceName(resourceName)
-            .setCategory(category)
-            .setExternalUri(externalUri)
-            .build();
-    mockSecurityCenter.addResponse(expectedResponse);
-
-    SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-    String findingId = "findingId728776081";
-    Finding finding = Finding.newBuilder().build();
-
-    Finding actualResponse = client.createFinding(parent, findingId, finding);
-    Assert.assertEquals(expectedResponse, actualResponse);
-
-    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
-    Assert.assertEquals(1, actualRequests.size());
-    CreateFindingRequest actualRequest = (CreateFindingRequest) actualRequests.get(0);
-
-    Assert.assertEquals(parent, SourceName.parse(actualRequest.getParent()));
-    Assert.assertEquals(findingId, actualRequest.getFindingId());
-    Assert.assertEquals(finding, actualRequest.getFinding());
-    Assert.assertTrue(
-        channelProvider.isHeaderSent(
-            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
-            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void createFindingExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
-    mockSecurityCenter.addException(exception);
-
-    try {
-      SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-      String findingId = "findingId728776081";
-      Finding finding = Finding.newBuilder().build();
-
-      client.createFinding(parent, findingId, finding);
-      Assert.fail("No exception raised");
-    } catch (InvalidArgumentException e) {
-      // Expected exception
-    }
-  }
-
-  @Test
-  @SuppressWarnings("all")
   public void getIamPolicyTest() {
     int version = 351608024;
     ByteString etag = ByteString.copyFromUtf8("21");
@@ -234,97 +129,6 @@ public class SecurityCenterClientTest {
       ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
 
       client.getIamPolicy(resource);
-      Assert.fail("No exception raised");
-    } catch (InvalidArgumentException e) {
-      // Expected exception
-    }
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void getOrganizationSettingsTest() {
-    OrganizationSettingsName name2 = OrganizationSettingsName.of("[ORGANIZATION]");
-    boolean enableAssetDiscovery = false;
-    OrganizationSettings expectedResponse =
-        OrganizationSettings.newBuilder()
-            .setName(name2.toString())
-            .setEnableAssetDiscovery(enableAssetDiscovery)
-            .build();
-    mockSecurityCenter.addResponse(expectedResponse);
-
-    OrganizationSettingsName name = OrganizationSettingsName.of("[ORGANIZATION]");
-
-    OrganizationSettings actualResponse = client.getOrganizationSettings(name);
-    Assert.assertEquals(expectedResponse, actualResponse);
-
-    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
-    Assert.assertEquals(1, actualRequests.size());
-    GetOrganizationSettingsRequest actualRequest =
-        (GetOrganizationSettingsRequest) actualRequests.get(0);
-
-    Assert.assertEquals(name, OrganizationSettingsName.parse(actualRequest.getName()));
-    Assert.assertTrue(
-        channelProvider.isHeaderSent(
-            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
-            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void getOrganizationSettingsExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
-    mockSecurityCenter.addException(exception);
-
-    try {
-      OrganizationSettingsName name = OrganizationSettingsName.of("[ORGANIZATION]");
-
-      client.getOrganizationSettings(name);
-      Assert.fail("No exception raised");
-    } catch (InvalidArgumentException e) {
-      // Expected exception
-    }
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void getSourceTest() {
-    SourceName name2 = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-    String displayName = "displayName1615086568";
-    String description = "description-1724546052";
-    Source expectedResponse =
-        Source.newBuilder()
-            .setName(name2.toString())
-            .setDisplayName(displayName)
-            .setDescription(description)
-            .build();
-    mockSecurityCenter.addResponse(expectedResponse);
-
-    SourceName name = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-
-    Source actualResponse = client.getSource(name);
-    Assert.assertEquals(expectedResponse, actualResponse);
-
-    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
-    Assert.assertEquals(1, actualRequests.size());
-    GetSourceRequest actualRequest = (GetSourceRequest) actualRequests.get(0);
-
-    Assert.assertEquals(name, SourceName.parse(actualRequest.getName()));
-    Assert.assertTrue(
-        channelProvider.isHeaderSent(
-            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
-            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void getSourceExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
-    mockSecurityCenter.addException(exception);
-
-    try {
-      SourceName name = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-
-      client.getSource(name);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
@@ -435,6 +239,243 @@ public class SecurityCenterClientTest {
       String groupBy = "groupBy506361367";
 
       client.groupFindings(parent, groupBy);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void testIamPermissionsTest() {
+    TestIamPermissionsResponse expectedResponse = TestIamPermissionsResponse.newBuilder().build();
+    mockSecurityCenter.addResponse(expectedResponse);
+
+    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
+    List<String> permissions = new ArrayList<>();
+
+    TestIamPermissionsResponse actualResponse = client.testIamPermissions(resource, permissions);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    TestIamPermissionsRequest actualRequest = (TestIamPermissionsRequest) actualRequests.get(0);
+
+    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
+    Assert.assertEquals(permissions, actualRequest.getPermissionsList());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void testIamPermissionsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockSecurityCenter.addException(exception);
+
+    try {
+      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
+      List<String> permissions = new ArrayList<>();
+
+      client.testIamPermissions(resource, permissions);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void createSourceTest() {
+    SourceName name = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    String displayName = "displayName1615086568";
+    String description = "description-1724546052";
+    Source expectedResponse =
+        Source.newBuilder()
+            .setName(name.toString())
+            .setDisplayName(displayName)
+            .setDescription(description)
+            .build();
+    mockSecurityCenter.addResponse(expectedResponse);
+
+    OrganizationName parent = OrganizationName.of("[ORGANIZATION]");
+    Source source = Source.newBuilder().build();
+
+    Source actualResponse = client.createSource(parent, source);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateSourceRequest actualRequest = (CreateSourceRequest) actualRequests.get(0);
+
+    Assert.assertEquals(parent, OrganizationName.parse(actualRequest.getParent()));
+    Assert.assertEquals(source, actualRequest.getSource());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void createSourceExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockSecurityCenter.addException(exception);
+
+    try {
+      OrganizationName parent = OrganizationName.of("[ORGANIZATION]");
+      Source source = Source.newBuilder().build();
+
+      client.createSource(parent, source);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void createFindingTest() {
+    FindingName name = FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
+    String parent2 = "parent21175163357";
+    String resourceName = "resourceName979421212";
+    String category = "category50511102";
+    String externalUri = "externalUri-1385596168";
+    Finding expectedResponse =
+        Finding.newBuilder()
+            .setName(name.toString())
+            .setParent(parent2)
+            .setResourceName(resourceName)
+            .setCategory(category)
+            .setExternalUri(externalUri)
+            .build();
+    mockSecurityCenter.addResponse(expectedResponse);
+
+    SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    String findingId = "findingId728776081";
+    Finding finding = Finding.newBuilder().build();
+
+    Finding actualResponse = client.createFinding(parent, findingId, finding);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    CreateFindingRequest actualRequest = (CreateFindingRequest) actualRequests.get(0);
+
+    Assert.assertEquals(parent, SourceName.parse(actualRequest.getParent()));
+    Assert.assertEquals(findingId, actualRequest.getFindingId());
+    Assert.assertEquals(finding, actualRequest.getFinding());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void createFindingExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockSecurityCenter.addException(exception);
+
+    try {
+      SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+      String findingId = "findingId728776081";
+      Finding finding = Finding.newBuilder().build();
+
+      client.createFinding(parent, findingId, finding);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void getOrganizationSettingsTest() {
+    OrganizationSettingsName name2 = OrganizationSettingsName.of("[ORGANIZATION]");
+    boolean enableAssetDiscovery = false;
+    OrganizationSettings expectedResponse =
+        OrganizationSettings.newBuilder()
+            .setName(name2.toString())
+            .setEnableAssetDiscovery(enableAssetDiscovery)
+            .build();
+    mockSecurityCenter.addResponse(expectedResponse);
+
+    OrganizationSettingsName name = OrganizationSettingsName.of("[ORGANIZATION]");
+
+    OrganizationSettings actualResponse = client.getOrganizationSettings(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetOrganizationSettingsRequest actualRequest =
+        (GetOrganizationSettingsRequest) actualRequests.get(0);
+
+    Assert.assertEquals(name, OrganizationSettingsName.parse(actualRequest.getName()));
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void getOrganizationSettingsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockSecurityCenter.addException(exception);
+
+    try {
+      OrganizationSettingsName name = OrganizationSettingsName.of("[ORGANIZATION]");
+
+      client.getOrganizationSettings(name);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception
+    }
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void getSourceTest() {
+    SourceName name2 = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    String displayName = "displayName1615086568";
+    String description = "description-1724546052";
+    Source expectedResponse =
+        Source.newBuilder()
+            .setName(name2.toString())
+            .setDisplayName(displayName)
+            .setDescription(description)
+            .build();
+    mockSecurityCenter.addResponse(expectedResponse);
+
+    SourceName name = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+
+    Source actualResponse = client.getSource(name);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GetSourceRequest actualRequest = (GetSourceRequest) actualRequests.get(0);
+
+    Assert.assertEquals(name, SourceName.parse(actualRequest.getName()));
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  @SuppressWarnings("all")
+  public void getSourceExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    mockSecurityCenter.addException(exception);
+
+    try {
+      SourceName name = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+
+      client.getSource(name);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
       // Expected exception
@@ -749,47 +790,6 @@ public class SecurityCenterClientTest {
 
   @Test
   @SuppressWarnings("all")
-  public void testIamPermissionsTest() {
-    TestIamPermissionsResponse expectedResponse = TestIamPermissionsResponse.newBuilder().build();
-    mockSecurityCenter.addResponse(expectedResponse);
-
-    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
-    List<String> permissions = new ArrayList<>();
-
-    TestIamPermissionsResponse actualResponse = client.testIamPermissions(resource, permissions);
-    Assert.assertEquals(expectedResponse, actualResponse);
-
-    List<AbstractMessage> actualRequests = mockSecurityCenter.getRequests();
-    Assert.assertEquals(1, actualRequests.size());
-    TestIamPermissionsRequest actualRequest = (TestIamPermissionsRequest) actualRequests.get(0);
-
-    Assert.assertEquals(Objects.toString(resource), Objects.toString(actualRequest.getResource()));
-    Assert.assertEquals(permissions, actualRequest.getPermissionsList());
-    Assert.assertTrue(
-        channelProvider.isHeaderSent(
-            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
-            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
-  }
-
-  @Test
-  @SuppressWarnings("all")
-  public void testIamPermissionsExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
-    mockSecurityCenter.addException(exception);
-
-    try {
-      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
-      List<String> permissions = new ArrayList<>();
-
-      client.testIamPermissions(resource, permissions);
-      Assert.fail("No exception raised");
-    } catch (InvalidArgumentException e) {
-      // Expected exception
-    }
-  }
-
-  @Test
-  @SuppressWarnings("all")
   public void updateFindingTest() {
     FindingName name = FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
     String parent = "parent-995424086";
@@ -932,7 +932,7 @@ public class SecurityCenterClientTest {
   @Test
   @SuppressWarnings("all")
   public void updateSecurityMarksTest() {
-    SecurityMarksName name = AssetSecurityMarksName.of("[ORGANIZATION]", "[ASSET]");
+    SecurityMarksName name = SecurityMarksName.ofOrganizationAssetName("[ORGANIZATION]", "[ASSET]");
     SecurityMarks expectedResponse = SecurityMarks.newBuilder().setName(name.toString()).build();
     mockSecurityCenter.addResponse(expectedResponse);
 
