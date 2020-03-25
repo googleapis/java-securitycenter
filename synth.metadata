@@ -1,11 +1,20 @@
 {
-  "updateTime": "2020-03-25T11:12:36.453256Z",
+  "updateTime": "2020-03-25T11:17:36.666589Z",
   "sources": [
     {
-      "generator": {
-        "name": "artman",
-        "version": "1.1.1",
-        "dockerImage": "googleapis/artman@sha256:5ef340c8d9334719bc5c6981d95f4a5d2737b0a6a24f2b9a0d430e96fff85c5b"
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "275fbcce2c900278d487c33293a3c7e1fbcd3a34",
+        "internalRef": "301661567"
+      }
+    },
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "275fbcce2c900278d487c33293a3c7e1fbcd3a34",
+        "internalRef": "301661567"
       }
     },
     {
@@ -31,8 +40,7 @@
         "apiName": "securitycenter",
         "apiVersion": "v1p1beta1",
         "language": "java",
-        "generator": "gapic",
-        "config": "google/cloud/securitycenter/artman_securitycenter_v1p1beta1.yaml"
+        "generator": "bazel"
       }
     },
     {
@@ -41,8 +49,7 @@
         "apiName": "securitycenter",
         "apiVersion": "v1beta1",
         "language": "java",
-        "generator": "gapic",
-        "config": "google/cloud/securitycenter/artman_securitycenter_v1beta1.yaml"
+        "generator": "bazel"
       }
     },
     {
@@ -51,8 +58,7 @@
         "apiName": "securitycenter",
         "apiVersion": "v1",
         "language": "java",
-        "generator": "gapic",
-        "config": "google/cloud/securitycenter/artman_securitycenter_v1.yaml"
+        "generator": "bazel"
       }
     }
   ]
