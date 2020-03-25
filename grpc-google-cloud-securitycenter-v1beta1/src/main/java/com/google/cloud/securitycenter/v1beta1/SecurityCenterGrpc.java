@@ -30,7 +30,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/cloud/securitycenter/v1beta1/securitycenter_service.proto")
 public final class SecurityCenterGrpc {
 
@@ -39,20 +39,30 @@ public final class SecurityCenterGrpc {
   public static final String SERVICE_NAME = "google.cloud.securitycenter.v1beta1.SecurityCenter";
 
   // Static method descriptors that strictly reflect the proto.
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getCreateSourceMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.CreateSourceRequest,
+          com.google.cloud.securitycenter.v1beta1.Source>
+      METHOD_CREATE_SOURCE = getCreateSourceMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.CreateSourceRequest,
           com.google.cloud.securitycenter.v1beta1.Source>
       getCreateSourceMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateSource",
-      requestType = com.google.cloud.securitycenter.v1beta1.CreateSourceRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.Source.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.CreateSourceRequest,
           com.google.cloud.securitycenter.v1beta1.Source>
       getCreateSourceMethod() {
+    return getCreateSourceMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.CreateSourceRequest,
+          com.google.cloud.securitycenter.v1beta1.Source>
+      getCreateSourceMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.CreateSourceRequest,
             com.google.cloud.securitycenter.v1beta1.Source>
@@ -67,7 +77,9 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.Source>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSource"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "CreateSource"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -85,20 +97,30 @@ public final class SecurityCenterGrpc {
     return getCreateSourceMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getCreateFindingMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.CreateFindingRequest,
+          com.google.cloud.securitycenter.v1beta1.Finding>
+      METHOD_CREATE_FINDING = getCreateFindingMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.CreateFindingRequest,
           com.google.cloud.securitycenter.v1beta1.Finding>
       getCreateFindingMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateFinding",
-      requestType = com.google.cloud.securitycenter.v1beta1.CreateFindingRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.Finding.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.CreateFindingRequest,
           com.google.cloud.securitycenter.v1beta1.Finding>
       getCreateFindingMethod() {
+    return getCreateFindingMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.CreateFindingRequest,
+          com.google.cloud.securitycenter.v1beta1.Finding>
+      getCreateFindingMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.CreateFindingRequest,
             com.google.cloud.securitycenter.v1beta1.Finding>
@@ -113,7 +135,10 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.Finding>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateFinding"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "CreateFinding"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -131,18 +156,26 @@ public final class SecurityCenterGrpc {
     return getCreateFindingMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetIamPolicyMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
+      METHOD_GET_IAM_POLICY = getGetIamPolicyMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
       getGetIamPolicyMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetIamPolicy",
-      requestType = com.google.iam.v1.GetIamPolicyRequest.class,
-      responseType = com.google.iam.v1.Policy.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
       getGetIamPolicyMethod() {
+    return getGetIamPolicyMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
+      getGetIamPolicyMethodHelper() {
     io.grpc.MethodDescriptor<com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>
         getGetIamPolicyMethod;
     if ((getGetIamPolicyMethod = SecurityCenterGrpc.getGetIamPolicyMethod) == null) {
@@ -153,7 +186,9 @@ public final class SecurityCenterGrpc {
                   io.grpc.MethodDescriptor
                       .<com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIamPolicy"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "GetIamPolicy"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -170,20 +205,30 @@ public final class SecurityCenterGrpc {
     return getGetIamPolicyMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetOrganizationSettingsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest,
+          com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
+      METHOD_GET_ORGANIZATION_SETTINGS = getGetOrganizationSettingsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest,
           com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
       getGetOrganizationSettingsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetOrganizationSettings",
-      requestType = com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.OrganizationSettings.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest,
           com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
       getGetOrganizationSettingsMethod() {
+    return getGetOrganizationSettingsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest,
+          com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
+      getGetOrganizationSettingsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest,
             com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
@@ -201,7 +246,9 @@ public final class SecurityCenterGrpc {
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(
-                          generateFullMethodName(SERVICE_NAME, "GetOrganizationSettings"))
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "GetOrganizationSettings"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -220,20 +267,30 @@ public final class SecurityCenterGrpc {
     return getGetOrganizationSettingsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetSourceMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GetSourceRequest,
+          com.google.cloud.securitycenter.v1beta1.Source>
+      METHOD_GET_SOURCE = getGetSourceMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GetSourceRequest,
           com.google.cloud.securitycenter.v1beta1.Source>
       getGetSourceMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetSource",
-      requestType = com.google.cloud.securitycenter.v1beta1.GetSourceRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.Source.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GetSourceRequest,
           com.google.cloud.securitycenter.v1beta1.Source>
       getGetSourceMethod() {
+    return getGetSourceMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GetSourceRequest,
+          com.google.cloud.securitycenter.v1beta1.Source>
+      getGetSourceMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.GetSourceRequest,
             com.google.cloud.securitycenter.v1beta1.Source>
@@ -248,7 +305,9 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.Source>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSource"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "GetSource"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -265,20 +324,30 @@ public final class SecurityCenterGrpc {
     return getGetSourceMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGroupAssetsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest,
+          com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
+      METHOD_GROUP_ASSETS = getGroupAssetsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest,
           com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
       getGroupAssetsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GroupAssets",
-      requestType = com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest,
           com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
       getGroupAssetsMethod() {
+    return getGroupAssetsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest,
+          com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
+      getGroupAssetsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest,
             com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
@@ -293,7 +362,9 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GroupAssets"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "GroupAssets"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -312,20 +383,30 @@ public final class SecurityCenterGrpc {
     return getGroupAssetsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGroupFindingsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest,
+          com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
+      METHOD_GROUP_FINDINGS = getGroupFindingsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest,
           com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
       getGroupFindingsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GroupFindings",
-      requestType = com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest,
           com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
       getGroupFindingsMethod() {
+    return getGroupFindingsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest,
+          com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
+      getGroupFindingsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest,
             com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
@@ -340,7 +421,10 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GroupFindings"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "GroupFindings"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -359,20 +443,30 @@ public final class SecurityCenterGrpc {
     return getGroupFindingsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getListAssetsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.ListAssetsRequest,
+          com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
+      METHOD_LIST_ASSETS = getListAssetsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.ListAssetsRequest,
           com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
       getListAssetsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListAssets",
-      requestType = com.google.cloud.securitycenter.v1beta1.ListAssetsRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.ListAssetsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.ListAssetsRequest,
           com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
       getListAssetsMethod() {
+    return getListAssetsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.ListAssetsRequest,
+          com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
+      getListAssetsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.ListAssetsRequest,
             com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
@@ -387,7 +481,9 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAssets"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "ListAssets"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -405,20 +501,30 @@ public final class SecurityCenterGrpc {
     return getListAssetsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getListFindingsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.ListFindingsRequest,
+          com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
+      METHOD_LIST_FINDINGS = getListFindingsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.ListFindingsRequest,
           com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
       getListFindingsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListFindings",
-      requestType = com.google.cloud.securitycenter.v1beta1.ListFindingsRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.ListFindingsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.ListFindingsRequest,
           com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
       getListFindingsMethod() {
+    return getListFindingsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.ListFindingsRequest,
+          com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
+      getListFindingsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.ListFindingsRequest,
             com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
@@ -433,7 +539,9 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFindings"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "ListFindings"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -452,20 +560,30 @@ public final class SecurityCenterGrpc {
     return getListFindingsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getListSourcesMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.ListSourcesRequest,
+          com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
+      METHOD_LIST_SOURCES = getListSourcesMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.ListSourcesRequest,
           com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
       getListSourcesMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListSources",
-      requestType = com.google.cloud.securitycenter.v1beta1.ListSourcesRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.ListSourcesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.ListSourcesRequest,
           com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
       getListSourcesMethod() {
+    return getListSourcesMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.ListSourcesRequest,
+          com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
+      getListSourcesMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.ListSourcesRequest,
             com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
@@ -480,7 +598,9 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSources"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "ListSources"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -499,20 +619,30 @@ public final class SecurityCenterGrpc {
     return getListSourcesMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getRunAssetDiscoveryMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest,
+          com.google.longrunning.Operation>
+      METHOD_RUN_ASSET_DISCOVERY = getRunAssetDiscoveryMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest,
           com.google.longrunning.Operation>
       getRunAssetDiscoveryMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RunAssetDiscovery",
-      requestType = com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest.class,
-      responseType = com.google.longrunning.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest,
           com.google.longrunning.Operation>
       getRunAssetDiscoveryMethod() {
+    return getRunAssetDiscoveryMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest,
+          com.google.longrunning.Operation>
+      getRunAssetDiscoveryMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest,
             com.google.longrunning.Operation>
@@ -527,7 +657,10 @@ public final class SecurityCenterGrpc {
                           com.google.longrunning.Operation>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RunAssetDiscovery"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "RunAssetDiscovery"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -545,20 +678,30 @@ public final class SecurityCenterGrpc {
     return getRunAssetDiscoveryMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getSetFindingStateMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest,
+          com.google.cloud.securitycenter.v1beta1.Finding>
+      METHOD_SET_FINDING_STATE = getSetFindingStateMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest,
           com.google.cloud.securitycenter.v1beta1.Finding>
       getSetFindingStateMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetFindingState",
-      requestType = com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.Finding.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest,
           com.google.cloud.securitycenter.v1beta1.Finding>
       getSetFindingStateMethod() {
+    return getSetFindingStateMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest,
+          com.google.cloud.securitycenter.v1beta1.Finding>
+      getSetFindingStateMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest,
             com.google.cloud.securitycenter.v1beta1.Finding>
@@ -573,7 +716,10 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.Finding>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetFindingState"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "SetFindingState"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -591,18 +737,26 @@ public final class SecurityCenterGrpc {
     return getSetFindingStateMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getSetIamPolicyMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
+      METHOD_SET_IAM_POLICY = getSetIamPolicyMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
       getSetIamPolicyMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetIamPolicy",
-      requestType = com.google.iam.v1.SetIamPolicyRequest.class,
-      responseType = com.google.iam.v1.Policy.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
       getSetIamPolicyMethod() {
+    return getSetIamPolicyMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
+      getSetIamPolicyMethodHelper() {
     io.grpc.MethodDescriptor<com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>
         getSetIamPolicyMethod;
     if ((getSetIamPolicyMethod = SecurityCenterGrpc.getSetIamPolicyMethod) == null) {
@@ -613,7 +767,9 @@ public final class SecurityCenterGrpc {
                   io.grpc.MethodDescriptor
                       .<com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetIamPolicy"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "SetIamPolicy"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -630,18 +786,26 @@ public final class SecurityCenterGrpc {
     return getSetIamPolicyMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getTestIamPermissionsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
+      METHOD_TEST_IAM_PERMISSIONS = getTestIamPermissionsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
       getTestIamPermissionsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "TestIamPermissions",
-      requestType = com.google.iam.v1.TestIamPermissionsRequest.class,
-      responseType = com.google.iam.v1.TestIamPermissionsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
       getTestIamPermissionsMethod() {
+    return getTestIamPermissionsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.iam.v1.TestIamPermissionsRequest, com.google.iam.v1.TestIamPermissionsResponse>
+      getTestIamPermissionsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.iam.v1.TestIamPermissionsRequest,
             com.google.iam.v1.TestIamPermissionsResponse>
@@ -657,7 +821,10 @@ public final class SecurityCenterGrpc {
                           com.google.iam.v1.TestIamPermissionsResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestIamPermissions"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "TestIamPermissions"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -674,20 +841,30 @@ public final class SecurityCenterGrpc {
     return getTestIamPermissionsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getUpdateFindingMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest,
+          com.google.cloud.securitycenter.v1beta1.Finding>
+      METHOD_UPDATE_FINDING = getUpdateFindingMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest,
           com.google.cloud.securitycenter.v1beta1.Finding>
       getUpdateFindingMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateFinding",
-      requestType = com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.Finding.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest,
           com.google.cloud.securitycenter.v1beta1.Finding>
       getUpdateFindingMethod() {
+    return getUpdateFindingMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest,
+          com.google.cloud.securitycenter.v1beta1.Finding>
+      getUpdateFindingMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest,
             com.google.cloud.securitycenter.v1beta1.Finding>
@@ -702,7 +879,10 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.Finding>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateFinding"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "UpdateFinding"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -720,20 +900,30 @@ public final class SecurityCenterGrpc {
     return getUpdateFindingMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getUpdateOrganizationSettingsMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest,
+          com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
+      METHOD_UPDATE_ORGANIZATION_SETTINGS = getUpdateOrganizationSettingsMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest,
           com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
       getUpdateOrganizationSettingsMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateOrganizationSettings",
-      requestType = com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.OrganizationSettings.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest,
           com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
       getUpdateOrganizationSettingsMethod() {
+    return getUpdateOrganizationSettingsMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest,
+          com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
+      getUpdateOrganizationSettingsMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest,
             com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
@@ -753,7 +943,9 @@ public final class SecurityCenterGrpc {
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(
-                          generateFullMethodName(SERVICE_NAME, "UpdateOrganizationSettings"))
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "UpdateOrganizationSettings"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -772,20 +964,30 @@ public final class SecurityCenterGrpc {
     return getUpdateOrganizationSettingsMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getUpdateSourceMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest,
+          com.google.cloud.securitycenter.v1beta1.Source>
+      METHOD_UPDATE_SOURCE = getUpdateSourceMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest,
           com.google.cloud.securitycenter.v1beta1.Source>
       getUpdateSourceMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateSource",
-      requestType = com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.Source.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest,
           com.google.cloud.securitycenter.v1beta1.Source>
       getUpdateSourceMethod() {
+    return getUpdateSourceMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest,
+          com.google.cloud.securitycenter.v1beta1.Source>
+      getUpdateSourceMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest,
             com.google.cloud.securitycenter.v1beta1.Source>
@@ -800,7 +1002,9 @@ public final class SecurityCenterGrpc {
                           com.google.cloud.securitycenter.v1beta1.Source>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSource"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter", "UpdateSource"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -818,20 +1022,30 @@ public final class SecurityCenterGrpc {
     return getUpdateSourceMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getUpdateSecurityMarksMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest,
+          com.google.cloud.securitycenter.v1beta1.SecurityMarks>
+      METHOD_UPDATE_SECURITY_MARKS = getUpdateSecurityMarksMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest,
           com.google.cloud.securitycenter.v1beta1.SecurityMarks>
       getUpdateSecurityMarksMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateSecurityMarks",
-      requestType = com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest.class,
-      responseType = com.google.cloud.securitycenter.v1beta1.SecurityMarks.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest,
           com.google.cloud.securitycenter.v1beta1.SecurityMarks>
       getUpdateSecurityMarksMethod() {
+    return getUpdateSecurityMarksMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest,
+          com.google.cloud.securitycenter.v1beta1.SecurityMarks>
+      getUpdateSecurityMarksMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest,
             com.google.cloud.securitycenter.v1beta1.SecurityMarks>
@@ -848,7 +1062,9 @@ public final class SecurityCenterGrpc {
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(
-                          generateFullMethodName(SERVICE_NAME, "UpdateSecurityMarks"))
+                          generateFullMethodName(
+                              "google.cloud.securitycenter.v1beta1.SecurityCenter",
+                              "UpdateSecurityMarks"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -869,43 +1085,19 @@ public final class SecurityCenterGrpc {
 
   /** Creates a new async stub that supports all call types for the service */
   public static SecurityCenterStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SecurityCenterStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<SecurityCenterStub>() {
-          @java.lang.Override
-          public SecurityCenterStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new SecurityCenterStub(channel, callOptions);
-          }
-        };
-    return SecurityCenterStub.newStub(factory, channel);
+    return new SecurityCenterStub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static SecurityCenterBlockingStub newBlockingStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SecurityCenterBlockingStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<SecurityCenterBlockingStub>() {
-          @java.lang.Override
-          public SecurityCenterBlockingStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new SecurityCenterBlockingStub(channel, callOptions);
-          }
-        };
-    return SecurityCenterBlockingStub.newStub(factory, channel);
+    return new SecurityCenterBlockingStub(channel);
   }
 
   /** Creates a new ListenableFuture-style stub that supports unary calls on the service */
   public static SecurityCenterFutureStub newFutureStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SecurityCenterFutureStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<SecurityCenterFutureStub>() {
-          @java.lang.Override
-          public SecurityCenterFutureStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new SecurityCenterFutureStub(channel, callOptions);
-          }
-        };
-    return SecurityCenterFutureStub.newStub(factory, channel);
+    return new SecurityCenterFutureStub(channel);
   }
 
   /**
@@ -928,7 +1120,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.CreateSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Source>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateSourceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateSourceMethodHelper(), responseObserver);
     }
 
     /**
@@ -943,7 +1135,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.CreateFindingRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Finding>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateFindingMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateFindingMethodHelper(), responseObserver);
     }
 
     /**
@@ -956,7 +1148,7 @@ public final class SecurityCenterGrpc {
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetIamPolicyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetIamPolicyMethodHelper(), responseObserver);
     }
 
     /**
@@ -970,7 +1162,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getGetOrganizationSettingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrganizationSettingsMethodHelper(), responseObserver);
     }
 
     /**
@@ -984,7 +1176,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.GetSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Source>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSourceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetSourceMethodHelper(), responseObserver);
     }
 
     /**
@@ -999,7 +1191,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getGroupAssetsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGroupAssetsMethodHelper(), responseObserver);
     }
 
     /**
@@ -1016,7 +1208,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getGroupFindingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGroupFindingsMethodHelper(), responseObserver);
     }
 
     /**
@@ -1030,7 +1222,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.ListAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getListAssetsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAssetsMethodHelper(), responseObserver);
     }
 
     /**
@@ -1046,7 +1238,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.ListFindingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getListFindingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListFindingsMethodHelper(), responseObserver);
     }
 
     /**
@@ -1060,7 +1252,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.ListSourcesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getListSourcesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListSourcesMethodHelper(), responseObserver);
     }
 
     /**
@@ -1077,7 +1269,7 @@ public final class SecurityCenterGrpc {
     public void runAssetDiscovery(
         com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getRunAssetDiscoveryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRunAssetDiscoveryMethodHelper(), responseObserver);
     }
 
     /**
@@ -1091,7 +1283,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Finding>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getSetFindingStateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSetFindingStateMethodHelper(), responseObserver);
     }
 
     /**
@@ -1104,7 +1296,7 @@ public final class SecurityCenterGrpc {
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetIamPolicyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSetIamPolicyMethodHelper(), responseObserver);
     }
 
     /**
@@ -1118,7 +1310,7 @@ public final class SecurityCenterGrpc {
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getTestIamPermissionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getTestIamPermissionsMethodHelper(), responseObserver);
     }
 
     /**
@@ -1133,7 +1325,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Finding>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateFindingMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateFindingMethodHelper(), responseObserver);
     }
 
     /**
@@ -1147,7 +1339,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateOrganizationSettingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateOrganizationSettingsMethodHelper(), responseObserver);
     }
 
     /**
@@ -1161,7 +1353,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Source>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSourceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateSourceMethodHelper(), responseObserver);
     }
 
     /**
@@ -1175,129 +1367,129 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.SecurityMarks>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateSecurityMarksMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateSecurityMarksMethodHelper(), responseObserver);
     }
 
     @java.lang.Override
     public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-              getCreateSourceMethod(),
+              getCreateSourceMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.CreateSourceRequest,
                       com.google.cloud.securitycenter.v1beta1.Source>(
                       this, METHODID_CREATE_SOURCE)))
           .addMethod(
-              getCreateFindingMethod(),
+              getCreateFindingMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.CreateFindingRequest,
                       com.google.cloud.securitycenter.v1beta1.Finding>(
                       this, METHODID_CREATE_FINDING)))
           .addMethod(
-              getGetIamPolicyMethod(),
+              getGetIamPolicyMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.iam.v1.GetIamPolicyRequest, com.google.iam.v1.Policy>(
                       this, METHODID_GET_IAM_POLICY)))
           .addMethod(
-              getGetOrganizationSettingsMethod(),
+              getGetOrganizationSettingsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest,
                       com.google.cloud.securitycenter.v1beta1.OrganizationSettings>(
                       this, METHODID_GET_ORGANIZATION_SETTINGS)))
           .addMethod(
-              getGetSourceMethod(),
+              getGetSourceMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.GetSourceRequest,
                       com.google.cloud.securitycenter.v1beta1.Source>(this, METHODID_GET_SOURCE)))
           .addMethod(
-              getGroupAssetsMethod(),
+              getGroupAssetsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest,
                       com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>(
                       this, METHODID_GROUP_ASSETS)))
           .addMethod(
-              getGroupFindingsMethod(),
+              getGroupFindingsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest,
                       com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>(
                       this, METHODID_GROUP_FINDINGS)))
           .addMethod(
-              getListAssetsMethod(),
+              getListAssetsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.ListAssetsRequest,
                       com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>(
                       this, METHODID_LIST_ASSETS)))
           .addMethod(
-              getListFindingsMethod(),
+              getListFindingsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.ListFindingsRequest,
                       com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>(
                       this, METHODID_LIST_FINDINGS)))
           .addMethod(
-              getListSourcesMethod(),
+              getListSourcesMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.ListSourcesRequest,
                       com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>(
                       this, METHODID_LIST_SOURCES)))
           .addMethod(
-              getRunAssetDiscoveryMethod(),
+              getRunAssetDiscoveryMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest,
                       com.google.longrunning.Operation>(this, METHODID_RUN_ASSET_DISCOVERY)))
           .addMethod(
-              getSetFindingStateMethod(),
+              getSetFindingStateMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest,
                       com.google.cloud.securitycenter.v1beta1.Finding>(
                       this, METHODID_SET_FINDING_STATE)))
           .addMethod(
-              getSetIamPolicyMethod(),
+              getSetIamPolicyMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.iam.v1.SetIamPolicyRequest, com.google.iam.v1.Policy>(
                       this, METHODID_SET_IAM_POLICY)))
           .addMethod(
-              getTestIamPermissionsMethod(),
+              getTestIamPermissionsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.iam.v1.TestIamPermissionsRequest,
                       com.google.iam.v1.TestIamPermissionsResponse>(
                       this, METHODID_TEST_IAM_PERMISSIONS)))
           .addMethod(
-              getUpdateFindingMethod(),
+              getUpdateFindingMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest,
                       com.google.cloud.securitycenter.v1beta1.Finding>(
                       this, METHODID_UPDATE_FINDING)))
           .addMethod(
-              getUpdateOrganizationSettingsMethod(),
+              getUpdateOrganizationSettingsMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest,
                       com.google.cloud.securitycenter.v1beta1.OrganizationSettings>(
                       this, METHODID_UPDATE_ORGANIZATION_SETTINGS)))
           .addMethod(
-              getUpdateSourceMethod(),
+              getUpdateSourceMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest,
                       com.google.cloud.securitycenter.v1beta1.Source>(
                       this, METHODID_UPDATE_SOURCE)))
           .addMethod(
-              getUpdateSecurityMarksMethod(),
+              getUpdateSecurityMarksMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest,
@@ -1315,7 +1507,11 @@ public final class SecurityCenterGrpc {
    * </pre>
    */
   public static final class SecurityCenterStub
-      extends io.grpc.stub.AbstractAsyncStub<SecurityCenterStub> {
+      extends io.grpc.stub.AbstractStub<SecurityCenterStub> {
+    private SecurityCenterStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private SecurityCenterStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -1337,7 +1533,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Source>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateSourceMethod(), getCallOptions()),
+          getChannel().newCall(getCreateSourceMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1355,7 +1551,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Finding>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateFindingMethod(), getCallOptions()),
+          getChannel().newCall(getCreateFindingMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1371,7 +1567,7 @@ public final class SecurityCenterGrpc {
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetIamPolicyMethod(), getCallOptions()),
+          getChannel().newCall(getGetIamPolicyMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1388,7 +1584,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetOrganizationSettingsMethod(), getCallOptions()),
+          getChannel().newCall(getGetOrganizationSettingsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1405,7 +1601,9 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Source>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetSourceMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetSourceMethodHelper(), getCallOptions()),
+          request,
+          responseObserver);
     }
 
     /**
@@ -1421,7 +1619,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGroupAssetsMethod(), getCallOptions()),
+          getChannel().newCall(getGroupAssetsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1441,7 +1639,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGroupFindingsMethod(), getCallOptions()),
+          getChannel().newCall(getGroupFindingsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1458,7 +1656,9 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListAssetsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListAssetsMethodHelper(), getCallOptions()),
+          request,
+          responseObserver);
     }
 
     /**
@@ -1475,7 +1675,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListFindingsMethod(), getCallOptions()),
+          getChannel().newCall(getListFindingsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1492,7 +1692,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListSourcesMethod(), getCallOptions()),
+          getChannel().newCall(getListSourcesMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1512,7 +1712,7 @@ public final class SecurityCenterGrpc {
         com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRunAssetDiscoveryMethod(), getCallOptions()),
+          getChannel().newCall(getRunAssetDiscoveryMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1529,7 +1729,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Finding>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getSetFindingStateMethod(), getCallOptions()),
+          getChannel().newCall(getSetFindingStateMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1545,7 +1745,7 @@ public final class SecurityCenterGrpc {
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getSetIamPolicyMethod(), getCallOptions()),
+          getChannel().newCall(getSetIamPolicyMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1562,7 +1762,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getTestIamPermissionsMethod(), getCallOptions()),
+          getChannel().newCall(getTestIamPermissionsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1580,7 +1780,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Finding>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUpdateFindingMethod(), getCallOptions()),
+          getChannel().newCall(getUpdateFindingMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1597,7 +1797,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.OrganizationSettings>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUpdateOrganizationSettingsMethod(), getCallOptions()),
+          getChannel().newCall(getUpdateOrganizationSettingsMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1614,7 +1814,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.Source>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUpdateSourceMethod(), getCallOptions()),
+          getChannel().newCall(getUpdateSourceMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1631,7 +1831,7 @@ public final class SecurityCenterGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1beta1.SecurityMarks>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUpdateSecurityMarksMethod(), getCallOptions()),
+          getChannel().newCall(getUpdateSecurityMarksMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -1645,7 +1845,11 @@ public final class SecurityCenterGrpc {
    * </pre>
    */
   public static final class SecurityCenterBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<SecurityCenterBlockingStub> {
+      extends io.grpc.stub.AbstractStub<SecurityCenterBlockingStub> {
+    private SecurityCenterBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private SecurityCenterBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -1665,7 +1869,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.Source createSource(
         com.google.cloud.securitycenter.v1beta1.CreateSourceRequest request) {
-      return blockingUnaryCall(getChannel(), getCreateSourceMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getCreateSourceMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1678,7 +1883,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.Finding createFinding(
         com.google.cloud.securitycenter.v1beta1.CreateFindingRequest request) {
-      return blockingUnaryCall(getChannel(), getCreateFindingMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getCreateFindingMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1689,7 +1895,8 @@ public final class SecurityCenterGrpc {
      * </pre>
      */
     public com.google.iam.v1.Policy getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
-      return blockingUnaryCall(getChannel(), getGetIamPolicyMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getGetIamPolicyMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1702,7 +1909,7 @@ public final class SecurityCenterGrpc {
     public com.google.cloud.securitycenter.v1beta1.OrganizationSettings getOrganizationSettings(
         com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetOrganizationSettingsMethod(), getCallOptions(), request);
+          getChannel(), getGetOrganizationSettingsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1714,7 +1921,7 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.Source getSource(
         com.google.cloud.securitycenter.v1beta1.GetSourceRequest request) {
-      return blockingUnaryCall(getChannel(), getGetSourceMethod(), getCallOptions(), request);
+      return blockingUnaryCall(getChannel(), getGetSourceMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1727,7 +1934,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse groupAssets(
         com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest request) {
-      return blockingUnaryCall(getChannel(), getGroupAssetsMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getGroupAssetsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1742,7 +1950,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse groupFindings(
         com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest request) {
-      return blockingUnaryCall(getChannel(), getGroupFindingsMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getGroupFindingsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1754,7 +1963,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.ListAssetsResponse listAssets(
         com.google.cloud.securitycenter.v1beta1.ListAssetsRequest request) {
-      return blockingUnaryCall(getChannel(), getListAssetsMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getListAssetsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1768,7 +1978,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.ListFindingsResponse listFindings(
         com.google.cloud.securitycenter.v1beta1.ListFindingsRequest request) {
-      return blockingUnaryCall(getChannel(), getListFindingsMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getListFindingsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1780,7 +1991,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.ListSourcesResponse listSources(
         com.google.cloud.securitycenter.v1beta1.ListSourcesRequest request) {
-      return blockingUnaryCall(getChannel(), getListSourcesMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getListSourcesMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1797,7 +2009,7 @@ public final class SecurityCenterGrpc {
     public com.google.longrunning.Operation runAssetDiscovery(
         com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest request) {
       return blockingUnaryCall(
-          getChannel(), getRunAssetDiscoveryMethod(), getCallOptions(), request);
+          getChannel(), getRunAssetDiscoveryMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1809,7 +2021,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.Finding setFindingState(
         com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest request) {
-      return blockingUnaryCall(getChannel(), getSetFindingStateMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getSetFindingStateMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1820,7 +2033,8 @@ public final class SecurityCenterGrpc {
      * </pre>
      */
     public com.google.iam.v1.Policy setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
-      return blockingUnaryCall(getChannel(), getSetIamPolicyMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getSetIamPolicyMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1833,7 +2047,7 @@ public final class SecurityCenterGrpc {
     public com.google.iam.v1.TestIamPermissionsResponse testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getTestIamPermissionsMethod(), getCallOptions(), request);
+          getChannel(), getTestIamPermissionsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1846,7 +2060,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.Finding updateFinding(
         com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest request) {
-      return blockingUnaryCall(getChannel(), getUpdateFindingMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getUpdateFindingMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1859,7 +2074,7 @@ public final class SecurityCenterGrpc {
     public com.google.cloud.securitycenter.v1beta1.OrganizationSettings updateOrganizationSettings(
         com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest request) {
       return blockingUnaryCall(
-          getChannel(), getUpdateOrganizationSettingsMethod(), getCallOptions(), request);
+          getChannel(), getUpdateOrganizationSettingsMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1871,7 +2086,8 @@ public final class SecurityCenterGrpc {
      */
     public com.google.cloud.securitycenter.v1beta1.Source updateSource(
         com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest request) {
-      return blockingUnaryCall(getChannel(), getUpdateSourceMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getUpdateSourceMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -1884,7 +2100,7 @@ public final class SecurityCenterGrpc {
     public com.google.cloud.securitycenter.v1beta1.SecurityMarks updateSecurityMarks(
         com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest request) {
       return blockingUnaryCall(
-          getChannel(), getUpdateSecurityMarksMethod(), getCallOptions(), request);
+          getChannel(), getUpdateSecurityMarksMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -1896,7 +2112,11 @@ public final class SecurityCenterGrpc {
    * </pre>
    */
   public static final class SecurityCenterFutureStub
-      extends io.grpc.stub.AbstractFutureStub<SecurityCenterFutureStub> {
+      extends io.grpc.stub.AbstractStub<SecurityCenterFutureStub> {
+    private SecurityCenterFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private SecurityCenterFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -1918,7 +2138,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.Source>
         createSource(com.google.cloud.securitycenter.v1beta1.CreateSourceRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateSourceMethod(), getCallOptions()), request);
+          getChannel().newCall(getCreateSourceMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1933,7 +2153,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.Finding>
         createFinding(com.google.cloud.securitycenter.v1beta1.CreateFindingRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateFindingMethod(), getCallOptions()), request);
+          getChannel().newCall(getCreateFindingMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1946,7 +2166,7 @@ public final class SecurityCenterGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetIamPolicyMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetIamPolicyMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1961,7 +2181,8 @@ public final class SecurityCenterGrpc {
         getOrganizationSettings(
             com.google.cloud.securitycenter.v1beta1.GetOrganizationSettingsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetOrganizationSettingsMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetOrganizationSettingsMethodHelper(), getCallOptions()),
+          request);
     }
 
     /**
@@ -1974,7 +2195,8 @@ public final class SecurityCenterGrpc {
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1beta1.Source>
         getSource(com.google.cloud.securitycenter.v1beta1.GetSourceRequest request) {
-      return futureUnaryCall(getChannel().newCall(getGetSourceMethod(), getCallOptions()), request);
+      return futureUnaryCall(
+          getChannel().newCall(getGetSourceMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1989,7 +2211,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.GroupAssetsResponse>
         groupAssets(com.google.cloud.securitycenter.v1beta1.GroupAssetsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGroupAssetsMethod(), getCallOptions()), request);
+          getChannel().newCall(getGroupAssetsMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2006,7 +2228,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.GroupFindingsResponse>
         groupFindings(com.google.cloud.securitycenter.v1beta1.GroupFindingsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGroupFindingsMethod(), getCallOptions()), request);
+          getChannel().newCall(getGroupFindingsMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2020,7 +2242,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.ListAssetsResponse>
         listAssets(com.google.cloud.securitycenter.v1beta1.ListAssetsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListAssetsMethod(), getCallOptions()), request);
+          getChannel().newCall(getListAssetsMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2036,7 +2258,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.ListFindingsResponse>
         listFindings(com.google.cloud.securitycenter.v1beta1.ListFindingsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListFindingsMethod(), getCallOptions()), request);
+          getChannel().newCall(getListFindingsMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2050,7 +2272,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.ListSourcesResponse>
         listSources(com.google.cloud.securitycenter.v1beta1.ListSourcesRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListSourcesMethod(), getCallOptions()), request);
+          getChannel().newCall(getListSourcesMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2068,7 +2290,7 @@ public final class SecurityCenterGrpc {
         runAssetDiscovery(
             com.google.cloud.securitycenter.v1beta1.RunAssetDiscoveryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getRunAssetDiscoveryMethod(), getCallOptions()), request);
+          getChannel().newCall(getRunAssetDiscoveryMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2082,7 +2304,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.Finding>
         setFindingState(com.google.cloud.securitycenter.v1beta1.SetFindingStateRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getSetFindingStateMethod(), getCallOptions()), request);
+          getChannel().newCall(getSetFindingStateMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2095,7 +2317,7 @@ public final class SecurityCenterGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getSetIamPolicyMethod(), getCallOptions()), request);
+          getChannel().newCall(getSetIamPolicyMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2109,7 +2331,7 @@ public final class SecurityCenterGrpc {
             com.google.iam.v1.TestIamPermissionsResponse>
         testIamPermissions(com.google.iam.v1.TestIamPermissionsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getTestIamPermissionsMethod(), getCallOptions()), request);
+          getChannel().newCall(getTestIamPermissionsMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2124,7 +2346,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.Finding>
         updateFinding(com.google.cloud.securitycenter.v1beta1.UpdateFindingRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUpdateFindingMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateFindingMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2139,7 +2361,8 @@ public final class SecurityCenterGrpc {
         updateOrganizationSettings(
             com.google.cloud.securitycenter.v1beta1.UpdateOrganizationSettingsRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUpdateOrganizationSettingsMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateOrganizationSettingsMethodHelper(), getCallOptions()),
+          request);
     }
 
     /**
@@ -2153,7 +2376,7 @@ public final class SecurityCenterGrpc {
             com.google.cloud.securitycenter.v1beta1.Source>
         updateSource(com.google.cloud.securitycenter.v1beta1.UpdateSourceRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUpdateSourceMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateSourceMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -2168,7 +2391,7 @@ public final class SecurityCenterGrpc {
         updateSecurityMarks(
             com.google.cloud.securitycenter.v1beta1.UpdateSecurityMarksRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUpdateSecurityMarksMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateSecurityMarksMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -2384,24 +2607,24 @@ public final class SecurityCenterGrpc {
               result =
                   io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
                       .setSchemaDescriptor(new SecurityCenterFileDescriptorSupplier())
-                      .addMethod(getCreateSourceMethod())
-                      .addMethod(getCreateFindingMethod())
-                      .addMethod(getGetIamPolicyMethod())
-                      .addMethod(getGetOrganizationSettingsMethod())
-                      .addMethod(getGetSourceMethod())
-                      .addMethod(getGroupAssetsMethod())
-                      .addMethod(getGroupFindingsMethod())
-                      .addMethod(getListAssetsMethod())
-                      .addMethod(getListFindingsMethod())
-                      .addMethod(getListSourcesMethod())
-                      .addMethod(getRunAssetDiscoveryMethod())
-                      .addMethod(getSetFindingStateMethod())
-                      .addMethod(getSetIamPolicyMethod())
-                      .addMethod(getTestIamPermissionsMethod())
-                      .addMethod(getUpdateFindingMethod())
-                      .addMethod(getUpdateOrganizationSettingsMethod())
-                      .addMethod(getUpdateSourceMethod())
-                      .addMethod(getUpdateSecurityMarksMethod())
+                      .addMethod(getCreateSourceMethodHelper())
+                      .addMethod(getCreateFindingMethodHelper())
+                      .addMethod(getGetIamPolicyMethodHelper())
+                      .addMethod(getGetOrganizationSettingsMethodHelper())
+                      .addMethod(getGetSourceMethodHelper())
+                      .addMethod(getGroupAssetsMethodHelper())
+                      .addMethod(getGroupFindingsMethodHelper())
+                      .addMethod(getListAssetsMethodHelper())
+                      .addMethod(getListFindingsMethodHelper())
+                      .addMethod(getListSourcesMethodHelper())
+                      .addMethod(getRunAssetDiscoveryMethodHelper())
+                      .addMethod(getSetFindingStateMethodHelper())
+                      .addMethod(getSetIamPolicyMethodHelper())
+                      .addMethod(getTestIamPermissionsMethodHelper())
+                      .addMethod(getUpdateFindingMethodHelper())
+                      .addMethod(getUpdateOrganizationSettingsMethodHelper())
+                      .addMethod(getUpdateSourceMethodHelper())
+                      .addMethod(getUpdateSecurityMarksMethodHelper())
                       .build();
         }
       }
