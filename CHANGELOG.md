@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.120.1](https://www.github.com/googleapis/java-securitycenter/compare/v0.120.0...v0.120.1) (2020-04-08)
+
+
+### Dependencies
+
+* update core dependencies ([#79](https://www.github.com/googleapis/java-securitycenter/issues/79)) ([85b7dda](https://www.github.com/googleapis/java-securitycenter/commit/85b7dda6e29d5b8e761198858a0523535283f9aa))
+* update dependency com.google.api:api-common to v1.9.0 ([#98](https://www.github.com/googleapis/java-securitycenter/issues/98)) ([08ea9c7](https://www.github.com/googleapis/java-securitycenter/commit/08ea9c703b2e4ea1e8e8d59fbdc70ca6cc2d8bf2))
+* update dependency org.threeten:threetenbp to v1.4.3 ([#92](https://www.github.com/googleapis/java-securitycenter/issues/92)) ([a44f985](https://www.github.com/googleapis/java-securitycenter/commit/a44f985b089604ff4f6d6fcbe363f2a38a75fc73))
+
 ## [0.120.0](https://www.github.com/googleapis/java-securitycenter/compare/v0.119.0...v0.120.0) (2020-03-10)
 
 
