@@ -1,11 +1,11 @@
 {
-  "updateTime": "2020-04-09T10:36:47.818742Z",
+  "updateTime": "2020-04-09T10:44:10.538132Z",
   "sources": [
     {
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-securitycenter.git",
-        "sha": "04de9cc1b6539b189729707ba527efe5653e0fe3"
+        "sha": "baa3d9a60486c941e9ef0c9386b1741858ace004"
       }
     },
     {
