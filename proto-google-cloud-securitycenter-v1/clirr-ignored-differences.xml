@@ -52,4 +52,20 @@
     <differenceType>8001</differenceType>
     <className>com/google/cloud/securitycenter/v1/SecurityMarksName$OrganizationSourceFindingBuilder</className>
   </difference>
+  <difference>
+    <differenceType>8001</differenceType>
+    <className>com/google/cloud/securitycenter/v1/AssetSecurityMarksName*</className>
+  </difference>
+  <difference>
+    <differenceType>8001</differenceType>
+    <className>com/google/cloud/securitycenter/v1/FindingSecurityMarksName*</className>
+  </difference>
+  <difference>
+    <differenceType>8001</differenceType>
+    <className>com/google/cloud/securitycenter/v1/SecurityMarksNames</className>
+  </difference>
+  <difference>
+    <differenceType>8001</differenceType>
+    <className>com/google/cloud/securitycenter/v1/UntypedSecurityMarksName</className>
+  </difference>
 </differences>
