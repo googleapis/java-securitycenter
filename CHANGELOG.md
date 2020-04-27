@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.121.1](https://www.github.com/googleapis/java-securitycenter/compare/v0.121.0...v0.121.1) (2020-04-27)
+
+
+### Dependencies
+
+* update dependency com.google.guava:guava-bom to v29 ([#109](https://www.github.com/googleapis/java-securitycenter/issues/109)) ([00a1471](https://www.github.com/googleapis/java-securitycenter/commit/00a1471f0b32e08b9a0bd6fd9c3ff86a510c8d97))
+* update dependency io.grpc:grpc-bom to v1.29.0 ([#124](https://www.github.com/googleapis/java-securitycenter/issues/124)) ([24fee0e](https://www.github.com/googleapis/java-securitycenter/commit/24fee0eef8d80ba3eb6999a315a18cbb458bdf53))
+* update dependency org.threeten:threetenbp to v1.4.4 ([#129](https://www.github.com/googleapis/java-securitycenter/issues/129)) ([5d62223](https://www.github.com/googleapis/java-securitycenter/commit/5d62223fc6c56a04aee99a8239914c650b4e3c9a))
+
 ## [0.121.0](https://www.github.com/googleapis/java-securitycenter/compare/v0.120.0...v0.121.0) (2020-04-09)
 
 
