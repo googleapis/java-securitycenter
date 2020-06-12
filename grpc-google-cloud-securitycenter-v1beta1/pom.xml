@@ -10,7 +10,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-securitycenter-parent</artifactId>
-    <version>0.123.0</version><!-- {x-version-update:google-cloud-securitycenter:current} -->
+    <version>1.0.0</version><!-- {x-version-update:google-cloud-securitycenter:current} -->
   </parent>
   <dependencies>
     <dependency>

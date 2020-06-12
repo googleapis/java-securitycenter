@@ -4,7 +4,7 @@
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-securitycenter-parent</artifactId>
   <packaging>pom</packaging>
-  <version>0.123.0</version><!-- {x-version-update:google-cloud-securitycenter:current} -->
+  <version>1.0.0</version><!-- {x-version-update:google-cloud-securitycenter:current} -->
   <name>Google Cloud Security Command Center Parent</name>
   <url>https://github.com/googleapis/java-securitycenter</url>
   <description>
@@ -82,7 +82,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-securitycenter-v1</artifactId>
-        <version>0.88.0</version><!-- {x-version-update:proto-google-cloud-securitycenter-v1:current} -->
+        <version>1.0.0</version><!-- {x-version-update:proto-google-cloud-securitycenter-v1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
@@ -97,7 +97,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-securitycenter-v1</artifactId>
-        <version>0.88.0</version><!-- {x-version-update:grpc-google-cloud-securitycenter-v1:current} -->
+        <version>1.0.0</version><!-- {x-version-update:grpc-google-cloud-securitycenter-v1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
@@ -112,7 +112,7 @@
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-securitycenter</artifactId>
-        <version>0.123.0</version><!-- {x-version-update:google-cloud-securitycenter:current} -->
+        <version>1.0.0</version><!-- {x-version-update:google-cloud-securitycenter:current} -->
       </dependency>
 
       <dependency>
