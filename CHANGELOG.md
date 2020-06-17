@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/googleapis/java-securitycenter/compare/v1.0.0...v1.0.1) (2020-06-17)
+
+
+### Documentation
+
+* specify allowed fields for UpdateNotificationConfig ([#174](https://www.github.com/googleapis/java-securitycenter/issues/174)) ([2bdf201](https://www.github.com/googleapis/java-securitycenter/commit/2bdf20193d74f4d33e7519f12afe027cc23e4647))
+
 ## [1.0.0](https://www.github.com/googleapis/java-securitycenter/compare/v0.122.0...v1.0.0) (2020-06-12)
 
 
