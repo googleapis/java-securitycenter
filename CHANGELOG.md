@@ -1,5 +1,17 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/googleapis/java-securitycenter/compare/v1.1.0...v1.1.1) (2020-07-28)
+
+
+### Bug Fixes
+
+* migrate to grpc_service_config ([#200](https://www.github.com/googleapis/java-securitycenter/issues/200)) ([7813a66](https://www.github.com/googleapis/java-securitycenter/commit/7813a6696e4cca71f53f6042c062ec19b2f63780))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.2 ([#194](https://www.github.com/googleapis/java-securitycenter/issues/194)) ([b17809b](https://www.github.com/googleapis/java-securitycenter/commit/b17809bf2d595af90782dda81dc7bc90a8a61a24))
+
 ## [1.1.0](https://www.github.com/googleapis/java-securitycenter/compare/v1.0.0...v1.1.0) (2020-06-22)
 
 
