@@ -11,24 +11,24 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "e26e1839a45445d13cd45b1be3b1523defb72fee",
-        "internalRef": "322867095"
+        "sha": "599ede9ebdeb33a91be48748f5f83ec13e7e692c",
+        "internalRef": "323062460"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "e26e1839a45445d13cd45b1be3b1523defb72fee",
-        "internalRef": "322867095"
+        "sha": "599ede9ebdeb33a91be48748f5f83ec13e7e692c",
+        "internalRef": "323062460"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "e26e1839a45445d13cd45b1be3b1523defb72fee",
-        "internalRef": "322867095"
+        "sha": "599ede9ebdeb33a91be48748f5f83ec13e7e692c",
+        "internalRef": "323062460"
       }
     },
     {
@@ -273,9 +273,9 @@
     "proto-google-cloud-securitycenter-v1/src/main/proto/google/cloud/securitycenter/v1/securitycenter_service.proto",
     "proto-google-cloud-securitycenter-v1/src/main/proto/google/cloud/securitycenter/v1/source.proto",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/Asset.java",
+    "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/AssetName.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/AssetOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/AssetOuterClass.java",
-    "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/AssetSecurityMarksName.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/CreateFindingRequest.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/CreateFindingRequestOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/CreateSourceRequest.java",
@@ -284,7 +284,6 @@
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/FindingName.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/FindingOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/FindingOuterClass.java",
-    "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/FindingSecurityMarksName.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/GetOrganizationSettingsRequest.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/GetOrganizationSettingsRequestOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/GetSourceRequest.java",
@@ -322,18 +321,16 @@
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/RunAssetDiscoveryResponseOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/RunAssetDiscoveryResponseOuterClass.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecurityMarks.java",
+    "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecurityMarksName.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecurityMarksOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecurityMarksOuterClass.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecuritycenterService.java",
-    "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecuritymarksName.java",
-    "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecuritymarksNames.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SetFindingStateRequest.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SetFindingStateRequestOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/Source.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SourceName.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SourceOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SourceOuterClass.java",
-    "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/UntypedSecuritymarksName.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/UpdateFindingRequest.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/UpdateFindingRequestOrBuilder.java",
     "proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/UpdateOrganizationSettingsRequest.java",
