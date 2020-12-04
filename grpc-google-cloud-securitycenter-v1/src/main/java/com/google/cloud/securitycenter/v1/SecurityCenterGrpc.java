@@ -22,13 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * V1 APIs for Security Center service.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/securitycenter/v1/securitycenter_service.proto")
@@ -1160,49 +1154,24 @@ public final class SecurityCenterGrpc {
     return SecurityCenterFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * V1 APIs for Security Center service.
-   * </pre>
-   */
+  /** */
   public abstract static class SecurityCenterImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a source.
-     * </pre>
-     */
+    /** */
     public void createSource(
         com.google.cloud.securitycenter.v1.CreateSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Source> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateSourceMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a finding. The corresponding source must exist for finding creation
-     * to succeed.
-     * </pre>
-     */
+    /** */
     public void createFinding(
         com.google.cloud.securitycenter.v1.CreateFindingRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Finding> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateFindingMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a notification config.
-     * </pre>
-     */
+    /** */
     public void createNotificationConfig(
         com.google.cloud.securitycenter.v1.CreateNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.NotificationConfig>
@@ -1210,39 +1179,21 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getCreateNotificationConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification config.
-     * </pre>
-     */
+    /** */
     public void deleteNotificationConfig(
         com.google.cloud.securitycenter.v1.DeleteNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteNotificationConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getGetIamPolicyMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a notification config.
-     * </pre>
-     */
+    /** */
     public void getNotificationConfig(
         com.google.cloud.securitycenter.v1.GetNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.NotificationConfig>
@@ -1250,13 +1201,7 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getGetNotificationConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the settings for an organization.
-     * </pre>
-     */
+    /** */
     public void getOrganizationSettings(
         com.google.cloud.securitycenter.v1.GetOrganizationSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.OrganizationSettings>
@@ -1264,27 +1209,14 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getGetOrganizationSettingsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a source.
-     * </pre>
-     */
+    /** */
     public void getSource(
         com.google.cloud.securitycenter.v1.GetSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Source> responseObserver) {
       asyncUnimplementedUnaryCall(getGetSourceMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization's assets and  groups them by their specified
-     * properties.
-     * </pre>
-     */
+    /** */
     public void groupAssets(
         com.google.cloud.securitycenter.v1.GroupAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.GroupAssetsResponse>
@@ -1292,16 +1224,7 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getGroupAssetsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization or source's findings and  groups them by their
-     * specified properties.
-     * To group across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public void groupFindings(
         com.google.cloud.securitycenter.v1.GroupFindingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.GroupFindingsResponse>
@@ -1309,13 +1232,7 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getGroupFindingsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization's assets.
-     * </pre>
-     */
+    /** */
     public void listAssets(
         com.google.cloud.securitycenter.v1.ListAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.ListAssetsResponse>
@@ -1323,15 +1240,7 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getListAssetsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization or source's findings.
-     * To list across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public void listFindings(
         com.google.cloud.securitycenter.v1.ListFindingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.ListFindingsResponse>
@@ -1339,13 +1248,7 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getListFindingsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists notification configs.
-     * </pre>
-     */
+    /** */
     public void listNotificationConfigs(
         com.google.cloud.securitycenter.v1.ListNotificationConfigsRequest request,
         io.grpc.stub.StreamObserver<
@@ -1354,13 +1257,7 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getListNotificationConfigsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all sources belonging to an organization.
-     * </pre>
-     */
+    /** */
     public void listSources(
         com.google.cloud.securitycenter.v1.ListSourcesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.ListSourcesResponse>
@@ -1368,56 +1265,28 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getListSourcesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Runs asset discovery. The discovery is tracked with a long-running
-     * operation.
-     * This API can only be called with limited frequency for an organization. If
-     * it is called too frequently the caller will receive a TOO_MANY_REQUESTS
-     * error.
-     * </pre>
-     */
+    /** */
     public void runAssetDiscovery(
         com.google.cloud.securitycenter.v1.RunAssetDiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getRunAssetDiscoveryMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the state of a finding.
-     * </pre>
-     */
+    /** */
     public void setFindingState(
         com.google.cloud.securitycenter.v1.SetFindingStateRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Finding> responseObserver) {
       asyncUnimplementedUnaryCall(getSetFindingStateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getSetIamPolicyMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the permissions that a caller has on the specified source.
-     * </pre>
-     */
+    /** */
     public void testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
@@ -1425,28 +1294,14 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getTestIamPermissionsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or updates a finding. The corresponding source must exist for a
-     * finding creation to succeed.
-     * </pre>
-     */
+    /** */
     public void updateFinding(
         com.google.cloud.securitycenter.v1.UpdateFindingRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Finding> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateFindingMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification config. The following update
-     * fields are allowed: description, pubsub_topic, streaming_config.filter
-     * </pre>
-     */
+    /** */
     public void updateNotificationConfig(
         com.google.cloud.securitycenter.v1.UpdateNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.NotificationConfig>
@@ -1454,13 +1309,7 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getUpdateNotificationConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an organization's settings.
-     * </pre>
-     */
+    /** */
     public void updateOrganizationSettings(
         com.google.cloud.securitycenter.v1.UpdateOrganizationSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.OrganizationSettings>
@@ -1468,26 +1317,14 @@ public final class SecurityCenterGrpc {
       asyncUnimplementedUnaryCall(getUpdateOrganizationSettingsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a source.
-     * </pre>
-     */
+    /** */
     public void updateSource(
         com.google.cloud.securitycenter.v1.UpdateSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Source> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateSourceMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates security marks.
-     * </pre>
-     */
+    /** */
     public void updateSecurityMarks(
         com.google.cloud.securitycenter.v1.UpdateSecurityMarksRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.SecurityMarks>
@@ -1654,13 +1491,7 @@ public final class SecurityCenterGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * V1 APIs for Security Center service.
-   * </pre>
-   */
+  /** */
   public static final class SecurityCenterStub
       extends io.grpc.stub.AbstractAsyncStub<SecurityCenterStub> {
     private SecurityCenterStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -1672,13 +1503,7 @@ public final class SecurityCenterGrpc {
       return new SecurityCenterStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a source.
-     * </pre>
-     */
+    /** */
     public void createSource(
         com.google.cloud.securitycenter.v1.CreateSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Source> responseObserver) {
@@ -1688,14 +1513,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a finding. The corresponding source must exist for finding creation
-     * to succeed.
-     * </pre>
-     */
+    /** */
     public void createFinding(
         com.google.cloud.securitycenter.v1.CreateFindingRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Finding> responseObserver) {
@@ -1705,13 +1523,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a notification config.
-     * </pre>
-     */
+    /** */
     public void createNotificationConfig(
         com.google.cloud.securitycenter.v1.CreateNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.NotificationConfig>
@@ -1722,13 +1534,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification config.
-     * </pre>
-     */
+    /** */
     public void deleteNotificationConfig(
         com.google.cloud.securitycenter.v1.DeleteNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1738,13 +1544,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
@@ -1754,13 +1554,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a notification config.
-     * </pre>
-     */
+    /** */
     public void getNotificationConfig(
         com.google.cloud.securitycenter.v1.GetNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.NotificationConfig>
@@ -1771,13 +1565,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the settings for an organization.
-     * </pre>
-     */
+    /** */
     public void getOrganizationSettings(
         com.google.cloud.securitycenter.v1.GetOrganizationSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.OrganizationSettings>
@@ -1788,13 +1576,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a source.
-     * </pre>
-     */
+    /** */
     public void getSource(
         com.google.cloud.securitycenter.v1.GetSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Source> responseObserver) {
@@ -1802,14 +1584,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getGetSourceMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization's assets and  groups them by their specified
-     * properties.
-     * </pre>
-     */
+    /** */
     public void groupAssets(
         com.google.cloud.securitycenter.v1.GroupAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.GroupAssetsResponse>
@@ -1820,16 +1595,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization or source's findings and  groups them by their
-     * specified properties.
-     * To group across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public void groupFindings(
         com.google.cloud.securitycenter.v1.GroupFindingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.GroupFindingsResponse>
@@ -1840,13 +1606,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization's assets.
-     * </pre>
-     */
+    /** */
     public void listAssets(
         com.google.cloud.securitycenter.v1.ListAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.ListAssetsResponse>
@@ -1855,15 +1615,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getListAssetsMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization or source's findings.
-     * To list across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public void listFindings(
         com.google.cloud.securitycenter.v1.ListFindingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.ListFindingsResponse>
@@ -1874,13 +1626,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists notification configs.
-     * </pre>
-     */
+    /** */
     public void listNotificationConfigs(
         com.google.cloud.securitycenter.v1.ListNotificationConfigsRequest request,
         io.grpc.stub.StreamObserver<
@@ -1892,13 +1638,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all sources belonging to an organization.
-     * </pre>
-     */
+    /** */
     public void listSources(
         com.google.cloud.securitycenter.v1.ListSourcesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.ListSourcesResponse>
@@ -1909,17 +1649,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Runs asset discovery. The discovery is tracked with a long-running
-     * operation.
-     * This API can only be called with limited frequency for an organization. If
-     * it is called too frequently the caller will receive a TOO_MANY_REQUESTS
-     * error.
-     * </pre>
-     */
+    /** */
     public void runAssetDiscovery(
         com.google.cloud.securitycenter.v1.RunAssetDiscoveryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -1929,13 +1659,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the state of a finding.
-     * </pre>
-     */
+    /** */
     public void setFindingState(
         com.google.cloud.securitycenter.v1.SetFindingStateRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Finding> responseObserver) {
@@ -1945,13 +1669,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
@@ -1961,13 +1679,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the permissions that a caller has on the specified source.
-     * </pre>
-     */
+    /** */
     public void testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
@@ -1978,14 +1690,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or updates a finding. The corresponding source must exist for a
-     * finding creation to succeed.
-     * </pre>
-     */
+    /** */
     public void updateFinding(
         com.google.cloud.securitycenter.v1.UpdateFindingRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Finding> responseObserver) {
@@ -1995,14 +1700,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification config. The following update
-     * fields are allowed: description, pubsub_topic, streaming_config.filter
-     * </pre>
-     */
+    /** */
     public void updateNotificationConfig(
         com.google.cloud.securitycenter.v1.UpdateNotificationConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.NotificationConfig>
@@ -2013,13 +1711,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an organization's settings.
-     * </pre>
-     */
+    /** */
     public void updateOrganizationSettings(
         com.google.cloud.securitycenter.v1.UpdateOrganizationSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.OrganizationSettings>
@@ -2030,13 +1722,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a source.
-     * </pre>
-     */
+    /** */
     public void updateSource(
         com.google.cloud.securitycenter.v1.UpdateSourceRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.Source> responseObserver) {
@@ -2046,13 +1732,7 @@ public final class SecurityCenterGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates security marks.
-     * </pre>
-     */
+    /** */
     public void updateSecurityMarks(
         com.google.cloud.securitycenter.v1.UpdateSecurityMarksRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.securitycenter.v1.SecurityMarks>
@@ -2064,13 +1744,7 @@ public final class SecurityCenterGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * V1 APIs for Security Center service.
-   * </pre>
-   */
+  /** */
   public static final class SecurityCenterBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<SecurityCenterBlockingStub> {
     private SecurityCenterBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -2083,167 +1757,82 @@ public final class SecurityCenterGrpc {
       return new SecurityCenterBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a source.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.Source createSource(
         com.google.cloud.securitycenter.v1.CreateSourceRequest request) {
       return blockingUnaryCall(getChannel(), getCreateSourceMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a finding. The corresponding source must exist for finding creation
-     * to succeed.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.Finding createFinding(
         com.google.cloud.securitycenter.v1.CreateFindingRequest request) {
       return blockingUnaryCall(getChannel(), getCreateFindingMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a notification config.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.NotificationConfig createNotificationConfig(
         com.google.cloud.securitycenter.v1.CreateNotificationConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateNotificationConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification config.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteNotificationConfig(
         com.google.cloud.securitycenter.v1.DeleteNotificationConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteNotificationConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public com.google.iam.v1.Policy getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return blockingUnaryCall(getChannel(), getGetIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a notification config.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.NotificationConfig getNotificationConfig(
         com.google.cloud.securitycenter.v1.GetNotificationConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetNotificationConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the settings for an organization.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.OrganizationSettings getOrganizationSettings(
         com.google.cloud.securitycenter.v1.GetOrganizationSettingsRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetOrganizationSettingsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a source.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.Source getSource(
         com.google.cloud.securitycenter.v1.GetSourceRequest request) {
       return blockingUnaryCall(getChannel(), getGetSourceMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization's assets and  groups them by their specified
-     * properties.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.GroupAssetsResponse groupAssets(
         com.google.cloud.securitycenter.v1.GroupAssetsRequest request) {
       return blockingUnaryCall(getChannel(), getGroupAssetsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization or source's findings and  groups them by their
-     * specified properties.
-     * To group across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.GroupFindingsResponse groupFindings(
         com.google.cloud.securitycenter.v1.GroupFindingsRequest request) {
       return blockingUnaryCall(getChannel(), getGroupFindingsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization's assets.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.ListAssetsResponse listAssets(
         com.google.cloud.securitycenter.v1.ListAssetsRequest request) {
       return blockingUnaryCall(getChannel(), getListAssetsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization or source's findings.
-     * To list across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.ListFindingsResponse listFindings(
         com.google.cloud.securitycenter.v1.ListFindingsRequest request) {
       return blockingUnaryCall(getChannel(), getListFindingsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists notification configs.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.ListNotificationConfigsResponse
         listNotificationConfigs(
             com.google.cloud.securitycenter.v1.ListNotificationConfigsRequest request) {
@@ -2251,130 +1840,64 @@ public final class SecurityCenterGrpc {
           getChannel(), getListNotificationConfigsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all sources belonging to an organization.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.ListSourcesResponse listSources(
         com.google.cloud.securitycenter.v1.ListSourcesRequest request) {
       return blockingUnaryCall(getChannel(), getListSourcesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Runs asset discovery. The discovery is tracked with a long-running
-     * operation.
-     * This API can only be called with limited frequency for an organization. If
-     * it is called too frequently the caller will receive a TOO_MANY_REQUESTS
-     * error.
-     * </pre>
-     */
+    /** */
     public com.google.longrunning.Operation runAssetDiscovery(
         com.google.cloud.securitycenter.v1.RunAssetDiscoveryRequest request) {
       return blockingUnaryCall(
           getChannel(), getRunAssetDiscoveryMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the state of a finding.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.Finding setFindingState(
         com.google.cloud.securitycenter.v1.SetFindingStateRequest request) {
       return blockingUnaryCall(getChannel(), getSetFindingStateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public com.google.iam.v1.Policy setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return blockingUnaryCall(getChannel(), getSetIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the permissions that a caller has on the specified source.
-     * </pre>
-     */
+    /** */
     public com.google.iam.v1.TestIamPermissionsResponse testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request) {
       return blockingUnaryCall(
           getChannel(), getTestIamPermissionsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or updates a finding. The corresponding source must exist for a
-     * finding creation to succeed.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.Finding updateFinding(
         com.google.cloud.securitycenter.v1.UpdateFindingRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateFindingMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification config. The following update
-     * fields are allowed: description, pubsub_topic, streaming_config.filter
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.NotificationConfig updateNotificationConfig(
         com.google.cloud.securitycenter.v1.UpdateNotificationConfigRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateNotificationConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an organization's settings.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.OrganizationSettings updateOrganizationSettings(
         com.google.cloud.securitycenter.v1.UpdateOrganizationSettingsRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateOrganizationSettingsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a source.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.Source updateSource(
         com.google.cloud.securitycenter.v1.UpdateSourceRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateSourceMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates security marks.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.securitycenter.v1.SecurityMarks updateSecurityMarks(
         com.google.cloud.securitycenter.v1.UpdateSecurityMarksRequest request) {
       return blockingUnaryCall(
@@ -2382,13 +1905,7 @@ public final class SecurityCenterGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * V1 APIs for Security Center service.
-   * </pre>
-   */
+  /** */
   public static final class SecurityCenterFutureStub
       extends io.grpc.stub.AbstractFutureStub<SecurityCenterFutureStub> {
     private SecurityCenterFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -2401,13 +1918,7 @@ public final class SecurityCenterGrpc {
       return new SecurityCenterFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a source.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.Source>
         createSource(com.google.cloud.securitycenter.v1.CreateSourceRequest request) {
@@ -2415,14 +1926,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getCreateSourceMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a finding. The corresponding source must exist for finding creation
-     * to succeed.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.Finding>
         createFinding(com.google.cloud.securitycenter.v1.CreateFindingRequest request) {
@@ -2430,13 +1934,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getCreateFindingMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a notification config.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.NotificationConfig>
         createNotificationConfig(
@@ -2445,13 +1943,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getCreateNotificationConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a notification config.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteNotificationConfig(
             com.google.cloud.securitycenter.v1.DeleteNotificationConfigRequest request) {
@@ -2459,26 +1951,14 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getDeleteNotificationConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a notification config.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.NotificationConfig>
         getNotificationConfig(
@@ -2487,13 +1967,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getGetNotificationConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the settings for an organization.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.OrganizationSettings>
         getOrganizationSettings(
@@ -2502,27 +1976,14 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getGetOrganizationSettingsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a source.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.Source>
         getSource(com.google.cloud.securitycenter.v1.GetSourceRequest request) {
       return futureUnaryCall(getChannel().newCall(getGetSourceMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization's assets and  groups them by their specified
-     * properties.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.GroupAssetsResponse>
         groupAssets(com.google.cloud.securitycenter.v1.GroupAssetsRequest request) {
@@ -2530,16 +1991,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getGroupAssetsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Filters an organization or source's findings and  groups them by their
-     * specified properties.
-     * To group across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.GroupFindingsResponse>
         groupFindings(com.google.cloud.securitycenter.v1.GroupFindingsRequest request) {
@@ -2547,13 +1999,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getGroupFindingsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization's assets.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.ListAssetsResponse>
         listAssets(com.google.cloud.securitycenter.v1.ListAssetsRequest request) {
@@ -2561,15 +2007,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getListAssetsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists an organization or source's findings.
-     * To list across all sources provide a `-` as the source id.
-     * Example: /v1/organizations/{organization_id}/sources/-/findings
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.ListFindingsResponse>
         listFindings(com.google.cloud.securitycenter.v1.ListFindingsRequest request) {
@@ -2577,13 +2015,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getListFindingsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists notification configs.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.ListNotificationConfigsResponse>
         listNotificationConfigs(
@@ -2592,13 +2024,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getListNotificationConfigsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all sources belonging to an organization.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.ListSourcesResponse>
         listSources(com.google.cloud.securitycenter.v1.ListSourcesRequest request) {
@@ -2606,30 +2032,14 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getListSourcesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Runs asset discovery. The discovery is tracked with a long-running
-     * operation.
-     * This API can only be called with limited frequency for an organization. If
-     * it is called too frequently the caller will receive a TOO_MANY_REQUESTS
-     * error.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         runAssetDiscovery(com.google.cloud.securitycenter.v1.RunAssetDiscoveryRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getRunAssetDiscoveryMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the state of a finding.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.Finding>
         setFindingState(com.google.cloud.securitycenter.v1.SetFindingStateRequest request) {
@@ -2637,26 +2047,14 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getSetFindingStateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy on the specified Source.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns the permissions that a caller has on the specified source.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.iam.v1.TestIamPermissionsResponse>
         testIamPermissions(com.google.iam.v1.TestIamPermissionsRequest request) {
@@ -2664,14 +2062,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getTestIamPermissionsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates or updates a finding. The corresponding source must exist for a
-     * finding creation to succeed.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.Finding>
         updateFinding(com.google.cloud.securitycenter.v1.UpdateFindingRequest request) {
@@ -2679,14 +2070,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getUpdateFindingMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a notification config. The following update
-     * fields are allowed: description, pubsub_topic, streaming_config.filter
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.NotificationConfig>
         updateNotificationConfig(
@@ -2695,13 +2079,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getUpdateNotificationConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates an organization's settings.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.OrganizationSettings>
         updateOrganizationSettings(
@@ -2710,13 +2088,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getUpdateOrganizationSettingsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a source.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.Source>
         updateSource(com.google.cloud.securitycenter.v1.UpdateSourceRequest request) {
@@ -2724,13 +2096,7 @@ public final class SecurityCenterGrpc {
           getChannel().newCall(getUpdateSourceMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates security marks.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.securitycenter.v1.SecurityMarks>
         updateSecurityMarks(com.google.cloud.securitycenter.v1.UpdateSecurityMarksRequest request) {
