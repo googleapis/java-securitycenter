@@ -107,7 +107,7 @@ public class SecurityCenterClientTest {
     Source expectedResponse =
         Source.newBuilder()
             .setName(SourceName.of("[ORGANIZATION]", "[SOURCE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -150,7 +150,7 @@ public class SecurityCenterClientTest {
     Source expectedResponse =
         Source.newBuilder()
             .setName(SourceName.of("[ORGANIZATION]", "[SOURCE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -194,9 +194,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -206,7 +206,7 @@ public class SecurityCenterClientTest {
 
     SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
     Finding finding = Finding.newBuilder().build();
-    String findingId = "finding_id728776081";
+    String findingId = "findingId439150212";
 
     Finding actualResponse = client.createFinding(parent, finding, findingId);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -232,7 +232,7 @@ public class SecurityCenterClientTest {
     try {
       SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
       Finding finding = Finding.newBuilder().build();
-      String findingId = "finding_id728776081";
+      String findingId = "findingId439150212";
       client.createFinding(parent, finding, findingId);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -246,9 +246,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -257,7 +257,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addResponse(expectedResponse);
 
     SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-    String findingId = "finding_id728776081";
+    String findingId = "findingId439150212";
     Finding finding = Finding.newBuilder().build();
 
     Finding actualResponse = client.createFinding(parent, findingId, finding);
@@ -283,7 +283,7 @@ public class SecurityCenterClientTest {
 
     try {
       SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-      String findingId = "finding_id728776081";
+      String findingId = "findingId439150212";
       Finding finding = Finding.newBuilder().build();
       client.createFinding(parent, findingId, finding);
       Assert.fail("No exception raised");
@@ -298,9 +298,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -310,7 +310,7 @@ public class SecurityCenterClientTest {
 
     String parent = "parent-995424086";
     Finding finding = Finding.newBuilder().build();
-    String findingId = "finding_id728776081";
+    String findingId = "findingId439150212";
 
     Finding actualResponse = client.createFinding(parent, finding, findingId);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -336,7 +336,7 @@ public class SecurityCenterClientTest {
     try {
       String parent = "parent-995424086";
       Finding finding = Finding.newBuilder().build();
-      String findingId = "finding_id728776081";
+      String findingId = "findingId439150212";
       client.createFinding(parent, finding, findingId);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -350,9 +350,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -361,7 +361,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addResponse(expectedResponse);
 
     String parent = "parent-995424086";
-    String findingId = "finding_id728776081";
+    String findingId = "findingId439150212";
     Finding finding = Finding.newBuilder().build();
 
     Finding actualResponse = client.createFinding(parent, findingId, finding);
@@ -387,7 +387,7 @@ public class SecurityCenterClientTest {
 
     try {
       String parent = "parent-995424086";
-      String findingId = "finding_id728776081";
+      String findingId = "findingId439150212";
       Finding finding = Finding.newBuilder().build();
       client.createFinding(parent, findingId, finding);
       Assert.fail("No exception raised");
@@ -403,8 +403,8 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
@@ -449,8 +449,8 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
@@ -495,13 +495,13 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
     OrganizationName parent = OrganizationName.of("[ORGANIZATION]");
-    String configId = "config_id-804450504";
+    String configId = "configId-580140035";
     NotificationConfig notificationConfig = NotificationConfig.newBuilder().build();
 
     NotificationConfig actualResponse =
@@ -529,7 +529,7 @@ public class SecurityCenterClientTest {
 
     try {
       OrganizationName parent = OrganizationName.of("[ORGANIZATION]");
-      String configId = "config_id-804450504";
+      String configId = "configId-580140035";
       NotificationConfig notificationConfig = NotificationConfig.newBuilder().build();
       client.createNotificationConfig(parent, configId, notificationConfig);
       Assert.fail("No exception raised");
@@ -545,13 +545,13 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
     String parent = "parent-995424086";
-    String configId = "config_id-804450504";
+    String configId = "configId-580140035";
     NotificationConfig notificationConfig = NotificationConfig.newBuilder().build();
 
     NotificationConfig actualResponse =
@@ -579,7 +579,7 @@ public class SecurityCenterClientTest {
 
     try {
       String parent = "parent-995424086";
-      String configId = "config_id-804450504";
+      String configId = "configId-580140035";
       NotificationConfig notificationConfig = NotificationConfig.newBuilder().build();
       client.createNotificationConfig(parent, configId, notificationConfig);
       Assert.fail("No exception raised");
@@ -747,8 +747,8 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
@@ -792,8 +792,8 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
@@ -913,7 +913,7 @@ public class SecurityCenterClientTest {
     Source expectedResponse =
         Source.newBuilder()
             .setName(SourceName.of("[ORGANIZATION]", "[SOURCE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -953,7 +953,7 @@ public class SecurityCenterClientTest {
     Source expectedResponse =
         Source.newBuilder()
             .setName(SourceName.of("[ORGANIZATION]", "[SOURCE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -1002,10 +1002,10 @@ public class SecurityCenterClientTest {
         GroupAssetsRequest.newBuilder()
             .setParent(OrganizationName.of("[ORGANIZATION]").toString())
             .setFilter("filter-1274492040")
-            .setGroupBy("group_by506361367")
+            .setGroupBy("groupBy293428022")
             .setCompareDuration(Duration.newBuilder().build())
             .setReadTime(Timestamp.newBuilder().build())
-            .setPageToken("page_token1630607433")
+            .setPageToken("pageToken873572522")
             .setPageSize(883849137)
             .build();
 
@@ -1043,10 +1043,10 @@ public class SecurityCenterClientTest {
           GroupAssetsRequest.newBuilder()
               .setParent(OrganizationName.of("[ORGANIZATION]").toString())
               .setFilter("filter-1274492040")
-              .setGroupBy("group_by506361367")
+              .setGroupBy("groupBy293428022")
               .setCompareDuration(Duration.newBuilder().build())
               .setReadTime(Timestamp.newBuilder().build())
-              .setPageToken("page_token1630607433")
+              .setPageToken("pageToken873572522")
               .setPageSize(883849137)
               .build();
       client.groupAssets(request);
@@ -1067,7 +1067,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addResponse(expectedResponse);
 
     SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-    String groupBy = "group_by506361367";
+    String groupBy = "groupBy293428022";
 
     GroupFindingsPagedResponse pagedListResponse = client.groupFindings(parent, groupBy);
 
@@ -1095,7 +1095,7 @@ public class SecurityCenterClientTest {
 
     try {
       SourceName parent = SourceName.of("[ORGANIZATION]", "[SOURCE]");
-      String groupBy = "group_by506361367";
+      String groupBy = "groupBy293428022";
       client.groupFindings(parent, groupBy);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -1114,7 +1114,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addResponse(expectedResponse);
 
     String parent = "parent-995424086";
-    String groupBy = "group_by506361367";
+    String groupBy = "groupBy293428022";
 
     GroupFindingsPagedResponse pagedListResponse = client.groupFindings(parent, groupBy);
 
@@ -1142,7 +1142,7 @@ public class SecurityCenterClientTest {
 
     try {
       String parent = "parent-995424086";
-      String groupBy = "group_by506361367";
+      String groupBy = "groupBy293428022";
       client.groupFindings(parent, groupBy);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -1606,9 +1606,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -1658,9 +1658,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -1874,9 +1874,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -1920,9 +1920,9 @@ public class SecurityCenterClientTest {
         Finding.newBuilder()
             .setName(FindingName.of("[ORGANIZATION]", "[SOURCE]", "[FINDING]").toString())
             .setParent("parent-995424086")
-            .setResourceName("resource_name979421212")
+            .setResourceName("resourceName-384566343")
             .setCategory("category50511102")
-            .setExternalUri("external_uri-1385596168")
+            .setExternalUri("externalUri-1153085023")
             .putAllSourceProperties(new HashMap<String, Value>())
             .setSecurityMarks(SecurityMarks.newBuilder().build())
             .setEventTime(Timestamp.newBuilder().build())
@@ -1970,8 +1970,8 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
@@ -2013,8 +2013,8 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsub_topic-338126829")
-            .setServiceAccount("service_account-1948028253")
+            .setPubsubTopic("pubsubTopic255880396")
+            .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
@@ -2098,7 +2098,7 @@ public class SecurityCenterClientTest {
     Source expectedResponse =
         Source.newBuilder()
             .setName(SourceName.of("[ORGANIZATION]", "[SOURCE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -2138,7 +2138,7 @@ public class SecurityCenterClientTest {
     Source expectedResponse =
         Source.newBuilder()
             .setName(SourceName.of("[ORGANIZATION]", "[SOURCE]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
