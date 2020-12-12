@@ -1404,7 +1404,8 @@ public class SecurityCenterClientTest {
   public void updateSecurityMarksTest() throws Exception {
     SecurityMarks expectedResponse =
         SecurityMarks.newBuilder()
-            .setName("name3373707")
+            .setName(
+                SecurityMarksName.ofOrganizationAssetName("[ORGANIZATION]", "[ASSET]").toString())
             .putAllMarks(new HashMap<String, String>())
             .build();
     mockSecurityCenter.addResponse(expectedResponse);

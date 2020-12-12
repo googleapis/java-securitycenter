@@ -403,7 +403,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -449,7 +449,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -495,7 +495,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -545,7 +545,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -747,7 +747,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -792,7 +792,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -1970,7 +1970,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -2013,7 +2013,7 @@ public class SecurityCenterClientTest {
             .setName(
                 NotificationConfigName.of("[ORGANIZATION]", "[NOTIFICATION_CONFIG]").toString())
             .setDescription("description-1724546052")
-            .setPubsubTopic("pubsubTopic255880396")
+            .setPubsubTopic(TopicName.of("[PROJECT]", "[TOPIC]").toString())
             .setServiceAccount("serviceAccount1079137720")
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -2180,7 +2180,8 @@ public class SecurityCenterClientTest {
   public void updateSecurityMarksTest() throws Exception {
     SecurityMarks expectedResponse =
         SecurityMarks.newBuilder()
-            .setName("name3373707")
+            .setName(
+                SecurityMarksName.ofOrganizationAssetName("[ORGANIZATION]", "[ASSET]").toString())
             .putAllMarks(new HashMap<String, String>())
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
@@ -2219,7 +2220,8 @@ public class SecurityCenterClientTest {
   public void updateSecurityMarksTest2() throws Exception {
     SecurityMarks expectedResponse =
         SecurityMarks.newBuilder()
-            .setName("name3373707")
+            .setName(
+                SecurityMarksName.ofOrganizationAssetName("[ORGANIZATION]", "[ASSET]").toString())
             .putAllMarks(new HashMap<String, String>())
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
