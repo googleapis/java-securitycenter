@@ -395,11 +395,21 @@ public class GrpcSecurityCenterStub extends SecurityCenterStub {
         SecurityCenterStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcSecurityCenterStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcSecurityCenterStub(SecurityCenterStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcSecurityCenterCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcSecurityCenterStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcSecurityCenterStub(
       SecurityCenterStubSettings settings,
       ClientContext clientContext,
