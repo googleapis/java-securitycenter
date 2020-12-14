@@ -229,7 +229,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *     "organizations/[organization_id]/sources/[source_id]".
    * @param finding Required. The Finding being created. The name and security_marks will be ignored
    *     as they are both output only fields on this resource.
-   * @param finding_id Required. Unique identifier provided by the client within the parent scope.
+   * @param findingId Required. Unique identifier provided by the client within the parent scope.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Finding createFinding(SourceName parent, Finding finding, String findingId) {
@@ -248,7 +248,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the new finding's parent. Its format should be
    *     "organizations/[organization_id]/sources/[source_id]".
-   * @param finding_id Required. Unique identifier provided by the client within the parent scope.
+   * @param findingId Required. Unique identifier provided by the client within the parent scope.
    * @param finding Required. The Finding being created. The name and security_marks will be ignored
    *     as they are both output only fields on this resource.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -271,7 +271,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *     "organizations/[organization_id]/sources/[source_id]".
    * @param finding Required. The Finding being created. The name and security_marks will be ignored
    *     as they are both output only fields on this resource.
-   * @param finding_id Required. Unique identifier provided by the client within the parent scope.
+   * @param findingId Required. Unique identifier provided by the client within the parent scope.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Finding createFinding(String parent, Finding finding, String findingId) {
@@ -290,7 +290,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the new finding's parent. Its format should be
    *     "organizations/[organization_id]/sources/[source_id]".
-   * @param finding_id Required. Unique identifier provided by the client within the parent scope.
+   * @param findingId Required. Unique identifier provided by the client within the parent scope.
    * @param finding Required. The Finding being created. The name and security_marks will be ignored
    *     as they are both output only fields on this resource.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -332,7 +332,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the new notification config's parent. Its format is
    *     "organizations/[organization_id]".
-   * @param notification_config Required. The notification config being created. The name and the
+   * @param notificationConfig Required. The notification config being created. The name and the
    *     service account will be ignored as they are both output only fields on this resource.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -352,7 +352,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the new notification config's parent. Its format is
    *     "organizations/[organization_id]".
-   * @param notification_config Required. The notification config being created. The name and the
+   * @param notificationConfig Required. The notification config being created. The name and the
    *     service account will be ignored as they are both output only fields on this resource.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -372,10 +372,10 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the new notification config's parent. Its format is
    *     "organizations/[organization_id]".
-   * @param config_id Required. Unique identifier provided by the client within the parent scope. It
+   * @param configId Required. Unique identifier provided by the client within the parent scope. It
    *     must be between 1 and 128 characters, and contains alphanumeric characters, underscores or
    *     hyphens only.
-   * @param notification_config Required. The notification config being created. The name and the
+   * @param notificationConfig Required. The notification config being created. The name and the
    *     service account will be ignored as they are both output only fields on this resource.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -396,10 +396,10 @@ public class SecurityCenterClient implements BackgroundResource {
    *
    * @param parent Required. Resource name of the new notification config's parent. Its format is
    *     "organizations/[organization_id]".
-   * @param config_id Required. Unique identifier provided by the client within the parent scope. It
+   * @param configId Required. Unique identifier provided by the client within the parent scope. It
    *     must be between 1 and 128 characters, and contains alphanumeric characters, underscores or
    *     hyphens only.
-   * @param notification_config Required. The notification config being created. The name and the
+   * @param notificationConfig Required. The notification config being created. The name and the
    *     service account will be ignored as they are both output only fields on this resource.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -734,7 +734,7 @@ public class SecurityCenterClient implements BackgroundResource {
    * @param parent Required. Name of the source to groupBy. Its format is
    *     "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
    *     provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
-   * @param group_by Required. Expression that defines what assets fields to use for grouping
+   * @param groupBy Required. Expression that defines what assets fields to use for grouping
    *     (including `state_change`). The string value should follow SQL syntax: comma separated list
    *     of fields. For example: "parent,resource_name".
    *     <p>The following fields are supported:
@@ -771,7 +771,7 @@ public class SecurityCenterClient implements BackgroundResource {
    * @param parent Required. Name of the source to groupBy. Its format is
    *     "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
    *     provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
-   * @param group_by Required. Expression that defines what assets fields to use for grouping
+   * @param groupBy Required. Expression that defines what assets fields to use for grouping
    *     (including `state_change`). The string value should follow SQL syntax: comma separated list
    *     of fields. For example: "parent,resource_name".
    *     <p>The following fields are supported:
@@ -1186,7 +1186,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *     https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
    *     "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
    * @param state Required. The desired State of the finding.
-   * @param start_time Required. The time at which the updated state takes effect.
+   * @param startTime Required. The time at which the updated state takes effect.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Finding setFindingState(FindingName name, Finding.State state, Timestamp startTime) {
@@ -1207,7 +1207,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *     https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
    *     "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
    * @param state Required. The desired State of the finding.
-   * @param start_time Required. The time at which the updated state takes effect.
+   * @param startTime Required. The time at which the updated state takes effect.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Finding setFindingState(String name, Finding.State state, Timestamp startTime) {
@@ -1388,7 +1388,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *     parent, security_marks, and update_time will be ignored.
    *     <p>In the case of creation, the finding id portion of the name must be alphanumeric and
    *     less than or equal to 32 characters and greater than 0 characters in length.
-   * @param update_mask The FieldMask to use when updating the finding resource. This field should
+   * @param updateMask The FieldMask to use when updating the finding resource. This field should
    *     not be specified when creating a finding.
    *     <p>When updating a finding, an empty mask is treated as updating all mutable fields and
    *     replacing source_properties. Individual source_properties can be added/updated by using
@@ -1429,7 +1429,7 @@ public class SecurityCenterClient implements BackgroundResource {
    * Updates a notification config. The following update fields are allowed: description,
    * pubsub_topic, streaming_config.filter
    *
-   * @param notification_config Required. The notification config to update.
+   * @param notificationConfig Required. The notification config to update.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final NotificationConfig updateNotificationConfig(NotificationConfig notificationConfig) {
@@ -1445,8 +1445,8 @@ public class SecurityCenterClient implements BackgroundResource {
    * Updates a notification config. The following update fields are allowed: description,
    * pubsub_topic, streaming_config.filter
    *
-   * @param notification_config Required. The notification config to update.
-   * @param update_mask The FieldMask to use when updating the notification config.
+   * @param notificationConfig Required. The notification config to update.
+   * @param updateMask The FieldMask to use when updating the notification config.
    *     <p>If empty all mutable fields will be updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -1489,7 +1489,7 @@ public class SecurityCenterClient implements BackgroundResource {
   /**
    * Updates an organization's settings.
    *
-   * @param organization_settings Required. The organization settings resource to update.
+   * @param organizationSettings Required. The organization settings resource to update.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final OrganizationSettings updateOrganizationSettings(
@@ -1541,7 +1541,7 @@ public class SecurityCenterClient implements BackgroundResource {
    * Updates a source.
    *
    * @param source Required. The source resource to update.
-   * @param update_mask The FieldMask to use when updating the source resource.
+   * @param updateMask The FieldMask to use when updating the source resource.
    *     <p>If empty all mutable fields will be updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -1576,7 +1576,7 @@ public class SecurityCenterClient implements BackgroundResource {
   /**
    * Updates security marks.
    *
-   * @param security_marks Required. The security marks resource to update.
+   * @param securityMarks Required. The security marks resource to update.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final SecurityMarks updateSecurityMarks(SecurityMarks securityMarks) {
@@ -1589,8 +1589,8 @@ public class SecurityCenterClient implements BackgroundResource {
   /**
    * Updates security marks.
    *
-   * @param security_marks Required. The security marks resource to update.
-   * @param update_mask The FieldMask to use when updating the security marks resource.
+   * @param securityMarks Required. The security marks resource to update.
+   * @param updateMask The FieldMask to use when updating the security marks resource.
    *     <p>The field mask must not contain duplicate fields. If empty or set to "marks", all marks
    *     will be replaced. Individual marks can be updated using "marks.&lt;mark_key&gt;".
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
