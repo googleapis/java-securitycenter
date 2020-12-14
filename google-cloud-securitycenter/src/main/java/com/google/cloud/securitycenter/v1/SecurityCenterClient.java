@@ -705,6 +705,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *       <li>category
    *       <li>state
    *       <li>parent
+   *       <li>severity
    *     </ul>
    *     <p>The following fields are supported when compare_duration is set:
    *     <ul>
@@ -741,6 +742,7 @@ public class SecurityCenterClient implements BackgroundResource {
    *       <li>category
    *       <li>state
    *       <li>parent
+   *       <li>severity
    *     </ul>
    *     <p>The following fields are supported when compare_duration is set:
    *     <ul>
