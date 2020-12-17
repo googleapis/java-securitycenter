@@ -22,11 +22,11 @@ service = 'securitycenter'
 versions = ['v1p1beta1', 'v1beta1', 'v1']
 
 for version in versions:
-  library = java.bazel_library(
-      service=service,
-      version=version,
-      bazel_target=f'//google/cloud/{service}/{version}:google-cloud-{service}-{version}-java',
-  )
+  # library = java.bazel_library(
+  #     service=service,
+  #     version=version,
+  #     bazel_target=f'//google/cloud/{service}/{version}:google-cloud-{service}-{version}-java',
+  # )
 
   # TODO: remove for next major release (2.0.0)
   s.replace(
@@ -64,5 +64,6 @@ for version in versions:
       "OrganizationSourceFindingBuilder",
       "OrganizationSourceFindingSecurityMarksBuilder",
   )
+  java.format_code(f"proto-google-cloud-securitycenter-{version}")
 
 java.common_templates()

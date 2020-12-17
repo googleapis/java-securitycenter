@@ -95,7 +95,8 @@ public class SecurityMarksName implements ResourceName {
   }
 
   @BetaApi("The per-pattern Builders are not stable yet and may be changed in the future.")
-  public static OrganizationSourceFindingSecurityMarksBuilder newOrganizationSourceFindingSecurityMarksBuilder() {
+  public static OrganizationSourceFindingSecurityMarksBuilder
+      newOrganizationSourceFindingSecurityMarksBuilder() {
     return new OrganizationSourceFindingSecurityMarksBuilder();
   }
 
@@ -108,7 +109,8 @@ public class SecurityMarksName implements ResourceName {
   }
 
   @BetaApi("The static create methods are not stable yet and may be changed in the future.")
-  public static SecurityMarksName ofOrganizationAssetSecurityMarksName(String organization, String asset) {
+  public static SecurityMarksName ofOrganizationAssetSecurityMarksName(
+      String organization, String asset) {
     return newBuilder().setOrganization(organization).setAsset(asset).build();
   }
 
@@ -148,7 +150,8 @@ public class SecurityMarksName implements ResourceName {
     }
     if (ORGANIZATION_ASSET.matches(formattedString)) {
       Map<String, String> matchMap = ORGANIZATION_ASSET.match(formattedString);
-      return ofOrganizationAssetSecurityMarksName(matchMap.get("organization"), matchMap.get("asset"));
+      return ofOrganizationAssetSecurityMarksName(
+          matchMap.get("organization"), matchMap.get("asset"));
     } else if (ORGANIZATION_SOURCE_FINDING.matches(formattedString)) {
       Map<String, String> matchMap = ORGANIZATION_SOURCE_FINDING.match(formattedString);
       return ofOrganizationSourceFindingSecurityMarksName(
