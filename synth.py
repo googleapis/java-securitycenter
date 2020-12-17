@@ -66,4 +66,11 @@ for version in versions:
   )
   java.format_code(f"proto-google-cloud-securitycenter-{version}")
 
+s.replace(
+  [f"google-cloud-securitycenter/**/SecurityCenterClientTest.java"],
+  "SecurityMarksName.ofOrganizationAssetName",
+  "SecurityMarksName.ofOrganizationAssetSecurityMarksName"
+)
+java.format_code(f"google-cloud-securitycenter")
+
 java.common_templates()

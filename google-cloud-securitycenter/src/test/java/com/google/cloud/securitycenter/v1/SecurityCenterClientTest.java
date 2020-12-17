@@ -1947,7 +1947,8 @@ public class SecurityCenterClientTest {
     SecurityMarks expectedResponse =
         SecurityMarks.newBuilder()
             .setName(
-                SecurityMarksName.ofOrganizationAssetName("[ORGANIZATION]", "[ASSET]").toString())
+                SecurityMarksName.ofOrganizationAssetSecurityMarksName("[ORGANIZATION]", "[ASSET]")
+                    .toString())
             .putAllMarks(new HashMap<String, String>())
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
