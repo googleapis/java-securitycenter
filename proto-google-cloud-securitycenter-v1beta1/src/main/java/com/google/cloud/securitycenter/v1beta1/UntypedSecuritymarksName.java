@@ -30,7 +30,7 @@ import java.util.Map;
  */
 @javax.annotation.Generated("by GAPIC protoc plugin")
 @Deprecated
-public class UntypedSecuritymarksName extends SecuritymarksName {
+public class UntypedSecuritymarksName implements ResourceName {
 
   private final String rawValue;
   private Map<String, String> valueMap;
