@@ -15,6 +15,7 @@
 """This script is used to synthesize generated parts of this library."""
 import synthtool as s
 import synthtool.languages.java as java
+import os
 
 AUTOSYNTH_MULTIPLE_COMMITS = True
 
@@ -67,10 +68,17 @@ for version in versions:
   java.format_code(f"proto-google-cloud-securitycenter-{version}")
 
 s.replace(
-  [f"google-cloud-securitycenter/**/SecurityCenterClientTest.java"],
-  "SecurityMarksName.ofOrganizationAssetName",
-  "SecurityMarksName.ofOrganizationAssetSecurityMarksName"
+    [f"google-cloud-securitycenter/**/SecurityCenterClientTest.java"],
+    "SecurityMarksName.ofOrganizationAssetName",
+    "SecurityMarksName.ofOrganizationAssetSecurityMarksName"
+)
+s.replace(
+    [f"google-cloud-securitycenter/src/test/java/com/google/cloud/securitycenter/v1beta1/SecurityCenterClientTest.java"],
+    "SecurityMarksName.ofOrganizationAssetSecurityMarksName",
+    "SecuritymarksName.ofOrganizationAssetSecurityMarksName"
 )
 java.format_code(f"google-cloud-securitycenter")
+
+os.remove('proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecurityMarksName.java')
 
 java.common_templates()

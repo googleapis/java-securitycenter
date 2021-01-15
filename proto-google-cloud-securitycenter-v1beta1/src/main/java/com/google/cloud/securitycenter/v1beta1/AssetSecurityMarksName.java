@@ -44,9 +44,7 @@ public class AssetSecurityMarksName extends SecuritymarksName {
     return asset;
   }
 
-  public static Builder newBuilder() {
-    return new Builder();
-  }
+
 
   public Builder toBuilder() {
     return new Builder(this);
@@ -58,7 +56,7 @@ public class AssetSecurityMarksName extends SecuritymarksName {
   }
 
   public static AssetSecurityMarksName of(String organization, String asset) {
-    return newBuilder().setOrganization(organization).setAsset(asset).build();
+    return (AssetSecurityMarksName) newBuilder().setOrganization(organization).setAsset(asset).build();
   }
 
   public static String format(String organization, String asset) {

@@ -1408,7 +1408,7 @@ public class SecurityCenterClientTest {
     SecurityMarks expectedResponse =
         SecurityMarks.newBuilder()
             .setName(
-                SecurityMarksName.ofOrganizationAssetSecurityMarksName("[ORGANIZATION]", "[ASSET]")
+                SecuritymarksName.ofOrganizationAssetSecurityMarksName("[ORGANIZATION]", "[ASSET]")
                     .toString())
             .putAllMarks(new HashMap<String, String>())
             .build();

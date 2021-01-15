@@ -28,11 +28,11 @@ public class SecuritymarksNames {
 
   public static SecuritymarksName parse(String resourceNameString) {
     if (AssetSecurityMarksName.isParsableFrom(resourceNameString)) {
-      return AssetSecurityMarksName.parse(resourceNameString);
+      return SecuritymarksName.parse(resourceNameString);
     }
     if (FindingSecurityMarksName.isParsableFrom(resourceNameString)) {
-      return FindingSecurityMarksName.parse(resourceNameString);
+      return SecuritymarksName.parse(resourceNameString);
     }
-    return UntypedSecuritymarksName.parse(resourceNameString);
+    return SecuritymarksName.parse(resourceNameString);
   }
 }

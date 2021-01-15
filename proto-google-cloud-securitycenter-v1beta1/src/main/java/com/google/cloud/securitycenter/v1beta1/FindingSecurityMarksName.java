@@ -23,57 +23,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/** AUTO-GENERATED DOCUMENTATION AND CLASS */
+/**
+ * AUTO-GENERATED DOCUMENTATION AND CLASS
+ */
 @javax.annotation.Generated("by GAPIC protoc plugin")
 public class FindingSecurityMarksName extends SecuritymarksName {
 
   private static final PathTemplate PATH_TEMPLATE =
       PathTemplate.createWithoutUrlEncoding(
           "organizations/{organization}/sources/{source}/findings/{finding}/securityMarks");
-
-  private volatile Map<String, String> fieldValuesMap;
-
   private final String organization;
   private final String source;
   private final String finding;
-
-  public String getOrganization() {
-    return organization;
-  }
-
-  public String getSource() {
-    return source;
-  }
-
-  public String getFinding() {
-    return finding;
-  }
-
-  public static Builder newBuilder() {
-    return new Builder();
-  }
-
-  public Builder toBuilder() {
-    return new Builder(this);
-  }
+  private volatile Map<String, String> fieldValuesMap;
 
   private FindingSecurityMarksName(Builder builder) {
     organization = Preconditions.checkNotNull(builder.getOrganization());
     source = Preconditions.checkNotNull(builder.getSource());
     finding = Preconditions.checkNotNull(builder.getFinding());
-  }
-
-  public static FindingSecurityMarksName of(String organization, String source, String finding) {
-    return newBuilder().setOrganization(organization).setSource(source).setFinding(finding).build();
-  }
-
-  public static String format(String organization, String source, String finding) {
-    return newBuilder()
-        .setOrganization(organization)
-        .setSource(source)
-        .setFinding(finding)
-        .build()
-        .toString();
   }
 
   public static FindingSecurityMarksName parse(String formattedString) {
@@ -83,7 +50,8 @@ public class FindingSecurityMarksName extends SecuritymarksName {
     Map<String, String> matchMap =
         PATH_TEMPLATE.validatedMatch(
             formattedString, "FindingSecurityMarksName.parse: formattedString not in valid format");
-    return of(matchMap.get("organization"), matchMap.get("source"), matchMap.get("finding"));
+    return (FindingSecurityMarksName) of(matchMap.get("organization"), matchMap.get("source"),
+        matchMap.get("finding"));
   }
 
   public static List<FindingSecurityMarksName> parseList(List<String> formattedStrings) {
@@ -108,6 +76,22 @@ public class FindingSecurityMarksName extends SecuritymarksName {
 
   public static boolean isParsableFrom(String formattedString) {
     return PATH_TEMPLATE.matches(formattedString);
+  }
+
+  public String getOrganization() {
+    return organization;
+  }
+
+  public String getSource() {
+    return source;
+  }
+
+  public String getFinding() {
+    return finding;
+  }
+
+  public Builder toBuilder() {
+    return new Builder(this);
   }
 
   public Map<String, String> getFieldValuesMap() {
@@ -135,53 +119,6 @@ public class FindingSecurityMarksName extends SecuritymarksName {
         "organization", organization, "source", source, "finding", finding);
   }
 
-  /** Builder for FindingSecurityMarksName. */
-  public static class Builder {
-
-    private String organization;
-    private String source;
-    private String finding;
-
-    public String getOrganization() {
-      return organization;
-    }
-
-    public String getSource() {
-      return source;
-    }
-
-    public String getFinding() {
-      return finding;
-    }
-
-    public Builder setOrganization(String organization) {
-      this.organization = organization;
-      return this;
-    }
-
-    public Builder setSource(String source) {
-      this.source = source;
-      return this;
-    }
-
-    public Builder setFinding(String finding) {
-      this.finding = finding;
-      return this;
-    }
-
-    private Builder() {}
-
-    private Builder(FindingSecurityMarksName findingSecurityMarksName) {
-      organization = findingSecurityMarksName.organization;
-      source = findingSecurityMarksName.source;
-      finding = findingSecurityMarksName.finding;
-    }
-
-    public FindingSecurityMarksName build() {
-      return new FindingSecurityMarksName(this);
-    }
-  }
-
   @Override
   public boolean equals(Object o) {
     if (o == this) {
@@ -206,5 +143,55 @@ public class FindingSecurityMarksName extends SecuritymarksName {
     h *= 1000003;
     h ^= finding.hashCode();
     return h;
+  }
+
+  /**
+   * Builder for FindingSecurityMarksName.
+   */
+  public static class Builder {
+
+    private String organization;
+    private String source;
+    private String finding;
+
+    private Builder() {
+    }
+
+    private Builder(FindingSecurityMarksName findingSecurityMarksName) {
+      organization = findingSecurityMarksName.organization;
+      source = findingSecurityMarksName.source;
+      finding = findingSecurityMarksName.finding;
+    }
+
+    public String getOrganization() {
+      return organization;
+    }
+
+    public Builder setOrganization(String organization) {
+      this.organization = organization;
+      return this;
+    }
+
+    public String getSource() {
+      return source;
+    }
+
+    public Builder setSource(String source) {
+      this.source = source;
+      return this;
+    }
+
+    public String getFinding() {
+      return finding;
+    }
+
+    public Builder setFinding(String finding) {
+      this.finding = finding;
+      return this;
+    }
+
+    public FindingSecurityMarksName build() {
+      return new FindingSecurityMarksName(this);
+    }
   }
 }
