@@ -44,5 +44,5 @@ final class DeleteNotificationConfigSnippets {
 
     return true;
   }
-// [END securitycenter_delete_notification_config]
 }
+// [END securitycenter_delete_notification_config]
