@@ -4,38 +4,38 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-securitycenter.git",
-        "sha": "574963527d22387443bcb3f38f968a88f3e26941"
+        "sha": "1d0e168521f2cd81f908be1b2e1eab9b3bf85ed1"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "8d73f9486fc193a150f6c907dfb9f49431aff3ff",
-        "internalRef": "332497859"
+        "sha": "af8f71dae961ee036a0ac52a1965270149a6b2c9",
+        "internalRef": "358516065"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "8d73f9486fc193a150f6c907dfb9f49431aff3ff",
-        "internalRef": "332497859"
+        "sha": "af8f71dae961ee036a0ac52a1965270149a6b2c9",
+        "internalRef": "358516065"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "8d73f9486fc193a150f6c907dfb9f49431aff3ff",
-        "internalRef": "332497859"
+        "sha": "af8f71dae961ee036a0ac52a1965270149a6b2c9",
+        "internalRef": "358516065"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "5d11bd2888c38ce1fb6fa6bf25494a4219a73928"
+        "sha": "6946fd71ae9215b0e7ae188f5057df765ee6d7d2"
       }
     }
   ],
@@ -83,7 +83,6 @@
     ".github/workflows/approve-readme.yaml",
     ".github/workflows/auto-release.yaml",
     ".github/workflows/ci.yaml",
-    ".github/workflows/formatting.yaml",
     ".github/workflows/samples.yaml",
     ".kokoro/build.bat",
     ".kokoro/build.sh",
@@ -94,7 +93,6 @@
     ".kokoro/continuous/java8.cfg",
     ".kokoro/continuous/readme.cfg",
     ".kokoro/dependencies.sh",
-    ".kokoro/linkage-monitor.sh",
     ".kokoro/nightly/common.cfg",
     ".kokoro/nightly/integration.cfg",
     ".kokoro/nightly/java11.cfg",
@@ -126,6 +124,8 @@
     ".kokoro/release/promote.sh",
     ".kokoro/release/publish_javadoc.cfg",
     ".kokoro/release/publish_javadoc.sh",
+    ".kokoro/release/publish_javadoc11.cfg",
+    ".kokoro/release/publish_javadoc11.sh",
     ".kokoro/release/snapshot.cfg",
     ".kokoro/release/snapshot.sh",
     ".kokoro/release/stage.cfg",
@@ -137,6 +137,7 @@
     "codecov.yaml",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1/SecurityCenterClient.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1/SecurityCenterSettings.java",
+    "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1/gapic_metadata.json",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1/package-info.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1/stub/GrpcSecurityCenterCallableFactory.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1/stub/GrpcSecurityCenterStub.java",
@@ -144,6 +145,7 @@
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1/stub/SecurityCenterStubSettings.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1beta1/SecurityCenterClient.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1beta1/SecurityCenterSettings.java",
+    "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1beta1/gapic_metadata.json",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1beta1/package-info.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1beta1/stub/GrpcSecurityCenterCallableFactory.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1beta1/stub/GrpcSecurityCenterStub.java",
@@ -151,6 +153,7 @@
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1beta1/stub/SecurityCenterStubSettings.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1p1beta1/SecurityCenterClient.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1p1beta1/SecurityCenterSettings.java",
+    "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1p1beta1/gapic_metadata.json",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1p1beta1/package-info.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1p1beta1/stub/GrpcSecurityCenterCallableFactory.java",
     "google-cloud-securitycenter/src/main/java/com/google/cloud/securitycenter/v1p1beta1/stub/GrpcSecurityCenterStub.java",

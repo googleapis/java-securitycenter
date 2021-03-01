@@ -1,5 +1,60 @@
 # Changelog
 
+### [1.3.8](https://www.github.com/googleapis/java-securitycenter/compare/v1.3.7...v1.3.8) (2021-02-25)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.0 ([#397](https://www.github.com/googleapis/java-securitycenter/issues/397)) ([9fa150d](https://www.github.com/googleapis/java-securitycenter/commit/9fa150d1d7901a681d5a2174e68334b80b941c6c))
+
+### [1.3.7](https://www.github.com/googleapis/java-securitycenter/compare/v1.3.6...v1.3.7) (2021-02-22)
+
+
+### Bug Fixes
+
+* deprecate files in v1beta1 that will be removed in next release ([#355](https://www.github.com/googleapis/java-securitycenter/issues/355)) ([aa91762](https://www.github.com/googleapis/java-securitycenter/commit/aa91762ced3587472ab00094105b2d0372fc508f))
+
+
+### Documentation
+
+* generate sample code in the Java microgenerator ([#371](https://www.github.com/googleapis/java-securitycenter/issues/371)) ([a81156a](https://www.github.com/googleapis/java-securitycenter/commit/a81156ad157694b6a206b65da5c6e9d15528219f))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.19.0 ([#382](https://www.github.com/googleapis/java-securitycenter/issues/382)) ([1d0e168](https://www.github.com/googleapis/java-securitycenter/commit/1d0e168521f2cd81f908be1b2e1eab9b3bf85ed1))
+
+### [1.3.6](https://www.github.com/googleapis/java-securitycenter/compare/v1.3.5...v1.3.6) (2021-02-05)
+
+
+### Bug Fixes
+
+* update repo name ([#368](https://www.github.com/googleapis/java-securitycenter/issues/368)) ([bde7a99](https://www.github.com/googleapis/java-securitycenter/commit/bde7a996396ce82833e0a380b7aec06e065617ea))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.18.0 ([#349](https://www.github.com/googleapis/java-securitycenter/issues/349)) ([6e6583f](https://www.github.com/googleapis/java-securitycenter/commit/6e6583f7a5788ba082257fe82b006988de3ec37b))
+
+### [1.3.5](https://www.github.com/googleapis/java-securitycenter/compare/v1.3.4...v1.3.5) (2020-12-16)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.17.0 ([#335](https://www.github.com/googleapis/java-securitycenter/issues/335)) ([27365c7](https://www.github.com/googleapis/java-securitycenter/commit/27365c713b3376ac66e16196decca679894f25ec))
+
+### [1.3.4](https://www.github.com/googleapis/java-securitycenter/compare/v1.3.3...v1.3.4) (2020-12-14)
+
+
+### Documentation
+
+* Wrap samples with future prefix ([#325](https://www.github.com/googleapis/java-securitycenter/issues/325)) ([3239d29](https://www.github.com/googleapis/java-securitycenter/commit/3239d29654eb7e09fb7a5a6393cbb57aa7a9a58f))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.1 ([#330](https://www.github.com/googleapis/java-securitycenter/issues/330)) ([5a253a6](https://www.github.com/googleapis/java-securitycenter/commit/5a253a60210cb28102e178ee16d543b77566caff))
+
 ### [1.3.3](https://www.github.com/googleapis/java-securitycenter/compare/v1.3.2...v1.3.3) (2020-12-02)
 
 
