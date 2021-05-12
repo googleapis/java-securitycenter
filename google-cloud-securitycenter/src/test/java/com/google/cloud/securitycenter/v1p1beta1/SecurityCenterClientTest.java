@@ -670,7 +670,7 @@ public class SecurityCenterClientTest {
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
-    ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
 
     Policy actualResponse = client.getIamPolicy(resource);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -692,7 +692,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addException(exception);
 
     try {
-      ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
       client.getIamPolicy(resource);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -1716,7 +1716,7 @@ public class SecurityCenterClientTest {
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
-    ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
     Policy policy = Policy.newBuilder().build();
 
     Policy actualResponse = client.setIamPolicy(resource, policy);
@@ -1740,7 +1740,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addException(exception);
 
     try {
-      ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
       Policy policy = Policy.newBuilder().build();
       client.setIamPolicy(resource, policy);
       Assert.fail("No exception raised");
@@ -1798,7 +1798,7 @@ public class SecurityCenterClientTest {
         TestIamPermissionsResponse.newBuilder().addAllPermissions(new ArrayList<String>()).build();
     mockSecurityCenter.addResponse(expectedResponse);
 
-    ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+    ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
     List<String> permissions = new ArrayList<>();
 
     TestIamPermissionsResponse actualResponse = client.testIamPermissions(resource, permissions);
@@ -1822,7 +1822,7 @@ public class SecurityCenterClientTest {
     mockSecurityCenter.addException(exception);
 
     try {
-      ResourceName resource = SourceName.of("[ORGANIZATION]", "[SOURCE]");
+      ResourceName resource = AssetName.of("[ORGANIZATION]", "[ASSET]");
       List<String> permissions = new ArrayList<>();
       client.testIamPermissions(resource, permissions);
       Assert.fail("No exception raised");
