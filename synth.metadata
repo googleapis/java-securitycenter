@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-securitycenter.git",
-        "sha": "c3db56c442ec17fc98924ccb9f938a7f3cb997c7"
+        "sha": "eb3a2f09798b63819ed4e244f6f4b93f5fcc3254"
       }
     },
     {
