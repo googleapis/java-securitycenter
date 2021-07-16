@@ -22,11 +22,6 @@ deep-remove-regex:
 
 deep-preserve-regex:
 - "/google-.*/src/test/java/com/google/cloud/.*/v.*/it/IT.*Test.java"
-- "/proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/UntypedSecuritymarksName.java"
-- "/proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecuritymarksNames.java"
-- "/proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/SecuritymarksName.java"
-- "/proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/FindingSecurityMarksName.java"
-- "/proto-google-cloud-securitycenter-v1beta1/src/main/java/com/google/cloud/securitycenter/v1beta1/AssetSecurityMarksName.java"
 
 deep-copy-regex:
 - source: "/google/cloud/securitycenter/(v.*)/.*-java/proto-google-.*/src"
