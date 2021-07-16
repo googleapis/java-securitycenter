@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.5](https://www.github.com/googleapis/java-securitycenter/compare/v1.6.4...v1.6.5) (2021-07-16)
+
+
+### Bug Fixes
+
+* Add shopt -s nullglob to dependencies script ([#556](https://www.github.com/googleapis/java-securitycenter/issues/556)) ([8014dd0](https://www.github.com/googleapis/java-securitycenter/commit/8014dd073e9d8ecc3cb589b9f4f3e8e740af7ae0))
+
 ### [1.6.4](https://www.github.com/googleapis/java-securitycenter/compare/v1.6.3...v1.6.4) (2021-07-06)
 
 
