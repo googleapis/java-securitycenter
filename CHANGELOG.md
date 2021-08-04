@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/googleapis/java-securitycenter/compare/v1.6.4...v1.7.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#585](https://www.github.com/googleapis/java-securitycenter/issues/585)) ([f572edb](https://www.github.com/googleapis/java-securitycenter/commit/f572edb04891d961bcfab4cba815b3d4b9bcae9e))
+
 ### [1.6.4](https://www.github.com/googleapis/java-securitycenter/compare/v1.6.3...v1.6.4) (2021-07-06)
 
 
