@@ -1,5 +1,44 @@
 # Changelog
 
+### [2.0.2](https://www.github.com/googleapis/java-securitycenter/compare/v2.0.1...v2.0.2) (2021-08-23)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.1.0 ([#608](https://www.github.com/googleapis/java-securitycenter/issues/608)) ([11c85ca](https://www.github.com/googleapis/java-securitycenter/commit/11c85ca746be5e9880b8149e1bea3a70f01f89b5))
+
+### [2.0.1](https://www.github.com/googleapis/java-securitycenter/compare/v2.0.0...v2.0.1) (2021-08-12)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-pubsub to v1.113.7 ([#597](https://www.github.com/googleapis/java-securitycenter/issues/597)) ([77ece06](https://www.github.com/googleapis/java-securitycenter/commit/77ece060e3bfc2d3728fb076420cc94f14654ce2))
+* update dependency com.google.cloud:google-cloud-pubsub to v1.114.0 ([#600](https://www.github.com/googleapis/java-securitycenter/issues/600)) ([2b89260](https://www.github.com/googleapis/java-securitycenter/commit/2b8926093e33fdc5180e688ae5ab63a0d136529d))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.0.1 ([#598](https://www.github.com/googleapis/java-securitycenter/issues/598)) ([3f52233](https://www.github.com/googleapis/java-securitycenter/commit/3f52233b1f5e458ad329436abc8c9e926fbf0aec))
+
+## [2.0.0](https://www.github.com/googleapis/java-securitycenter/compare/v1.6.4...v2.0.0) (2021-08-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* release gapic-generator-java v2.0.0 (#589)
+
+### Features
+
+* add finding_class and indicator fields in Finding ([#579](https://www.github.com/googleapis/java-securitycenter/issues/579)) ([6747a44](https://www.github.com/googleapis/java-securitycenter/commit/6747a44e5cbcc1ed1307b7b53d0553c6efcfcc1c))
+* release gapic-generator-java v2.0.0 ([#589](https://www.github.com/googleapis/java-securitycenter/issues/589)) ([38c3102](https://www.github.com/googleapis/java-securitycenter/commit/38c3102f2609375192445e9984afc15b0a51f0fa))
+
+
+### Bug Fixes
+
+* Add shopt -s nullglob to dependencies script ([#556](https://www.github.com/googleapis/java-securitycenter/issues/556)) ([8014dd0](https://www.github.com/googleapis/java-securitycenter/commit/8014dd073e9d8ecc3cb589b9f4f3e8e740af7ae0))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-pubsub to v1.113.6 ([#593](https://www.github.com/googleapis/java-securitycenter/issues/593)) ([849cb1c](https://www.github.com/googleapis/java-securitycenter/commit/849cb1c1718e492175aad707b879b394496b566c))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2 ([#590](https://www.github.com/googleapis/java-securitycenter/issues/590)) ([facfaae](https://www.github.com/googleapis/java-securitycenter/commit/facfaaefe07e00ca19513fc12a0817c31a74acad))
+
 ### [1.6.4](https://www.github.com/googleapis/java-securitycenter/compare/v1.6.3...v1.6.4) (2021-07-06)
 
 
