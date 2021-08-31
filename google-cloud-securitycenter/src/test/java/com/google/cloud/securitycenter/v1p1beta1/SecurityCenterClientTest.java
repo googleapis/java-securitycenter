@@ -688,7 +688,6 @@ public class SecurityCenterClientTest {
             .build();
     mockSecurityCenter.addResponse(expectedResponse);
 
-
     ResourceName resource = ProjectName.of("[PROJECT]");
 
     Policy actualResponse = client.getIamPolicy(resource);
@@ -2008,7 +2007,7 @@ public class SecurityCenterClientTest {
     TestIamPermissionsResponse expectedResponse =
         TestIamPermissionsResponse.newBuilder().addAllPermissions(new ArrayList<String>()).build();
     mockSecurityCenter.addResponse(expectedResponse);
-    
+
     ResourceName resource = ProjectName.of("[PROJECT]");
     List<String> permissions = new ArrayList<>();
 
