@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.0](github.com/googleapis/java-securitycenter/compare/v2.1.7...v2.2.0) (2021-10-19)
+
+
+### Features
+
+* feat: publish `routing.proto` containing the `google.api.RoutingRule` annotation feat: add Bazel rules wrapping `routing.proto` (#677)
+* feat: Added vulnerability field to the finding feat: Added type field to the resource which is surfaced in NotificationMessage (#676)
+* feat: add `google/api/routing.proto` (#658)
+
 ### [2.1.7](https://www.github.com/googleapis/java-securitycenter/compare/v2.1.6...v2.1.7) (2021-10-06)
 
 
