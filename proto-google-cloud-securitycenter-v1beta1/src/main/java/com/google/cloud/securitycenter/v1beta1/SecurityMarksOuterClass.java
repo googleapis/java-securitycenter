@@ -45,18 +45,16 @@ public final class SecurityMarksOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n"
-          + "8google/cloud/securitycenter/v1beta1/security_marks.proto\022#google.cloud.securit"
-          + "ycenter.v1beta1\032\031google/api/resource.proto\032\034google/api/annotations.proto\"\330\002\n\r"
+          + "8google/cloud/securitycenter/v1beta1/security_marks.proto\022#google.cloud.securitycenter.v1beta1\032\031google/api/resource.proto\032\034google/api/annotations.proto\"\330\002\n\r"
           + "SecurityMarks\022\014\n"
           + "\004name\030\001 \001(\t\022L\n"
-          + "\005marks\030\002 \003(\0132"
-          + "=.google.cloud.securitycenter.v1beta1.SecurityMarks.MarksEntry\032,\n\n"
+          + "\005marks\030\002"
+          + " \003(\0132=.google.cloud.securitycenter.v1beta1.SecurityMarks.MarksEntry\032,\n\n"
           + "MarksEntry\022\013\n"
           + "\003key\030\001 \001(\t\022\r\n"
           + "\005value\030\002 \001(\t:\0028\001:\274\001\352A\270\001\n"
           + "+securitycenter.googleapis.com/SecurityMarks"
-          + "\0229organizations/{organization}/assets/{asset}/securityMarks\022Norganizations/{orga"
-          + "nization}/sources/{source}/findings/{finding}/securityMarksB~\n"
+          + "\0229organizations/{organization}/assets/{asset}/securityMarks\022Norganizations/{organization}/sources/{source}/findings/{finding}/securityMarksB~\n"
           + "\'com.google.cloud.securitycenter.v1beta1P\001ZQgoogle.golang."
           + "org/genproto/googleapis/cloud/securitycenter/v1beta1;securitycenterb\006proto3"
     };
