@@ -53,8 +53,7 @@ public final class SecurityMarksOuterClass {
           + "MarksEntry\022\013\n"
           + "\003key\030\001 \001(\t\022\r\n"
           + "\005value\030\002 \001(\t:\0028\001:\274\001\352A\270\001\n"
-          + "+securitycenter.googleapis.com/SecurityMarks"
-          + "\0229organizations/{organization}/assets/{asset}/securityMarks\022Norganizations/{organization}/sources/{source}/findings/{finding}/securityMarksB~\n"
+          + "+securitycenter.googleapis.com/SecurityMarks\0229organizations/{organization}/assets/{asset}/securityMarks\022Norganizations/{organization}/sources/{source}/findings/{finding}/securityMarksB~\n"
           + "\'com.google.cloud.securitycenter.v1beta1P\001ZQgoogle.golang."
           + "org/genproto/googleapis/cloud/securitycenter/v1beta1;securitycenterb\006proto3"
     };
