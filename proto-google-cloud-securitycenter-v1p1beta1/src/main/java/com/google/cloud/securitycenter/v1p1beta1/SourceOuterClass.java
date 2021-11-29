@@ -40,23 +40,21 @@ public final class SourceOuterClass {
 
   static {
     java.lang.String[] descriptorData = {
-      "\n2google/cloud/securitycenter/v1p1beta1/"
-          + "source.proto\022%google.cloud.securitycente"
-          + "r.v1p1beta1\032\031google/api/resource.proto\032\034"
-          + "google/api/annotations.proto\"\375\001\n\006Source\022"
-          + "\014\n\004name\030\001 \001(\t\022\024\n\014display_name\030\002 \001(\t\022\023\n\013d"
-          + "escription\030\003 \001(\t\022\026\n\016canonical_name\030\016 \001(\t"
-          + ":\241\001\352A\235\001\n$securitycenter.googleapis.com/S"
-          + "ource\022-organizations/{organization}/sour"
+      "\n"
+          + "2google/cloud/securitycenter/v1p1beta1/source.proto\022%google.cloud.securitycente"
+          + "r.v1p1beta1\032\031google/api/resource.proto\032\034google/api/annotations.proto\"\375\001\n"
+          + "\006Source\022\014\n"
+          + "\004name\030\001 \001(\t\022\024\n"
+          + "\014display_name\030\002 \001(\t\022\023\n"
+          + "\013description\030\003 \001(\t\022\026\n"
+          + "\016canonical_name\030\016 \001(\t:\241\001\352A\235\001\n"
+          + "$securitycenter.googleapis.com/Source\022-organizations/{organization}/sour"
           + "ces/{source}\022!folders/{folder}/sources/{"
-          + "source}\022#projects/{project}/sources/{sou"
-          + "rce}B\375\001\n)com.google.cloud.securitycenter"
-          + ".v1p1beta1P\001ZSgoogle.golang.org/genproto"
-          + "/googleapis/cloud/securitycenter/v1p1bet"
-          + "a1;securitycenter\252\002%Google.Cloud.Securit"
+          + "source}\022#projects/{project}/sources/{source}B\375\001\n"
+          + ")com.google.cloud.securitycenter.v1p1beta1P\001ZSgoogle.golang.org/genproto"
+          + "/googleapis/cloud/securitycenter/v1p1beta1;securitycenter\252\002%Google.Cloud.Securit"
           + "yCenter.V1P1Beta1\312\002%Google\\Cloud\\Securit"
-          + "yCenter\\V1p1beta1\352\002(Google::Cloud::Secur"
-          + "ityCenter::V1p1beta1b\006proto3"
+          + "yCenter\\V1p1beta1\352\002(Google::Cloud::SecurityCenter::V1p1beta1b\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
