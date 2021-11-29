@@ -46,8 +46,7 @@ public final class FindingOuterClass {
     java.lang.String[] descriptorData = {
       "\n"
           + "3google/cloud/securitycenter/v1p1beta1/finding.proto\022%google.cloud.securitycent"
-          + "er.v1p1beta1\032\037google/api/field_behavior."
-          + "proto\032\031google/api/resource.proto\032:google/cloud/securitycenter/v1p1beta1/security_marks.proto\032\034google/protobuf/struct.proto\032\037google/protobuf/timestamp.proto\032\034google/api/annotations.proto\"\337\007\n"
+          + "er.v1p1beta1\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032:google/cloud/securitycenter/v1p1beta1/security_marks.proto\032\034google/protobuf/struct.proto\032\037google/protobuf/timestamp.proto\032\034google/api/annotations.proto\"\337\007\n"
           + "\007Finding\022\014\n"
           + "\004name\030\001 \001(\t\022\016\n"
           + "\006parent\030\002 \001(\t\022\025\n\r"
