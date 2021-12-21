@@ -24,7 +24,7 @@ import com.google.cloud.securitycenter.v1.UpdateMuteConfigRequest;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 
-public class UpdateMuteConfig {
+public class UpdateMuteRule {
 
   public static void main(String[] args) throws IOException {
     // Specify the name of the mute config to delete.
@@ -34,12 +34,12 @@ public class UpdateMuteConfig {
     // projects/{project}/muteConfigs/{config_id}
     // TODO: Replace the variables within {}
     String muteConfigName = "{any-one-of-the-above-formats}";
-    updateMuteConfig(muteConfigName);
+    updateMuteRule(muteConfigName);
   }
 
   // Updates an existing mute configuration.
-  // The following can be updated in a mute config: description, and filter.
-  public static void updateMuteConfig(String muteConfigName) throws IOException {
+  // The following can be updated in a mute config: description, and filter/ mute rule.
+  public static void updateMuteRule(String muteConfigName) throws IOException {
     try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
 
       MuteConfig updateMuteConfig = MuteConfig.newBuilder()

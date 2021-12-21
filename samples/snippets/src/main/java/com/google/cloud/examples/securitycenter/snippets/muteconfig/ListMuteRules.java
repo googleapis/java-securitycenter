@@ -23,7 +23,7 @@ import com.google.cloud.securitycenter.v1.MuteConfig;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
 
-public class ListMuteConfigs {
+public class ListMuteRules {
 
   public static void main(String[] args) throws IOException {
     // Use any one of the following three resource paths to list mute configurations.
@@ -32,14 +32,14 @@ public class ListMuteConfigs {
     // "projects/{project_id}"
     // TODO: Replace variables enclosed within {}
     String parent = "projects/{project_id}";
-    listMuteConfigs(parent);
+    listMuteRules(parent);
   }
 
   // Listing mute configs at organization level will give all the configs
   // at org, folder and project levels.
   // Similarly, listing configs at folder level will list all the configs
   // at folder + projects (within that folder) level.
-  public static void listMuteConfigs(String parent) throws IOException {
+  public static void listMuteRules(String parent) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       ListMuteConfigsRequest listMuteConfigsRequest = ListMuteConfigsRequest.newBuilder()

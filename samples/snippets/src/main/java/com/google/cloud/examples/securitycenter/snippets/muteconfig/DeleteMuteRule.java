@@ -16,17 +16,16 @@
 
 package com.google.cloud.examples.securitycenter.snippets.muteconfig;
 
-// [START securitycenter_get_mute_config]
+// [START securitycenter_delete_mute_config]
 
-import com.google.cloud.securitycenter.v1.MuteConfig;
 import com.google.cloud.securitycenter.v1.MuteConfigName;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
 
-public class GetMuteConfig {
+public class DeleteMuteRule {
 
   public static void main(String[] args) throws IOException {
-    // Name of the mute config to retrieve.
+    // Specify the name of the mute config to delete.
     // Its format is:
     // organizations/{organization}/muteConfigs/{config_id} or
     // folders/{folder}/muteConfigs/{config_id} or
@@ -34,19 +33,19 @@ public class GetMuteConfig {
     // TODO: Replace the variables within {}
     String muteConfigName = "{any-one-of-the-above-formats}";
 
-    getMuteConfig(muteConfigName);
+    deleteMuteRule(muteConfigName);
   }
 
-  // Retrieves mute configuration given its resource name.
-  public static void getMuteConfig(String muteConfigName) throws IOException {
+  // Deletes a mute configuration given its resource name.
+  // Note: Already muted findings are not affected when a mute config is deleted.
+  public static void deleteMuteRule(String muteConfigName) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      MuteConfig muteConfig = client.getMuteConfig(MuteConfigName.newBuilder()
+      client.deleteMuteConfig(MuteConfigName.newBuilder()
           .setMuteConfig(muteConfigName).build());
 
-      System.out.println("Retrieved the mute config: Description: " + muteConfig.getDescription());
+      System.out.println("Mute Config Rule deleted successfully: " + muteConfigName);
     }
   }
-
 }
-// [END securitycenter_get_mute_config]
+// [END securitycenter_delete_mute_config]
