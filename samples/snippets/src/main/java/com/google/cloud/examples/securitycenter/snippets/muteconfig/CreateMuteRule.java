@@ -22,45 +22,46 @@ import com.google.cloud.securitycenter.v1.CreateMuteConfigRequest;
 import com.google.cloud.securitycenter.v1.MuteConfig;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
+import java.util.UUID;
 
-public class CreateMuteConfig {
+public class CreateMuteRule {
 
   public static void main(String[] args) throws IOException {
-    // Use any one of the following three options as a parent to create mute config:
-    // organizations/{organization}/muteConfigs/{config_id} or
-    // folders/{folder}/muteConfigs/{config_id} or
-    // projects/{project}/muteConfigs/{config_id}
+    // parentPath: use any one of the following three options,
+    //    organizations/{organization} or
+    //    folders/{folder} or
+    //    projects/{project}
     // TODO: Replace the variables within {}
     String parentPath = "{parent_path}";
-    String projectId = "projects/{project_id}";
-    createMuteConfig(parentPath, projectId);
+    createMuteRule(parentPath);
   }
 
   // Creates a mute configuration under a given scope that will mute
-  // all new finding creates/updates which match the filter.
+  // all new finding which match the filter/ mute rule.
   // Existing findings will NOT BE muted.
-  public static void createMuteConfig(String parentPath, String projectId) throws IOException {
+  public static void createMuteRule(String parentPath) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
+
+      MuteConfig muteConfig = MuteConfig.newBuilder()
+          .setDescription("Mute low-medium IAM grants excluding 'compute' ")
+          // Set mute rule(s).
+          // To construct mute rules and for supported properties, see:
+          // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#console_3
+          .setFilter(
+              "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
+                  + "category=\"Persistence: IAM Anomalous Grant\" AND "
+                  + "-resource.type:\"compute\"")
+          .build();
 
       CreateMuteConfigRequest request = CreateMuteConfigRequest.newBuilder()
           .setParent(parentPath)
-          .setMuteConfig(MuteConfig.newBuilder()
-              .setDescription("Mute low-medium IAM grants excluding 'compute' ")
-              // Set SQL config rule.
-              // For all supported properties for mute rules, see:
-              // https://cloud.google.com/security-command-center/docs/how-to-mute-findings?hl=en#supported_properties
-              .setFilter(String.format(
-                  "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
-                      + "category=\"Persistence: IAM Anomalous Grant\" AND "
-                      + "resource.project_display_name=\"%s\" AND "
-                      + "-resource.type:\"compute\"",
-                  projectId))
-              .build()).build();
+          // Set a random id; max of 63 chars.
+          .setMuteConfigId("random-mute-id-" + UUID.randomUUID())
+          .setMuteConfig(muteConfig).build();
 
       MuteConfig response = client.createMuteConfig(request);
       System.out.println("Mute Config Rule created successfully: " + response.getName());
     }
   }
-
 }
 // [END securitycenter_create_mute_config]
