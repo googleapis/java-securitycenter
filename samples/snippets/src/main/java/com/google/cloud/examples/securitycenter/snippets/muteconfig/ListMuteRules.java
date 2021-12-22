@@ -42,8 +42,8 @@ public class ListMuteRules {
   public static void listMuteRules(String parent) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      ListMuteConfigsRequest listMuteConfigsRequest = ListMuteConfigsRequest.newBuilder()
-          .setParent(parent).build();
+      ListMuteConfigsRequest listMuteConfigsRequest =
+          ListMuteConfigsRequest.newBuilder().setParent(parent).build();
 
       // List all Mute Configs present in the resource.
       for (MuteConfig muteConfig : client.listMuteConfigs(listMuteConfigsRequest).iterateAll()) {

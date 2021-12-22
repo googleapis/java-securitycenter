@@ -43,22 +43,25 @@ public class CreateMuteRule {
   public static void createMuteRule(String parentPath, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      MuteConfig muteConfig = MuteConfig.newBuilder()
-          .setDescription("Mute low-medium IAM grants excluding 'compute' ")
-          // Set mute rule(s).
-          // To construct mute rules and for supported properties, see:
-          // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#console_3
-          .setFilter(
-              "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
-                  + "category=\"Persistence: IAM Anomalous Grant\" AND "
-                  + "-resource.type:\"compute\"")
-          .build();
+      MuteConfig muteConfig =
+          MuteConfig.newBuilder()
+              .setDescription("Mute low-medium IAM grants excluding 'compute' ")
+              // Set mute rule(s).
+              // To construct mute rules and for supported properties, see:
+              // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#console_3
+              .setFilter(
+                  "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
+                      + "category=\"Persistence: IAM Anomalous Grant\" AND "
+                      + "-resource.type:\"compute\"")
+              .build();
 
-      CreateMuteConfigRequest request = CreateMuteConfigRequest.newBuilder()
-          .setParent(parentPath)
-          // Set a random id; max of 63 chars.
-          .setMuteConfigId(muteConfigId)
-          .setMuteConfig(muteConfig).build();
+      CreateMuteConfigRequest request =
+          CreateMuteConfigRequest.newBuilder()
+              .setParent(parentPath)
+              // Set a random id; max of 63 chars.
+              .setMuteConfigId(muteConfigId)
+              .setMuteConfig(muteConfig)
+              .build();
 
       MuteConfig response = client.createMuteConfig(request);
       System.out.println("Mute Config Rule created successfully: " + response.getName());

@@ -41,8 +41,7 @@ public class DeleteMuteRule {
   public static void deleteMuteRule(String muteConfigName) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      client.deleteMuteConfig(MuteConfigName.newBuilder()
-          .setMuteConfig(muteConfigName).build());
+      client.deleteMuteConfig(MuteConfigName.newBuilder().setMuteConfig(muteConfigName).build());
 
       System.out.println("Mute Config Rule deleted successfully: " + muteConfigName);
     }

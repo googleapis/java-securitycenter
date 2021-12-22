@@ -40,12 +40,11 @@ public class GetMuteRule {
   public static void getMuteRule(String muteConfigName) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      MuteConfig muteConfig = client.getMuteConfig(MuteConfigName.newBuilder()
-          .setMuteConfig(muteConfigName).build());
+      MuteConfig muteConfig =
+          client.getMuteConfig(MuteConfigName.newBuilder().setMuteConfig(muteConfigName).build());
 
       System.out.println("Retrieved the mute config: " + muteConfig);
     }
   }
-
 }
 // [END securitycenter_get_mute_config]

@@ -42,24 +42,27 @@ public class UpdateMuteRule {
   public static void updateMuteRule(String muteConfigName) throws IOException {
     try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
 
-      MuteConfig updateMuteConfig = MuteConfig.newBuilder()
-          .setName(muteConfigName)
-          .setDescription("Updated mute config description").build();
+      MuteConfig updateMuteConfig =
+          MuteConfig.newBuilder()
+              .setName(muteConfigName)
+              .setDescription("Updated mute config description")
+              .build();
 
-      UpdateMuteConfigRequest updateMuteConfigRequest = UpdateMuteConfigRequest.newBuilder()
-          .setMuteConfig(updateMuteConfig)
-          // Set the update mask to specify which properties of the Mute Config should be updated.
-          // If empty all mutable fields will be updated.
-          // Make sure that the mask fields match the properties changed in 'updateMuteConfig'.
-          // For more info on constructing update mask path, see the proto or:
-          // https://cloud.google.com/security-command-center/docs/reference/rest/v1/folders.muteConfigs/patch?hl=en#query-parameters
-          .setUpdateMask(FieldMask.newBuilder().addPaths("mute_config.description").build())
-          .build();
+      UpdateMuteConfigRequest updateMuteConfigRequest =
+          UpdateMuteConfigRequest.newBuilder()
+              .setMuteConfig(updateMuteConfig)
+              // Set the update mask to specify which properties of the Mute Config should be
+              // updated.
+              // If empty all mutable fields will be updated.
+              // Make sure that the mask fields match the properties changed in 'updateMuteConfig'.
+              // For more info on constructing update mask path, see the proto or:
+              // https://cloud.google.com/security-command-center/docs/reference/rest/v1/folders.muteConfigs/patch?hl=en#query-parameters
+              .setUpdateMask(FieldMask.newBuilder().addPaths("mute_config.description").build())
+              .build();
 
       MuteConfig response = securityCenterClient.updateMuteConfig(updateMuteConfigRequest);
       System.out.println(response);
     }
   }
-
 }
 // [END securitycenter_update_mute_config]
