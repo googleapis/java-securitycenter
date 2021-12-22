@@ -43,7 +43,7 @@ public class GetMuteRule {
       MuteConfig muteConfig = client.getMuteConfig(MuteConfigName.newBuilder()
           .setMuteConfig(muteConfigName).build());
 
-      System.out.println("Retrieved the mute config: Description: " + muteConfig.getDescription());
+      System.out.println("Retrieved the mute config: " + muteConfig);
     }
   }
 

@@ -33,13 +33,14 @@ public class CreateMuteRule {
     //    projects/{project}
     // TODO: Replace the variables within {}
     String parentPath = "{parent_path}";
-    createMuteRule(parentPath);
+    String muteConfigId = "random-mute-id-" + UUID.randomUUID();
+    createMuteRule(parentPath, muteConfigId);
   }
 
   // Creates a mute configuration under a given scope that will mute
   // all new finding which match the filter/ mute rule.
   // Existing findings will NOT BE muted.
-  public static void createMuteRule(String parentPath) throws IOException {
+  public static void createMuteRule(String parentPath, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       MuteConfig muteConfig = MuteConfig.newBuilder()
@@ -56,7 +57,7 @@ public class CreateMuteRule {
       CreateMuteConfigRequest request = CreateMuteConfigRequest.newBuilder()
           .setParent(parentPath)
           // Set a random id; max of 63 chars.
-          .setMuteConfigId("random-mute-id-" + UUID.randomUUID())
+          .setMuteConfigId(muteConfigId)
           .setMuteConfig(muteConfig).build();
 
       MuteConfig response = client.createMuteConfig(request);
