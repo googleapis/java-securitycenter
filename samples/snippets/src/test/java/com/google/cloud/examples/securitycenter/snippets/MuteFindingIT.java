@@ -94,7 +94,7 @@ public class MuteFindingIT {
 
   @AfterClass
   public static void cleanUp() throws IOException {
-    PrintStream out = System.out;
+    final PrintStream out = System.out;
     stdOut = new ByteArrayOutputStream();
     System.setOut(new PrintStream(stdOut));
     DeleteMuteRule.deleteMuteRule(PROJECT_ID, MUTE_RULE_CREATE);
