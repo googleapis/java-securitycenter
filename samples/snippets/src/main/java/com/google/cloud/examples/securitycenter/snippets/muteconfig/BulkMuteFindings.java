@@ -46,15 +46,16 @@ public class BulkMuteFindings {
       throws IOException, ExecutionException, InterruptedException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      BulkMuteFindingsRequest bulkMuteFindingsRequest = BulkMuteFindingsRequest.newBuilder()
-          .setParent(parentPath)
-          // To create mute rules, see:
-          // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#create_mute_rules
-          .setFilter(muteRule)
-          .build();
+      BulkMuteFindingsRequest bulkMuteFindingsRequest =
+          BulkMuteFindingsRequest.newBuilder()
+              .setParent(parentPath)
+              // To create mute rules, see:
+              // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#create_mute_rules
+              .setFilter(muteRule)
+              .build();
 
-      BulkMuteFindingsResponse response = client.bulkMuteFindingsAsync(bulkMuteFindingsRequest)
-          .get();
+      BulkMuteFindingsResponse response =
+          client.bulkMuteFindingsAsync(bulkMuteFindingsRequest).get();
       System.out.println("Bulk mute findings completed successfully ! " + response);
     }
   }
