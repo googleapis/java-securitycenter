@@ -40,12 +40,11 @@ public class GetMuteRule {
       // (org -> MuteConfigName.ofOrganizationMuteConfigName()
       // folder -> MuteConfigName.ofFolderMuteConfigName()
       // project -> MuteConfigName.ofProjectMuteConfigName)
-      MuteConfig muteConfig = client.getMuteConfig(
-          MuteConfigName.ofProjectMuteConfigName(projectId, muteConfigId));
+      MuteConfig muteConfig =
+          client.getMuteConfig(MuteConfigName.ofProjectMuteConfigName(projectId, muteConfigId));
 
       System.out.println("Retrieved the mute config: " + muteConfig);
     }
   }
-
 }
 // [END securitycenter_get_mute_config]

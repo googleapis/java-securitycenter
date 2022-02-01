@@ -73,7 +73,8 @@ public class MuteFindingIT {
   // Check if the required environment variables are set.
   public static void requireEnvVar(String envVarName) {
     assertWithMessage(String.format("Missing environment variable '%s' ", envVarName))
-        .that(System.getenv(envVarName)).isNotEmpty();
+        .that(System.getenv(envVarName))
+        .isNotEmpty();
   }
 
   @BeforeClass
@@ -106,13 +107,17 @@ public class MuteFindingIT {
   public static Source createSource(String organizationId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      Source source = Source.newBuilder()
-          .setDisplayName("Custom display name")
-          .setDescription("A source that does X").build();
+      Source source =
+          Source.newBuilder()
+              .setDisplayName("Custom display name")
+              .setDescription("A source that does X")
+              .build();
 
-      CreateSourceRequest createSourceRequest = CreateSourceRequest.newBuilder()
-          .setParent(String.format("organizations/%s", organizationId))
-          .setSource(source).build();
+      CreateSourceRequest createSourceRequest =
+          CreateSourceRequest.newBuilder()
+              .setParent(String.format("organizations/%s", organizationId))
+              .setSource(source)
+              .build();
 
       Source response = client.createSource(createSourceRequest);
       System.out.println("Created source : " + response.getName());
@@ -157,8 +162,7 @@ public class MuteFindingIT {
   public static ListFindingsPagedResponse getAllFindings(String sourceName) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      ListFindingsRequest request = ListFindingsRequest.newBuilder()
-          .setParent(sourceName).build();
+      ListFindingsRequest request = ListFindingsRequest.newBuilder().setParent(sourceName).build();
 
       return client.listFindings(request);
     }
@@ -215,15 +219,16 @@ public class MuteFindingIT {
   @Test
   public void testBulkMuteFindings() throws IOException, ExecutionException, InterruptedException {
     // Mute findings that belong to this project.
-    BulkMuteFindings.bulkMute(String.format("projects/%s", PROJECT_ID),
+    BulkMuteFindings.bulkMute(
+        String.format("projects/%s", PROJECT_ID),
         String.format("resource.project_display_name=\"%s\"", PROJECT_ID));
 
     // Get all findings in the source to check if they are muted.
-    ListFindingsPagedResponse response = getAllFindings(
-        String.format("projects/%s/sources/%s", PROJECT_ID, SOURCE.getName().split("/")[3]));
+    ListFindingsPagedResponse response =
+        getAllFindings(
+            String.format("projects/%s/sources/%s", PROJECT_ID, SOURCE.getName().split("/")[3]));
     for (ListFindingsResult finding : response.iterateAll()) {
       Assert.assertEquals(finding.getFinding().getMute(), Mute.MUTED);
     }
   }
-
 }
