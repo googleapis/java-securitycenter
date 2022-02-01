@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,8 @@ public class UpdateMuteRule {
 
       MuteConfig updateMuteConfig = MuteConfig.newBuilder()
           .setName(muteConfigName)
-          .setDescription("Updated mute config description").build();
+          .setDescription("Updated mute config description")
+          .build();
 
       UpdateMuteConfigRequest updateMuteConfigRequest = UpdateMuteConfigRequest.newBuilder()
           .setMuteConfig(updateMuteConfig)
@@ -53,7 +54,10 @@ public class UpdateMuteRule {
           // Make sure that the mask fields match the properties changed in 'updateMuteConfig'.
           // For more info on constructing update mask path, see the proto or:
           // https://cloud.google.com/security-command-center/docs/reference/rest/v1/folders.muteConfigs/patch?hl=en#query-parameters
-          .setUpdateMask(FieldMask.newBuilder().addPaths("mute_config.description").build())
+          .setUpdateMask(
+              FieldMask.newBuilder()
+                  .addPaths("description")
+                  .build())
           .build();
 
       MuteConfig response = securityCenterClient.updateMuteConfig(updateMuteConfigRequest);

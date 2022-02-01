@@ -46,7 +46,8 @@ public class SetMuteUnmuteFinding {
 
       SetMuteRequest setMuteRequest = SetMuteRequest.newBuilder()
           .setName(findingPath)
-          .setMute(Mute.MUTED).build();
+          .setMute(Mute.MUTED)
+          .build();
 
       Finding finding = client.setMute(setMuteRequest);
       System.out.println("Mute value for the finding: " + finding.getMute());

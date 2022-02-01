@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,26 +25,24 @@ import java.io.IOException;
 public class DeleteMuteRule {
 
   public static void main(String[] args) throws IOException {
-    // Specify the name of the mute config to delete.
-    // Its format is:
-    // organizations/{organization}/muteConfigs/{config_id} or
-    // folders/{folder}/muteConfigs/{config_id} or
-    // projects/{project}/muteConfigs/{config_id}
-    // TODO: Replace the variables within {}
-    String muteConfigName = "{any-one-of-the-above-formats}";
-
-    deleteMuteRule(muteConfigName);
+    // muteConfigId: Specify the name of the mute config to delete.
+    // TODO(Developer): Replace the below variables
+    String parentPath = "{project-id | folder | organization}";
+    String muteConfigId = "{any-one-of-the-above-formats}";
+    deleteMuteRule(parentPath, muteConfigId);
   }
 
   // Deletes a mute configuration given its resource name.
   // Note: Already muted findings are not affected when a mute config is deleted.
-  public static void deleteMuteRule(String muteConfigName) throws IOException {
+  public static void deleteMuteRule(String projectId, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
+      // Use appropriate MuteConfigName methods depending upon the type of parent.
+      // (org -> MuteConfigName.ofOrganizationMuteConfigName()
+      // folder -> MuteConfigName.ofFolderMuteConfigName()
+      // project -> MuteConfigName.ofProjectMuteConfigName)
+      client.deleteMuteConfig(MuteConfigName.ofProjectMuteConfigName(projectId, muteConfigId));
 
-      client.deleteMuteConfig(MuteConfigName.newBuilder()
-          .setMuteConfig(muteConfigName).build());
-
-      System.out.println("Mute Config Rule deleted successfully: " + muteConfigName);
+      System.out.println("Mute Config Rule deleted successfully: " + muteConfigId);
     }
   }
 }

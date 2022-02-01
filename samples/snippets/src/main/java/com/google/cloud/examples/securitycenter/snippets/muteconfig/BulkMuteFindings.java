@@ -50,7 +50,8 @@ public class BulkMuteFindings {
           .setParent(parentPath)
           // To create mute rules, see:
           // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#create_mute_rules
-          .setFilter(muteRule).build();
+          .setFilter(muteRule)
+          .build();
 
       BulkMuteFindingsResponse response = client.bulkMuteFindingsAsync(bulkMuteFindingsRequest)
           .get();

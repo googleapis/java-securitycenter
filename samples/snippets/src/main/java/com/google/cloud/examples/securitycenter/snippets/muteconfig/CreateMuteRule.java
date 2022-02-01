@@ -58,7 +58,8 @@ public class CreateMuteRule {
           .setParent(parentPath)
           // Set a random id; max of 63 chars.
           .setMuteConfigId(muteConfigId)
-          .setMuteConfig(muteConfig).build();
+          .setMuteConfig(muteConfig)
+          .build();
 
       MuteConfig response = client.createMuteConfig(request);
       System.out.println("Mute Config Rule created successfully: " + response.getName());
