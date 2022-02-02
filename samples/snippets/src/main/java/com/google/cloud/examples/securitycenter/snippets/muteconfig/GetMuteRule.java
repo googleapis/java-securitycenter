@@ -33,7 +33,7 @@ public class GetMuteRule {
     getMuteRule(parentPath, muteConfigId);
   }
 
-  // Retrieves mute configuration given its resource name.
+  // Retrieves a mute configuration given its resource name.
   public static void getMuteRule(String projectId, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
       // Use appropriate MuteConfigName methods depending upon the type of parent.

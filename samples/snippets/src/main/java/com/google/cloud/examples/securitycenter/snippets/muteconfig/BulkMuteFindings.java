@@ -28,10 +28,10 @@ public class BulkMuteFindings {
 
   public static void main(String[] args)
       throws IOException, ExecutionException, InterruptedException {
-    // parentPath: use any one of the following three options
-    //    organizations/{organization} or
-    //    folders/{folder} or
-    //    projects/{project}
+    // parentPath: use any one of the following options:
+    //             - organizations/{organization_id}
+    //             - folders/{folder_id}
+    //             - projects/{project_id}
     // muteRule: Expression that identifies findings that should be updated.
     // TODO: Replace the variables within {}
     String parentPath = "{parent_path}";
@@ -39,8 +39,8 @@ public class BulkMuteFindings {
     bulkMute(parentPath, muteRule);
   }
 
-  // Kicks off an LRO (Long-Running-Operation) to bulk mute findings for a parent based on a filter.
-  // The parent can be either an organization, folder or project. The findings
+  // Kicks off a long-running operation (LRO) to bulk mute findings for a parent based on a filter.
+  // The parent can be either an organization, folder, or project. The findings
   // matched by the filter will be muted after the LRO is done.
   public static void bulkMute(String parentPath, String muteRule)
       throws IOException, ExecutionException, InterruptedException {
@@ -56,7 +56,7 @@ public class BulkMuteFindings {
 
       BulkMuteFindingsResponse response =
           client.bulkMuteFindingsAsync(bulkMuteFindingsRequest).get();
-      System.out.println("Bulk mute findings completed successfully ! " + response);
+      System.out.println("Bulk mute findings completed successfully! " + response);
     }
   }
 }

@@ -26,19 +26,19 @@ import java.io.IOException;
 public class ListMuteRules {
 
   public static void main(String[] args) throws IOException {
-    // Use any one of the following three resource paths to list mute configurations.
-    // "organizations/{organization_id}" or
-    // "folders/{folder_id}" or
-    // "projects/{project_id}"
+    // parent: Use any one of the following resource paths to list mute configurations:
+    //         - organizations/{organization_id}
+    //         - folders/{folder_id}
+    //         - projects/{project_id}
     // TODO: Replace variables enclosed within {}
     String parent = "projects/{project_id}";
     listMuteRules(parent);
   }
 
-  // Listing mute configs at organization level will give all the configs
-  // at org, folder and project levels.
+  // Listing mute configs at organization level will return all the configs
+  // at the org, folder and project levels.
   // Similarly, listing configs at folder level will list all the configs
-  // at folder + projects (within that folder) level.
+  // at the folder and project levels.
   public static void listMuteRules(String parent) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 

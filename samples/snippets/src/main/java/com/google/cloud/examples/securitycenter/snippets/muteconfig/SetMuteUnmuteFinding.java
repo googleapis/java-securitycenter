@@ -29,18 +29,19 @@ public class SetMuteUnmuteFinding {
   public static void main(String[] args) throws IOException {
     // findingPath: The relative resource name of the finding. See:
     // https://cloud.google.com/apis/design/resource_names#relative_resource_name
-    // Example:
-    //  "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}",
-    //  "folders/{folder_id}/sources/{source_id}/finding/{finding_id}",
-    //  "projects/{project_id}/sources/{source_id}/finding/{finding_id}".
+    // Use any one of the following formats:
+    //  - organizations/{organization_id}/sources/{source_id}/finding/{finding_id}
+    //  - folders/{folder_id}/sources/{source_id}/finding/{finding_id}
+    //  - projects/{project_id}/sources/{source_id}/finding/{finding_id}
     // TODO: Replace the variables within {}
     String findingPath = "{path-to-the-finding}";
     setMute(findingPath);
   }
 
   // Mute/unmute an individual finding.
-  // If a finding is already muted, muting it again (or vice versa) is a no-op.
-  // Various mute states are: MUTE_UNSPECIFIED/ MUTE/ UNMUTE.
+  // If a finding is already muted, muting it again has no effect.
+  // Similarly, unmuting a finding that isn't muted has no effect.
+  // Various mute states are: MUTE_UNSPECIFIED/MUTE/UNMUTE.
   public static void setMute(String findingPath) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 

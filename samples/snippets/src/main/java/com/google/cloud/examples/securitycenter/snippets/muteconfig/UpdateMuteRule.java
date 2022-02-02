@@ -28,10 +28,10 @@ public class UpdateMuteRule {
 
   public static void main(String[] args) throws IOException {
     // Specify the name of the mute config to delete.
-    // Its format is:
-    // organizations/{organization}/muteConfigs/{config_id} or
-    // folders/{folder}/muteConfigs/{config_id} or
-    // projects/{project}/muteConfigs/{config_id}
+    // Use any one of the following formats:
+    // - organizations/{organization}/muteConfigs/{config_id}
+    // - folders/{folder}/muteConfigs/{config_id}
+    // - projects/{project}/muteConfigs/{config_id}
     // TODO: Replace the variables within {}
     String muteConfigName = "{any-one-of-the-above-formats}";
     updateMuteRule(muteConfigName);
@@ -53,7 +53,7 @@ public class UpdateMuteRule {
               .setMuteConfig(updateMuteConfig)
               // Set the update mask to specify which properties of the Mute Config should be
               // updated.
-              // If empty all mutable fields will be updated.
+              // If empty, all mutable fields will be updated.
               // Make sure that the mask fields match the properties changed in 'updateMuteConfig'.
               // For more info on constructing update mask path, see the proto or:
               // https://cloud.google.com/security-command-center/docs/reference/rest/v1/folders.muteConfigs/patch?hl=en#query-parameters

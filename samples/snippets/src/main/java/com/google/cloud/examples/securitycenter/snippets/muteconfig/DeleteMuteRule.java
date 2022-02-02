@@ -33,7 +33,7 @@ public class DeleteMuteRule {
   }
 
   // Deletes a mute configuration given its resource name.
-  // Note: Already muted findings are not affected when a mute config is deleted.
+  // Note: Previously muted findings are not affected when a mute config is deleted.
   public static void deleteMuteRule(String projectId, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
       // Use appropriate MuteConfigName methods depending upon the type of parent.
@@ -42,7 +42,7 @@ public class DeleteMuteRule {
       // project -> MuteConfigName.ofProjectMuteConfigName)
       client.deleteMuteConfig(MuteConfigName.ofProjectMuteConfigName(projectId, muteConfigId));
 
-      System.out.println("Mute Config Rule deleted successfully: " + muteConfigId);
+      System.out.println("Mute rule deleted successfully: " + muteConfigId);
     }
   }
 }

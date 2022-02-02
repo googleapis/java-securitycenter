@@ -27,10 +27,10 @@ import java.util.UUID;
 public class CreateMuteRule {
 
   public static void main(String[] args) throws IOException {
-    // parentPath: use any one of the following three options,
-    //    organizations/{organization} or
-    //    folders/{folder} or
-    //    projects/{project}
+    // parentPath: use any one of the following options:
+    //             - organizations/{organization_id}
+    //             - folders/{folder_id}
+    //             - projects/{project_id}
     // TODO: Replace the variables within {}
     String parentPath = "{parent_path}";
     String muteConfigId = "random-mute-id-" + UUID.randomUUID();
@@ -38,7 +38,7 @@ public class CreateMuteRule {
   }
 
   // Creates a mute configuration under a given scope that will mute
-  // all new finding which match the filter/ mute rule.
+  // all new findings that match a given filter.
   // Existing findings will NOT BE muted.
   public static void createMuteRule(String parentPath, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
@@ -48,7 +48,7 @@ public class CreateMuteRule {
               .setDescription("Mute low-medium IAM grants excluding 'compute' ")
               // Set mute rule(s).
               // To construct mute rules and for supported properties, see:
-              // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#console_3
+              // https://cloud.google.com/security-command-center/docs/how-to-mute-findings#create_mute_rules
               .setFilter(
                   "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
                       + "category=\"Persistence: IAM Anomalous Grant\" AND "
@@ -64,7 +64,7 @@ public class CreateMuteRule {
               .build();
 
       MuteConfig response = client.createMuteConfig(request);
-      System.out.println("Mute Config Rule created successfully: " + response.getName());
+      System.out.println("Mute rule created successfully: " + response.getName());
     }
   }
 }
