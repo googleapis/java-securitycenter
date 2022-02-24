@@ -55,20 +55,20 @@ If you are using Maven without BOM, add this to your dependencies:
 If you are using Gradle 5.x or later, add this to your dependencies
 
 ```Groovy
-implementation platform('com.google.cloud:libraries-bom:24.2.0')
+implementation platform('com.google.cloud:libraries-bom:24.3.0')
 
 implementation 'com.google.cloud:google-cloud-securitycenter'
 ```
 If you are using Gradle without BOM, add this to your dependencies
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-securitycenter:2.3.2'
+implementation 'com.google.cloud:google-cloud-securitycenter:2.4.0'
 ```
 
 If you are using SBT, add this to your dependencies
 
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-securitycenter" % "2.3.2"
+libraryDependencies += "com.google.cloud" % "google-cloud-securitycenter" % "2.4.0"
 ```
 
 ## Authentication
