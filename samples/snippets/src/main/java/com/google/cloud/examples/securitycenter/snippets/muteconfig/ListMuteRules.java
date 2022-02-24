@@ -35,7 +35,7 @@ public class ListMuteRules {
     listMuteRules(parent);
   }
 
-  // Listing mute configs at organization level will return all the configs
+  // Listing mute configs at the organization level will return all the configs
   // at the org, folder and project levels.
   // Similarly, listing configs at folder level will list all the configs
   // at the folder and project levels.
@@ -45,7 +45,7 @@ public class ListMuteRules {
       ListMuteConfigsRequest listMuteConfigsRequest =
           ListMuteConfigsRequest.newBuilder().setParent(parent).build();
 
-      // List all Mute Configs present in the resource.
+      // List all mute configs present in the resource.
       for (MuteConfig muteConfig : client.listMuteConfigs(listMuteConfigsRequest).iterateAll()) {
         System.out.println(muteConfig.getName());
       }

@@ -38,7 +38,7 @@ public class UpdateMuteRule {
   }
 
   // Updates an existing mute configuration.
-  // The following can be updated in a mute config: description, and filter/ mute rule.
+  // The following can be updated in a mute config: description and filter.
   public static void updateMuteRule(String muteConfigName) throws IOException {
     try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
 
@@ -51,7 +51,7 @@ public class UpdateMuteRule {
       UpdateMuteConfigRequest updateMuteConfigRequest =
           UpdateMuteConfigRequest.newBuilder()
               .setMuteConfig(updateMuteConfig)
-              // Set the update mask to specify which properties of the Mute Config should be
+              // Set the update mask to specify which properties of the mute config should be
               // updated.
               // If empty, all mutable fields will be updated.
               // Make sure that the mask fields match the properties changed in 'updateMuteConfig'.

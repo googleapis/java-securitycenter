@@ -57,8 +57,8 @@ import org.junit.runners.JUnit4;
 public class MuteFindingIT {
 
   // TODO(Developer): Replace the below variables.
-  private static final String PROJECT_ID = getProject();
-  private static final String ORGANIZATION_ID = getOrganizationId();
+  private static final String PROJECT_ID = System.getenv("SCC_PROJECT_ID");
+  private static final String ORGANIZATION_ID = System.getenv("SCC_PROJECT_ORG_ID");
 
   private static final String MUTE_RULE_CREATE = "random-mute-id-" + UUID.randomUUID();
   private static final String MUTE_RULE_UPDATE = "random-mute-id-" + UUID.randomUUID();
@@ -80,8 +80,10 @@ public class MuteFindingIT {
   @BeforeClass
   public static void setUp() throws IOException {
     requireEnvVar("GOOGLE_APPLICATION_CREDENTIALS");
+    requireEnvVar("SCC_PROJECT_ID");
+    requireEnvVar("SCC_PROJECT_ORG_ID");
 
-    // Create Mute Rules.
+    // Create mute rules.
     CreateMuteRule.createMuteRule(String.format("projects/%s", PROJECT_ID), MUTE_RULE_CREATE);
     CreateMuteRule.createMuteRule(String.format("projects/%s", PROJECT_ID), MUTE_RULE_UPDATE);
     // Create Source.
@@ -130,13 +132,13 @@ public class MuteFindingIT {
 
       Instant eventTime = Instant.now();
 
-      // The resource this finding applies to.  The Cloud Security Command Center UI can link
+      // The resource this finding applies to. The Cloud Security Command Center UI can link
       // the findings for a resource to the corresponding Asset of a resource
       // if there are matches.
       // TODO(Developer): Replace the below sample resource name
       String resourceName = "//cloudresourcemanager.googleapis.com/organizations/11232";
 
-      // Start setting up a request to create a finding in a source.
+      // Set up a request to create a finding in a source.
       Finding finding =
           Finding.newBuilder()
               .setParent(sourceName)

@@ -28,11 +28,12 @@ public class BulkMuteFindings {
 
   public static void main(String[] args)
       throws IOException, ExecutionException, InterruptedException {
-    // parentPath: use any one of the following options:
+    // parentPath: Use any one of the following options:
     //             - organizations/{organization_id}
     //             - folders/{folder_id}
     //             - projects/{project_id}
     // muteRule: Expression that identifies findings that should be updated.
+    // eg: "resource.project_display_name=\"PROJECT_ID\""
     // TODO: Replace the variables within {}
     String parentPath = "{parent_path}";
     String muteRule = "{filter-condition}";
@@ -54,6 +55,7 @@ public class BulkMuteFindings {
               .setFilter(muteRule)
               .build();
 
+      // ExecutionException is thrown if the below call fails.
       BulkMuteFindingsResponse response =
           client.bulkMuteFindingsAsync(bulkMuteFindingsRequest).get();
       System.out.println("Bulk mute findings completed successfully! " + response);

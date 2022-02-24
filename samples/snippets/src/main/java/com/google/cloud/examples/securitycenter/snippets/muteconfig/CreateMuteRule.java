@@ -27,7 +27,7 @@ import java.util.UUID;
 public class CreateMuteRule {
 
   public static void main(String[] args) throws IOException {
-    // parentPath: use any one of the following options:
+    // parentPath: Use any one of the following options:
     //             - organizations/{organization_id}
     //             - folders/{folder_id}
     //             - projects/{project_id}
@@ -39,7 +39,7 @@ public class CreateMuteRule {
 
   // Creates a mute configuration under a given scope that will mute
   // all new findings that match a given filter.
-  // Existing findings will NOT BE muted.
+  // Existing findings will not be muted.
   public static void createMuteRule(String parentPath, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
@@ -63,6 +63,7 @@ public class CreateMuteRule {
               .setMuteConfig(muteConfig)
               .build();
 
+      // ExecutionException is thrown if the below call fails.
       MuteConfig response = client.createMuteConfig(request);
       System.out.println("Mute rule created successfully: " + response.getName());
     }

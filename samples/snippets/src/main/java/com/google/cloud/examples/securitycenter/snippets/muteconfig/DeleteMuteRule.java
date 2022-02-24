@@ -26,7 +26,7 @@ public class DeleteMuteRule {
 
   public static void main(String[] args) throws IOException {
     // muteConfigId: Specify the name of the mute config to delete.
-    // TODO(Developer): Replace the below variables
+    // TODO(Developer): Replace the following variables
     String parentPath = "{project-id | folder | organization}";
     String muteConfigId = "{any-one-of-the-above-formats}";
     deleteMuteRule(parentPath, muteConfigId);
@@ -36,7 +36,7 @@ public class DeleteMuteRule {
   // Note: Previously muted findings are not affected when a mute config is deleted.
   public static void deleteMuteRule(String projectId, String muteConfigId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
-      // Use appropriate MuteConfigName methods depending upon the type of parent.
+      // Use appropriate MuteConfigName methods depending on the type of parent.
       // (org -> MuteConfigName.ofOrganizationMuteConfigName()
       // folder -> MuteConfigName.ofFolderMuteConfigName()
       // project -> MuteConfigName.ofProjectMuteConfigName)
