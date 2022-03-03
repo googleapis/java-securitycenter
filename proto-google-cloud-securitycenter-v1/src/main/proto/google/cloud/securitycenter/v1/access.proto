@@ -16,23 +16,41 @@ syntax = "proto3";
 
 package google.cloud.securitycenter.v1;
 
+import "google/api/annotations.proto";
+
 option go_package = "google.golang.org/genproto/googleapis/cloud/securitycenter/v1;securitycenter";
 option java_multiple_files = true;
-option java_outer_classname = "IndicatorProto";
+option java_outer_classname = "AccessProto";
 option java_package = "com.google.cloud.securitycenter.v1";
 option csharp_namespace = "Google.Cloud.SecurityCenter.V1";
 option php_namespace = "Google\\Cloud\\SecurityCenter\\V1";
 option ruby_package = "Google::Cloud::SecurityCenter::V1";
 
+// Represents an access event.
+message Access {
+  // Associated email, such as "foo@google.com".
+  string principal_email = 1;
 
-// Represents what's commonly known as an Indicator of compromise (IoC) in
-// computer forensics. This is an artifact observed on a network or in an
-// operating system that, with high confidence, indicates a computer intrusion.
-// Reference: https://en.wikipedia.org/wiki/Indicator_of_compromise
-message Indicator {
-  // List of ip addresses associated to the Finding.
-  repeated string ip_addresses = 1;
+  // Caller's IP address, such as "1.1.1.1".
+  string caller_ip = 2;
 
-  // List of domains associated to the Finding.
-  repeated string domains = 2;
+  // The caller IP's geolocation, which identifies where the call came from.
+  Geolocation caller_ip_geo = 3;
+
+  // What kind of user agent is associated, e.g. operating system shells,
+  // embedded or stand-alone applications, etc.
+  string user_agent_family = 4;
+
+  // This is the API service that the service account made a call to, e.g.
+  // "iam.googleapis.com"
+  string service_name = 5;
+
+  // The method that the service account called, e.g. "SetIamPolicy".
+  string method_name = 6;
+}
+
+// Represents a geographical location for a given access.
+message Geolocation {
+  // A CLDR.
+  string region_code = 1;
 }
