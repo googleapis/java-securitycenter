@@ -42,9 +42,10 @@ public class GetBigQueryExport {
   public static void getBigQueryExport(String parent, String bigQueryExportId) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      GetBigQueryExportRequest bigQueryExportRequest = GetBigQueryExportRequest.newBuilder()
-          .setName(String.format("%s/bigQueryExports/%s", parent, bigQueryExportId))
-          .build();
+      GetBigQueryExportRequest bigQueryExportRequest =
+          GetBigQueryExportRequest.newBuilder()
+              .setName(String.format("%s/bigQueryExports/%s", parent, bigQueryExportId))
+              .build();
 
       BigQueryExport response = client.getBigQueryExport(bigQueryExportRequest);
       System.out.printf("Retrieved the BigQuery export: %s", response.getName());

@@ -35,37 +35,41 @@ public class CreateBigQueryExport {
     // filter: Expression that defines the filter to apply across create/update events of findings.
     // bigQueryDatasetId: The BigQuery dataset to write findings' updates to.
     // bigQueryExportId: Unique identifier provided by the client.
-    // For more info, refer: https://cloud.google.com/security-command-center/docs/how-to-analyze-findings-in-big-query#export_findings_from_to
+    // For more info, refer:
+    // https://cloud.google.com/security-command-center/docs/how-to-analyze-findings-in-big-query#export_findings_from_to
     String parent = String.format("projects/%s", "your-google-cloud-project-id");
-    String filter = "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
-        + "category=\"Persistence: IAM Anomalous Grant\" AND "
-        + "-resource.type:\"compute\"";
+    String filter =
+        "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
+            + "category=\"Persistence: IAM Anomalous Grant\" AND "
+            + "-resource.type:\"compute\"";
     String bigQueryDatasetId = "your-bigquery-dataset-id";
     String bigQueryExportId = UUID.randomUUID().toString().toLowerCase();
 
     createBigQueryExport(parent, filter, bigQueryDatasetId, bigQueryExportId);
   }
 
-
   // Create export configuration to export findings from a project to a BigQuery dataset.
   // Optionally specify filter to export certain findings only.
-  public static void createBigQueryExport(String parent, String filter, String bigQueryDatasetId,
-      String bigQueryExportId) throws IOException {
+  public static void createBigQueryExport(
+      String parent, String filter, String bigQueryDatasetId, String bigQueryExportId)
+      throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       // Create the BigQuery export configuration.
-      BigQueryExport bigQueryExport = BigQueryExport.newBuilder()
-          .setDescription(
-              "Export low and medium findings if the compute resource has an IAM anomalous grant")
-          .setFilter(filter)
-          .setDataset(String.format("%s/datasets/%s", parent, bigQueryDatasetId))
-          .build();
+      BigQueryExport bigQueryExport =
+          BigQueryExport.newBuilder()
+              .setDescription(
+                  "Export low and medium findings if the compute resource has an IAM anomalous grant")
+              .setFilter(filter)
+              .setDataset(String.format("%s/datasets/%s", parent, bigQueryDatasetId))
+              .build();
 
-      CreateBigQueryExportRequest bigQueryExportRequest = CreateBigQueryExportRequest.newBuilder()
-          .setParent(parent)
-          .setBigQueryExport(bigQueryExport)
-          .setBigQueryExportId(bigQueryExportId)
-          .build();
+      CreateBigQueryExportRequest bigQueryExportRequest =
+          CreateBigQueryExportRequest.newBuilder()
+              .setParent(parent)
+              .setBigQueryExport(bigQueryExport)
+              .setBigQueryExportId(bigQueryExportId)
+              .build();
 
       // Create the export request.
       BigQueryExport response = client.createBigQueryExport(bigQueryExportRequest);

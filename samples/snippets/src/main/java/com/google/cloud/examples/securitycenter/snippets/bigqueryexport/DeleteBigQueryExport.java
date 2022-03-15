@@ -41,9 +41,10 @@ public class DeleteBigQueryExport {
       throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      DeleteBigQueryExportRequest bigQueryExportRequest = DeleteBigQueryExportRequest.newBuilder()
-          .setName(String.format("%s/bigQueryExports/%s", parent, bigQueryExportId))
-          .build();
+      DeleteBigQueryExportRequest bigQueryExportRequest =
+          DeleteBigQueryExportRequest.newBuilder()
+              .setName(String.format("%s/bigQueryExports/%s", parent, bigQueryExportId))
+              .build();
 
       client.deleteBigQueryExport(bigQueryExportRequest);
       System.out.printf("BigQuery export request deleted successfully: %s", bigQueryExportId);

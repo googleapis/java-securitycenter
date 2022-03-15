@@ -35,11 +35,13 @@ public class UpdateBigQueryExport {
     //              - projects/{project_id}
     // filter: Expression that defines the filter to apply across create/update events of findings.
     // bigQueryExportId: Unique identifier provided by the client.
-    // For more info, refer: https://cloud.google.com/security-command-center/docs/how-to-analyze-findings-in-big-query#export_findings_from_to
+    // For more info, refer:
+    // https://cloud.google.com/security-command-center/docs/how-to-analyze-findings-in-big-query#export_findings_from_to
     String parent = String.format("projects/%s", "your-google-cloud-project-id");
-    String filter = "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
-        + "category=\"Persistence: IAM Anomalous Grant\" AND "
-        + "-resource.type:\"compute\"";
+    String filter =
+        "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
+            + "category=\"Persistence: IAM Anomalous Grant\" AND "
+            + "-resource.type:\"compute\"";
     String bigQueryExportId = UUID.randomUUID().toString().toLowerCase();
 
     updateBigQueryExport(parent, filter, bigQueryExportId);
@@ -51,19 +53,21 @@ public class UpdateBigQueryExport {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       //  Set the new values for export configuration.
-      BigQueryExport bigQueryExport = BigQueryExport.newBuilder()
-          .setName(String.format("%s/bigQueryExports/%s", parent, bigQueryExportId))
-          .setFilter(filter)
-          .build();
+      BigQueryExport bigQueryExport =
+          BigQueryExport.newBuilder()
+              .setName(String.format("%s/bigQueryExports/%s", parent, bigQueryExportId))
+              .setFilter(filter)
+              .build();
 
-      UpdateBigQueryExportRequest request = UpdateBigQueryExportRequest.newBuilder()
-          .setBigQueryExport(bigQueryExport)
-          // Set the update mask to specify which properties should be updated.
-          // If empty, all mutable fields will be updated.
-          // For more info on constructing field mask path, see the proto or:
-          // https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.FieldMask
-          .setUpdateMask(FieldMask.newBuilder().addPaths("filter").build())
-          .build();
+      UpdateBigQueryExportRequest request =
+          UpdateBigQueryExportRequest.newBuilder()
+              .setBigQueryExport(bigQueryExport)
+              // Set the update mask to specify which properties should be updated.
+              // If empty, all mutable fields will be updated.
+              // For more info on constructing field mask path, see the proto or:
+              // https://cloud.google.com/java/docs/reference/protobuf/latest/com.google.protobuf.FieldMask
+              .setUpdateMask(FieldMask.newBuilder().addPaths("filter").build())
+              .build();
 
       BigQueryExport response = client.updateBigQueryExport(request);
       if (response.getFilter().equalsIgnoreCase(filter)) {

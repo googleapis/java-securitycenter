@@ -37,6 +37,11 @@ If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
     <artifactId>google-cloud-pubsub</artifactId>
   </dependency>
 
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-bigquery</artifactId>
+  </dependency>
+
 ```
 
 If you are using Maven without BOM, add this to your dependencies:
@@ -54,7 +59,7 @@ If you are using Maven without BOM, add this to your dependencies:
 If you are using Gradle 5.x or later, add this to your dependencies
 
 ```Groovy
-implementation platform('com.google.cloud:libraries-bom:24.4.0')
+implementation platform('com.google.cloud:libraries-bom:25.0.0')
 
 implementation 'com.google.cloud:google-cloud-securitycenter'
 ```
@@ -117,6 +122,11 @@ Samples are in the [`samples/`](https://github.com/googleapis/java-securitycente
 | List Notification Config Snippets | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/ListNotificationConfigSnippets.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/ListNotificationConfigSnippets.java) |
 | Notification Receiver | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/NotificationReceiver.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/NotificationReceiver.java) |
 | Update Notification Config Snippets | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/UpdateNotificationConfigSnippets.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/UpdateNotificationConfigSnippets.java) |
+| Create Big Query Export | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/CreateBigQueryExport.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/CreateBigQueryExport.java) |
+| Delete Big Query Export | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/DeleteBigQueryExport.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/DeleteBigQueryExport.java) |
+| Get Big Query Export | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/GetBigQueryExport.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/GetBigQueryExport.java) |
+| List Big Query Exports | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/ListBigQueryExports.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/ListBigQueryExports.java) |
+| Update Big Query Export | [source code](https://github.com/googleapis/java-securitycenter/blob/main/samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/UpdateBigQueryExport.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-securitycenter&page=editor&open_in_editor=samples/snippets/src/main/java/com/google/cloud/examples/securitycenter/snippets/bigqueryexport/UpdateBigQueryExport.java) |
 
 
 

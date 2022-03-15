@@ -72,8 +72,8 @@ public class BigQueryExportIT {
     createBigQueryDataset(BQ_DATASET_NAME);
     // Create export request.
     String filter = "severity=\"LOW\" OR severity=\"MEDIUM\"";
-    CreateBigQueryExport.createBigQueryExport(String.format("projects/%s", PROJECT_ID), filter,
-        BQ_DATASET_NAME, BQ_EXPORT_ID);
+    CreateBigQueryExport.createBigQueryExport(
+        String.format("projects/%s", PROJECT_ID), filter, BQ_DATASET_NAME, BQ_EXPORT_ID);
 
     stdOut = null;
     System.setOut(out);
@@ -87,8 +87,8 @@ public class BigQueryExportIT {
 
     // Delete BigQuery Dataset and export request.
     deleteBigQueryDataset(BQ_DATASET_NAME);
-    DeleteBigQueryExport.deleteBigQueryExport(String.format("projects/%s", PROJECT_ID),
-        BQ_EXPORT_ID);
+    DeleteBigQueryExport.deleteBigQueryExport(
+        String.format("projects/%s", PROJECT_ID), BQ_EXPORT_ID);
 
     stdOut = null;
     System.setOut(out);
@@ -144,9 +144,8 @@ public class BigQueryExportIT {
   @Test
   public void testUpdateBigQueryExport() throws IOException {
     String filter = "severity=\"MEDIUM\"";
-    UpdateBigQueryExport.updateBigQueryExport(String.format("projects/%s", PROJECT_ID), filter,
-        BQ_EXPORT_ID);
+    UpdateBigQueryExport.updateBigQueryExport(
+        String.format("projects/%s", PROJECT_ID), filter, BQ_EXPORT_ID);
     assertThat(stdOut.toString()).contains("BigQueryExport updated successfully!");
   }
-
 }

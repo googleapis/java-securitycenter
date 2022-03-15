@@ -40,10 +40,11 @@ public class ListBigQueryExports {
   public static void listBigQueryExports(String parent) throws IOException {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      ListBigQueryExportsRequest request = ListBigQueryExportsRequest.newBuilder()
-          // The parent, which owns the collection of BigQuery exports.
-          .setParent(parent)
-          .build();
+      ListBigQueryExportsRequest request =
+          ListBigQueryExportsRequest.newBuilder()
+              // The parent, which owns the collection of BigQuery exports.
+              .setParent(parent)
+              .build();
 
       ListBigQueryExportsPagedResponse response = client.listBigQueryExports(request);
 
