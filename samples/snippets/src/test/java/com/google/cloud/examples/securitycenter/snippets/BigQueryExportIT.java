@@ -89,6 +89,8 @@ public class BigQueryExportIT {
     deleteBigQueryDataset(BQ_DATASET_NAME);
     DeleteBigQueryExport.deleteBigQueryExport(
         String.format("projects/%s", PROJECT_ID), BQ_EXPORT_ID);
+    assertThat(stdOut.toString()).contains(
+        String.format("BigQuery export request deleted successfully: %s", BQ_EXPORT_ID));
 
     stdOut = null;
     System.setOut(out);

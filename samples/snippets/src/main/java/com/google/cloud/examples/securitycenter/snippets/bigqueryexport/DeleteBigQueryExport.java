@@ -26,19 +26,25 @@ public class DeleteBigQueryExport {
 
   public static void main(String[] args) throws IOException {
     // TODO(Developer): Modify the following variable values.
+
     // parent: Use any one of the following resource paths:
     //              - organizations/{organization_id}
     //              - folders/{folder_id}
     //              - projects/{project_id}
-    // bigQueryExportId: Unique identifier that is used to identify the export.
     String parent = String.format("projects/%s", "your-google-cloud-project-id");
+
+    // bigQueryExportId: Unique identifier that is used to identify the export.
     String bigQueryExportId = "export-id";
+
     deleteBigQueryExport(parent, bigQueryExportId);
   }
 
   // Delete an existing BigQuery export.
   public static void deleteBigQueryExport(String parent, String bigQueryExportId)
       throws IOException {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       DeleteBigQueryExportRequest bigQueryExportRequest =
