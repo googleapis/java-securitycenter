@@ -26,25 +26,29 @@ import java.util.concurrent.ExecutionException;
 
 public class BulkMuteFindings {
 
-  public static void main(String[] args)
-      throws IOException, ExecutionException, InterruptedException {
+  public static void main(String[] args) {
+    // TODO: Replace the variables within {}
+
     // parentPath: Use any one of the following options:
     //             - organizations/{organization_id}
     //             - folders/{folder_id}
     //             - projects/{project_id}
+    String parentPath = String.format("projects/%s", "your-google-cloud-project-id");
+
     // muteRule: Expression that identifies findings that should be updated.
     // eg: "resource.project_display_name=\"PROJECT_ID\""
-    // TODO: Replace the variables within {}
-    String parentPath = "{parent_path}";
     String muteRule = "{filter-condition}";
+
     bulkMute(parentPath, muteRule);
   }
 
   // Kicks off a long-running operation (LRO) to bulk mute findings for a parent based on a filter.
   // The parent can be either an organization, folder, or project. The findings
   // matched by the filter will be muted after the LRO is done.
-  public static void bulkMute(String parentPath, String muteRule)
-      throws IOException, ExecutionException, InterruptedException {
+  public static void bulkMute(String parentPath, String muteRule) {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       BulkMuteFindingsRequest bulkMuteFindingsRequest =
@@ -59,6 +63,8 @@ public class BulkMuteFindings {
       BulkMuteFindingsResponse response =
           client.bulkMuteFindingsAsync(bulkMuteFindingsRequest).get();
       System.out.println("Bulk mute findings completed successfully! " + response);
+    } catch (IOException | InterruptedException | ExecutionException e) {
+      System.out.println("Bulk mute findings failed! \n Exception: " + e);
     }
   }
 }

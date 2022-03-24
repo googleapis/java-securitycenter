@@ -26,13 +26,16 @@ import java.util.UUID;
 
 public class CreateMuteRule {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
+    // TODO: Replace the variables within {}
+
     // parentPath: Use any one of the following options:
     //             - organizations/{organization_id}
     //             - folders/{folder_id}
     //             - projects/{project_id}
-    // TODO: Replace the variables within {}
-    String parentPath = "{parent_path}";
+    String parentPath = String.format("projects/%s", "your-google-cloud-project-id");
+
+    // muteConfigId: Set a random id; max of 63 chars.
     String muteConfigId = "random-mute-id-" + UUID.randomUUID();
     createMuteRule(parentPath, muteConfigId);
   }
@@ -40,7 +43,10 @@ public class CreateMuteRule {
   // Creates a mute configuration under a given scope that will mute
   // all new findings that match a given filter.
   // Existing findings will not be muted.
-  public static void createMuteRule(String parentPath, String muteConfigId) throws IOException {
+  public static void createMuteRule(String parentPath, String muteConfigId) {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       MuteConfig muteConfig =
@@ -58,7 +64,6 @@ public class CreateMuteRule {
       CreateMuteConfigRequest request =
           CreateMuteConfigRequest.newBuilder()
               .setParent(parentPath)
-              // Set a random id; max of 63 chars.
               .setMuteConfigId(muteConfigId)
               .setMuteConfig(muteConfig)
               .build();
@@ -66,6 +71,8 @@ public class CreateMuteRule {
       // ExecutionException is thrown if the below call fails.
       MuteConfig response = client.createMuteConfig(request);
       System.out.println("Mute rule created successfully: " + response.getName());
+    } catch (IOException e) {
+      System.out.println("Mute rule creation failed! \n Exception: " + e);
     }
   }
 }

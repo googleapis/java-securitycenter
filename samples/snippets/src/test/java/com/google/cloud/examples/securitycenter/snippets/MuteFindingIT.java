@@ -43,7 +43,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.time.Instant;
 import java.util.UUID;
-import java.util.concurrent.ExecutionException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -96,12 +95,14 @@ public class MuteFindingIT {
   }
 
   @AfterClass
-  public static void cleanUp() throws IOException {
+  public static void cleanUp() {
     final PrintStream out = System.out;
     stdOut = new ByteArrayOutputStream();
     System.setOut(new PrintStream(stdOut));
     DeleteMuteRule.deleteMuteRule(PROJECT_ID, MUTE_RULE_CREATE);
+    assertThat(stdOut.toString()).contains("Mute rule deleted successfully: " + MUTE_RULE_CREATE);
     DeleteMuteRule.deleteMuteRule(PROJECT_ID, MUTE_RULE_UPDATE);
+    assertThat(stdOut.toString()).contains("Mute rule deleted successfully: " + MUTE_RULE_UPDATE);
     stdOut = null;
     System.setOut(out);
   }
@@ -191,21 +192,21 @@ public class MuteFindingIT {
   }
 
   @Test
-  public void testGetMuteRule() throws IOException {
+  public void testGetMuteRule() {
     GetMuteRule.getMuteRule(PROJECT_ID, MUTE_RULE_CREATE);
     assertThat(stdOut.toString()).contains("Retrieved the mute config: ");
     assertThat(stdOut.toString()).contains(MUTE_RULE_CREATE);
   }
 
   @Test
-  public void testListMuteRules() throws IOException {
+  public void testListMuteRules() {
     ListMuteRules.listMuteRules(String.format("projects/%s", PROJECT_ID));
     assertThat(stdOut.toString()).contains(MUTE_RULE_CREATE);
     assertThat(stdOut.toString()).contains(MUTE_RULE_UPDATE);
   }
 
   @Test
-  public void testUpdateMuteRules() throws IOException {
+  public void testUpdateMuteRules() {
     UpdateMuteRule.updateMuteRule(
         String.format("projects/%s/muteConfigs/%s", PROJECT_ID, MUTE_RULE_UPDATE));
     GetMuteRule.getMuteRule(PROJECT_ID, MUTE_RULE_UPDATE);
@@ -213,13 +214,13 @@ public class MuteFindingIT {
   }
 
   @Test
-  public void testSetMuteFinding() throws IOException {
+  public void testSetMuteFinding() {
     SetMuteUnmuteFinding.setMute(FINDING_1.getName());
     assertThat(stdOut.toString()).contains("Mute value for the finding: MUTED");
   }
 
   @Test
-  public void testBulkMuteFindings() throws IOException, ExecutionException, InterruptedException {
+  public void testBulkMuteFindings() throws IOException {
     // Mute findings that belong to this project.
     BulkMuteFindings.bulkMute(
         String.format("projects/%s", PROJECT_ID),
@@ -228,7 +229,8 @@ public class MuteFindingIT {
     // Get all findings in the source to check if they are muted.
     ListFindingsPagedResponse response =
         getAllFindings(
-            String.format("projects/%s/sources/%s", PROJECT_ID, SOURCE.getName().split("/")[3]));
+            String.format("projects/%s/sources/%s",
+                PROJECT_ID, SOURCE.getName().split("/")[3]));
     for (ListFindingsResult finding : response.iterateAll()) {
       Assert.assertEquals(finding.getFinding().getMute(), Mute.MUTED);
     }

@@ -26,20 +26,24 @@ import java.io.IOException;
 
 public class UpdateMuteRule {
 
-  public static void main(String[] args) throws IOException {
-    // Specify the name of the mute config to delete.
-    // Use any one of the following formats:
-    // - organizations/{organization}/muteConfigs/{config_id}
-    // - folders/{folder}/muteConfigs/{config_id}
-    // - projects/{project}/muteConfigs/{config_id}
+  public static void main(String[] args) {
     // TODO: Replace the variables within {}
+
+    // Specify the name of the mute config to delete.
+    // muteConfigName: Use any one of the following formats:
+    //                 - organizations/{organization}/muteConfigs/{config_id}
+    //                 - folders/{folder}/muteConfigs/{config_id}
+    //                 - projects/{project}/muteConfigs/{config_id}
     String muteConfigName = "{any-one-of-the-above-formats}";
     updateMuteRule(muteConfigName);
   }
 
   // Updates an existing mute configuration.
   // The following can be updated in a mute config: description and filter.
-  public static void updateMuteRule(String muteConfigName) throws IOException {
+  public static void updateMuteRule(String muteConfigName) {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient securityCenterClient = SecurityCenterClient.create()) {
 
       MuteConfig updateMuteConfig =
@@ -62,6 +66,8 @@ public class UpdateMuteRule {
 
       MuteConfig response = securityCenterClient.updateMuteConfig(updateMuteConfigRequest);
       System.out.println(response);
+    } catch (IOException e) {
+      System.out.println("Mute rule update failed! \n Exception: " + e);
     }
   }
 }

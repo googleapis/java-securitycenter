@@ -26,14 +26,15 @@ import java.io.IOException;
 
 public class SetMuteUnmuteFinding {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
+    // TODO: Replace the variables within {}
+
     // findingPath: The relative resource name of the finding. See:
     // https://cloud.google.com/apis/design/resource_names#relative_resource_name
     // Use any one of the following formats:
     //  - organizations/{organization_id}/sources/{source_id}/finding/{finding_id}
     //  - folders/{folder_id}/sources/{source_id}/finding/{finding_id}
     //  - projects/{project_id}/sources/{source_id}/finding/{finding_id}
-    // TODO: Replace the variables within {}
     String findingPath = "{path-to-the-finding}";
     setMute(findingPath);
   }
@@ -42,7 +43,10 @@ public class SetMuteUnmuteFinding {
   // If a finding is already muted, muting it again has no effect.
   // Similarly, unmuting a finding that isn't muted has no effect.
   // Various mute states are: MUTE_UNSPECIFIED/MUTE/UNMUTE.
-  public static void setMute(String findingPath) throws IOException {
+  public static void setMute(String findingPath) {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       SetMuteRequest setMuteRequest =
@@ -50,6 +54,8 @@ public class SetMuteUnmuteFinding {
 
       Finding finding = client.setMute(setMuteRequest);
       System.out.println("Mute value for the finding: " + finding.getMute());
+    } catch (IOException e) {
+      System.out.println("Mute rule set failed! \n Exception: " + e);
     }
   }
 }

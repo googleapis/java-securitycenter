@@ -24,17 +24,26 @@ import java.io.IOException;
 
 public class DeleteMuteRule {
 
-  public static void main(String[] args) throws IOException {
-    // muteConfigId: Specify the name of the mute config to delete.
+  public static void main(String[] args) {
     // TODO(Developer): Replace the following variables
-    String parentPath = "{project-id | folder | organization}";
-    String muteConfigId = "{any-one-of-the-above-formats}";
+    // parentPath: Use any one of the following options:
+    //             - organizations/{organization_id}
+    //             - folders/{folder_id}
+    //             - projects/{project_id}
+    String parentPath = String.format("projects/%s", "your-google-cloud-project-id");
+
+    // muteConfigId: Specify the name of the mute config to delete.
+    String muteConfigId = "mute-config-id";
+
     deleteMuteRule(parentPath, muteConfigId);
   }
 
   // Deletes a mute configuration given its resource name.
   // Note: Previously muted findings are not affected when a mute config is deleted.
-  public static void deleteMuteRule(String projectId, String muteConfigId) throws IOException {
+  public static void deleteMuteRule(String projectId, String muteConfigId) {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
       // Use appropriate MuteConfigName methods depending on the type of parent.
       // (org -> MuteConfigName.ofOrganizationMuteConfigName()
@@ -43,6 +52,8 @@ public class DeleteMuteRule {
       client.deleteMuteConfig(MuteConfigName.ofProjectMuteConfigName(projectId, muteConfigId));
 
       System.out.println("Mute rule deleted successfully: " + muteConfigId);
+    } catch (IOException e) {
+      System.out.println("Mute rule deletion failed! \n Exception: " + e);
     }
   }
 }

@@ -25,16 +25,26 @@ import java.io.IOException;
 
 public class GetMuteRule {
 
-  public static void main(String[] args) throws IOException {
-    // muteConfigId: Name of the mute config to retrieve.
+  public static void main(String[] args) {
     // TODO(Developer): Replace the following variables
-    String parentPath = "{project-id | folder | organization}";
-    String muteConfigId = "{any-one-of-the-above-formats}";
+
+    // parentPath: Use any one of the following options:
+    //             - organizations/{organization_id}
+    //             - folders/{folder_id}
+    //             - projects/{project_id}
+    String parentPath = String.format("projects/%s", "your-google-cloud-project-id");
+
+    // muteConfigId: Name of the mute config to retrieve.
+    String muteConfigId = "mute-config-id";
+
     getMuteRule(parentPath, muteConfigId);
   }
 
   // Retrieves a mute configuration given its resource name.
-  public static void getMuteRule(String projectId, String muteConfigId) throws IOException {
+  public static void getMuteRule(String projectId, String muteConfigId) {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
       // Use appropriate MuteConfigName methods depending on the type of parent.
       // (org -> MuteConfigName.ofOrganizationMuteConfigName()
@@ -44,6 +54,8 @@ public class GetMuteRule {
           client.getMuteConfig(MuteConfigName.ofProjectMuteConfigName(projectId, muteConfigId));
 
       System.out.println("Retrieved the mute config: " + muteConfig);
+    } catch (IOException e) {
+      System.out.println("Mute rule retrieval failed! \n Exception: " + e);
     }
   }
 }

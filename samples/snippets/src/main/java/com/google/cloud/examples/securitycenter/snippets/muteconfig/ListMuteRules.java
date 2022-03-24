@@ -25,21 +25,25 @@ import java.io.IOException;
 
 public class ListMuteRules {
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
+    // TODO: Replace variables enclosed within {}
+
     // parent: Use any one of the following resource paths to list mute configurations:
     //         - organizations/{organization_id}
     //         - folders/{folder_id}
     //         - projects/{project_id}
-    // TODO: Replace variables enclosed within {}
-    String parent = "projects/{project_id}";
-    listMuteRules(parent);
+    String parentPath = String.format("projects/%s", "your-google-cloud-project-id");
+    listMuteRules(parentPath);
   }
 
   // Listing mute configs at the organization level will return all the configs
   // at the org, folder and project levels.
   // Similarly, listing configs at folder level will list all the configs
   // at the folder and project levels.
-  public static void listMuteRules(String parent) throws IOException {
+  public static void listMuteRules(String parent) {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       ListMuteConfigsRequest listMuteConfigsRequest =
@@ -49,6 +53,8 @@ public class ListMuteRules {
       for (MuteConfig muteConfig : client.listMuteConfigs(listMuteConfigsRequest).iterateAll()) {
         System.out.println(muteConfig.getName());
       }
+    } catch (IOException e) {
+      System.out.println("Listing Mute rule failed! \n Exception: " + e);
     }
   }
 }
