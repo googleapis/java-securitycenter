@@ -37,9 +37,10 @@ public class UpdateBigQueryExport {
     String parent = String.format("projects/%s", "your-google-cloud-project-id");
 
     // filter: Expression that defines the filter to apply across create/update events of findings.
-    String filter = "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
-        + "category=\"Persistence: IAM Anomalous Grant\" AND "
-        + "-resource.type:\"compute\"";
+    String filter =
+        "severity=\"LOW\" OR severity=\"MEDIUM\" AND "
+            + "category=\"Persistence: IAM Anomalous Grant\" AND "
+            + "-resource.type:\"compute\"";
 
     // bigQueryExportId: Unique identifier provided by the client.
     // For more info, see:
