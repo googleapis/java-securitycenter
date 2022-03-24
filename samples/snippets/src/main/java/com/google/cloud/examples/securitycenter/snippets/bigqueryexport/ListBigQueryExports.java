@@ -47,9 +47,7 @@ public class ListBigQueryExports {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       ListBigQueryExportsRequest request =
-          ListBigQueryExportsRequest.newBuilder()
-              .setParent(parent)
-              .build();
+          ListBigQueryExportsRequest.newBuilder().setParent(parent).build();
 
       ListBigQueryExportsPagedResponse response = client.listBigQueryExports(request);
 
