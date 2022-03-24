@@ -326,11 +326,12 @@ public interface FindingOrBuilder
    *
    *
    * <pre>
-   * The time at which the event took place, or when an update to the finding
-   * occurred. For example, if the finding represents an open firewall it would
-   * capture the time the detector believes the firewall became open. The
-   * accuracy is determined by the detector. If the finding were to be resolved
-   * afterward, this time would reflect when the finding was resolved. Must not
+   * The time the finding was first detected. If an existing finding is updated,
+   * then this is the time the update occurred.
+   * For example, if the finding represents an open firewall, this property
+   * captures the time the detector believes the firewall became open. The
+   * accuracy is determined by the detector. If the finding is later resolved,
+   * then this time reflects when the finding was resolved. This must not
    * be set to a value greater than the current timestamp.
    * </pre>
    *
@@ -343,11 +344,12 @@ public interface FindingOrBuilder
    *
    *
    * <pre>
-   * The time at which the event took place, or when an update to the finding
-   * occurred. For example, if the finding represents an open firewall it would
-   * capture the time the detector believes the firewall became open. The
-   * accuracy is determined by the detector. If the finding were to be resolved
-   * afterward, this time would reflect when the finding was resolved. Must not
+   * The time the finding was first detected. If an existing finding is updated,
+   * then this is the time the update occurred.
+   * For example, if the finding represents an open firewall, this property
+   * captures the time the detector believes the firewall became open. The
+   * accuracy is determined by the detector. If the finding is later resolved,
+   * then this time reflects when the finding was resolved. This must not
    * be set to a value greater than the current timestamp.
    * </pre>
    *
@@ -360,11 +362,12 @@ public interface FindingOrBuilder
    *
    *
    * <pre>
-   * The time at which the event took place, or when an update to the finding
-   * occurred. For example, if the finding represents an open firewall it would
-   * capture the time the detector believes the firewall became open. The
-   * accuracy is determined by the detector. If the finding were to be resolved
-   * afterward, this time would reflect when the finding was resolved. Must not
+   * The time the finding was first detected. If an existing finding is updated,
+   * then this is the time the update occurred.
+   * For example, if the finding represents an open firewall, this property
+   * captures the time the detector believes the firewall became open. The
+   * accuracy is determined by the detector. If the finding is later resolved,
+   * then this time reflects when the finding was resolved. This must not
    * be set to a value greater than the current timestamp.
    * </pre>
    *
@@ -474,7 +477,8 @@ public interface FindingOrBuilder
    *
    * <pre>
    * Indicates the mute state of a finding (either unspecified, muted, unmuted
-   * or undefined).
+   * or undefined). Unlike other attributes of a finding, a finding provider
+   * shouldn't set the value of mute.
    * </pre>
    *
    * <code>.google.cloud.securitycenter.v1.Finding.Mute mute = 15;</code>
@@ -487,7 +491,8 @@ public interface FindingOrBuilder
    *
    * <pre>
    * Indicates the mute state of a finding (either unspecified, muted, unmuted
-   * or undefined).
+   * or undefined). Unlike other attributes of a finding, a finding provider
+   * shouldn't set the value of mute.
    * </pre>
    *
    * <code>.google.cloud.securitycenter.v1.Finding.Mute mute = 15;</code>
@@ -726,9 +731,48 @@ public interface FindingOrBuilder
    *
    *
    * <pre>
+   * Access details associated to the Finding, such as more information on the
+   * caller, which method was accessed, from where, etc.
+   * </pre>
+   *
+   * <code>.google.cloud.securitycenter.v1.Access access = 26;</code>
+   *
+   * @return Whether the access field is set.
+   */
+  boolean hasAccess();
+  /**
+   *
+   *
+   * <pre>
+   * Access details associated to the Finding, such as more information on the
+   * caller, which method was accessed, from where, etc.
+   * </pre>
+   *
+   * <code>.google.cloud.securitycenter.v1.Access access = 26;</code>
+   *
+   * @return The access.
+   */
+  com.google.cloud.securitycenter.v1.Access getAccess();
+  /**
+   *
+   *
+   * <pre>
+   * Access details associated to the Finding, such as more information on the
+   * caller, which method was accessed, from where, etc.
+   * </pre>
+   *
+   * <code>.google.cloud.securitycenter.v1.Access access = 26;</code>
+   */
+  com.google.cloud.securitycenter.v1.AccessOrBuilder getAccessOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
    * First known as mute_annotation. Records additional information about the
    * mute operation e.g. mute config that muted the finding, user who muted the
-   * finding, etc.
+   * finding, etc. Unlike other attributes of a finding, a finding provider
+   * shouldn't set the value of mute.
    * </pre>
    *
    * <code>string mute_initiator = 28;</code>
@@ -742,7 +786,8 @@ public interface FindingOrBuilder
    * <pre>
    * First known as mute_annotation. Records additional information about the
    * mute operation e.g. mute config that muted the finding, user who muted the
-   * finding, etc.
+   * finding, etc. Unlike other attributes of a finding, a finding provider
+   * shouldn't set the value of mute.
    * </pre>
    *
    * <code>string mute_initiator = 28;</code>
