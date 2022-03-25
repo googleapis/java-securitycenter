@@ -37,7 +37,7 @@ public class ListMuteRules {
   }
 
   // Listing mute configs at the organization level will return all the configs
-  // at the org, folder and project levels.
+  // at the org, folder, and project levels.
   // Similarly, listing configs at folder level will list all the configs
   // at the folder and project levels.
   public static void listMuteRules(String parent) {

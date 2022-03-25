@@ -85,9 +85,9 @@ public class MuteFindingIT {
     // Create mute rules.
     CreateMuteRule.createMuteRule(String.format("projects/%s", PROJECT_ID), MUTE_RULE_CREATE);
     CreateMuteRule.createMuteRule(String.format("projects/%s", PROJECT_ID), MUTE_RULE_UPDATE);
-    // Create Source.
+    // Create source.
     SOURCE = createSource(ORGANIZATION_ID);
-    // Create Findings within the source.
+    // Create findings within the source.
     String uuid = UUID.randomUUID().toString().split("-")[0];
     FINDING_1 = createFinding(SOURCE.getName(), "1testingscc" + uuid);
     FINDING_2 = createFinding(SOURCE.getName(), "2testingscc" + uuid);
