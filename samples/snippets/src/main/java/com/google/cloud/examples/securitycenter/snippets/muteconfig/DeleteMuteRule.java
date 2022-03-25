@@ -46,7 +46,7 @@ public class DeleteMuteRule {
     // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
       // Use appropriate MuteConfigName methods depending on the type of parent.
-      // (org -> MuteConfigName.ofOrganizationMuteConfigName()
+      // org -> MuteConfigName.ofOrganizationMuteConfigName()
       // folder -> MuteConfigName.ofFolderMuteConfigName()
       // project -> MuteConfigName.ofProjectMuteConfigName)
       client.deleteMuteConfig(MuteConfigName.ofProjectMuteConfigName(projectId, muteConfigId));
