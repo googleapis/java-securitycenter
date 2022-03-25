@@ -45,7 +45,7 @@ public class UpdateBigQueryExport {
     // bigQueryExportId: Unique identifier provided by the client.
     // For more info, see:
     // https://cloud.google.com/security-command-center/docs/how-to-analyze-findings-in-big-query#export_findings_from_to
-    String bigQueryExportId = UUID.randomUUID().toString().toLowerCase();
+    String bigQueryExportId = "big-query-export-id";
 
     updateBigQueryExport(parent, filter, bigQueryExportId);
   }
