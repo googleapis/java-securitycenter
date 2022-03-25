@@ -55,7 +55,7 @@ public class SetMuteUnmuteFinding {
       Finding finding = client.setMute(setMuteRequest);
       System.out.println("Mute value for the finding: " + finding.getMute());
     } catch (IOException e) {
-      System.out.println("Mute rule set failed! \n Exception: " + e);
+      System.out.println("Failed to set the specified mute value. \n Exception: " + e);
     }
   }
 }

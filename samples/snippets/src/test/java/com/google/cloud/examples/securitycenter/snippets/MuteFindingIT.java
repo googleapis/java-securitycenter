@@ -134,9 +134,9 @@ public class MuteFindingIT {
       Instant eventTime = Instant.now();
 
       // The resource this finding applies to. The Cloud Security Command Center UI can link
-      // the findings for a resource to the corresponding Asset of a resource
+      // the findings for a resource to the corresponding asset of a resource
       // if there are matches.
-      // TODO(Developer): Replace the below sample resource name
+      // TODO(Developer): Replace the sample resource name
       String resourceName = "//cloudresourcemanager.googleapis.com/organizations/11232";
 
       // Set up a request to create a finding in a source.

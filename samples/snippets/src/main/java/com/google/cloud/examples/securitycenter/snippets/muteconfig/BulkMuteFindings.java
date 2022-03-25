@@ -35,7 +35,7 @@ public class BulkMuteFindings {
     //             - projects/{project_id}
     String parentPath = String.format("projects/%s", "your-google-cloud-project-id");
 
-    // muteRule: Expression that identifies findings that should be updated.
+    // muteRule: Expression that identifies findings that should be muted.
     // eg: "resource.project_display_name=\"PROJECT_ID\""
     String muteRule = "{filter-condition}";
 
