@@ -48,7 +48,8 @@ public class BigQueryExportIT {
   // TODO(Developer): Replace the below variables.
   private static final String PROJECT_ID = System.getenv("SCC_PROJECT_ID");
   private static final String BQ_DATASET_NAME = "sampledataset";
-  private static final String BQ_EXPORT_ID = "default-" + UUID.randomUUID().toString().split("-")[0];
+  private static final String BQ_EXPORT_ID =
+      "default-" + UUID.randomUUID().toString().split("-")[0];
 
   private static ByteArrayOutputStream stdOut;
 
