@@ -49,10 +49,7 @@ public class SetUnmuteFinding {
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
       SetMuteRequest setMuteRequest =
-          SetMuteRequest.newBuilder()
-              .setName(findingPath)
-              .setMute(Mute.UNMUTED)
-              .build();
+          SetMuteRequest.newBuilder().setName(findingPath).setMute(Mute.UNMUTED).build();
 
       Finding finding = client.setMute(setMuteRequest);
       System.out.println("Mute value for the finding: " + finding.getMute());
@@ -62,4 +59,3 @@ public class SetUnmuteFinding {
   }
 }
 // [END securitycenter_set_unmute]
-
