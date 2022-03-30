@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -52,7 +52,8 @@ public class SetUnmuteFinding {
           SetMuteRequest.newBuilder().setName(findingPath).setMute(Mute.UNMUTED).build();
 
       Finding finding = client.setMute(setMuteRequest);
-      System.out.println("Mute value for the finding: " + finding.getMute());
+      System.out.println(
+          "Mute value for the finding " + finding.getName() + " is: " + finding.getMute());
     } catch (IOException e) {
       System.out.println("Failed to set the specified mute value. \n Exception: " + e);
     }
