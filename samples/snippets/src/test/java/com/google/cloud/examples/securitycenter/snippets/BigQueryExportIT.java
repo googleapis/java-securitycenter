@@ -67,7 +67,7 @@ public class BigQueryExportIT {
     System.setOut(new PrintStream(stdOut));
 
     requireEnvVar("GOOGLE_APPLICATION_CREDENTIALS");
-    requireEnvVar("SCC_PROJECT_ID");
+    requireEnvVar("GOOGLE_CLOUD_PROJECT");
 
     // Create a BigQuery dataset.
     createBigQueryDataset(BQ_DATASET_NAME);
