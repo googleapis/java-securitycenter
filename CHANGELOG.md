@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.11.1](https://github.com/googleapis/java-securitycenter/compare/v2.11.0...v2.11.1) (2022-10-07)
+
+
+### Dependencies
+
+* Update dependency com.google.cloud:google-cloud-bigquery to v2.17.0 ([#939](https://github.com/googleapis/java-securitycenter/issues/939)) ([d9ed77f](https://github.com/googleapis/java-securitycenter/commit/d9ed77f284a404b7670ae178e8641cedf09fc3a4))
+* Update dependency com.google.cloud:google-cloud-pubsub to v1.120.20 ([#938](https://github.com/googleapis/java-securitycenter/issues/938)) ([e22b955](https://github.com/googleapis/java-securitycenter/commit/e22b955b49a8dc1baf7a0bab862b71f30369f3ca))
+
 ## [2.11.0](https://github.com/googleapis/java-securitycenter/compare/v2.10.0...v2.11.0) (2022-10-03)
 
 
