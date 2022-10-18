@@ -63,7 +63,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-securitycenter-v1beta1</artifactId>
-        <version>0.106.2-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-securitycenter-v1beta1:current} -->
+        <version>0.107.0</version><!-- {x-version-update:grpc-google-cloud-securitycenter-v1beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
