@@ -23,48 +23,57 @@ import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 
-// [END securitycenter_update_notification_config]
+public class UpdateNotificationConfigSnippets {
 
-/** Snippets for UpdateNotificationConfig. */
-final class UpdateNotificationConfigSnippets {
-  private UpdateNotificationConfigSnippets() {}
+  public static void main(String[] args) throws IOException {
+    // parentId: must be in one of the following formats:
+    //    "organizations/{organization_id}"
+    //    "projects/{project_id}"
+    //    "folders/{folder_id}"
+    String parentId = String.format("organizations/%s", "ORG_ID");
+    String notificationConfigId = "{config-id}";
+    String projectId = "{your-project}";
+    String topicName = "{your-topic}";
 
-  // [START securitycenter_update_notification_config]
+    updateNotificationConfig(parentId, notificationConfigId, projectId, topicName);
+  }
+
+  // Update an exiting notification config.
   public static NotificationConfig updateNotificationConfig(
-      String organizationId, String notificationConfigId, String projectId, String topicName)
+      String parentId, String notificationConfigId, String projectId, String topicName)
       throws IOException {
-    // String organizationId = "{your-org-id}";
-    // String notificationConfigId = "{your-config-id}";
-    // String projectId = "{your-project}";
-    // String topicName = "{your-topic}";
-
-    String notificationConfigName =
-        String.format(
-            "organizations/%s/notificationConfigs/%s", organizationId, notificationConfigId);
-
-    // Ensure this ServiceAccount has the "pubsub.topics.setIamPolicy" permission on the topic.
-    String pubsubTopic = String.format("projects/%s/topics/%s", projectId, topicName);
-
-    NotificationConfig configToUpdate =
-        NotificationConfig.newBuilder()
-            .setName(notificationConfigName)
-            .setDescription("updated description")
-            .setPubsubTopic(pubsubTopic)
-            .setStreamingConfig(StreamingConfig.newBuilder().setFilter("state = \"ACTIVE\""))
-            .build();
-    FieldMask fieldMask =
-        FieldMask.newBuilder()
-            .addPaths("description")
-            .addPaths("pubsub_topic")
-            .addPaths("streaming_config.filter")
-            .build();
-
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
+
+      String notificationConfigName =
+          String.format(
+              "%s/notificationConfigs/%s", parentId, notificationConfigId);
+
+      // Ensure this ServiceAccount has the "pubsub.topics.setIamPolicy" permission on the topic.
+      String pubsubTopic = String.format("projects/%s/topics/%s", projectId, topicName);
+
+      NotificationConfig configToUpdate =
+          NotificationConfig.newBuilder()
+              .setName(notificationConfigName)
+              .setDescription("updated description")
+              .setPubsubTopic(pubsubTopic)
+              .setStreamingConfig(StreamingConfig.newBuilder().setFilter("state = \"ACTIVE\""))
+              .build();
+
+      FieldMask fieldMask =
+          FieldMask.newBuilder()
+              .addPaths("description")
+              .addPaths("pubsub_topic")
+              .addPaths("streaming_config.filter")
+              .build();
+
       NotificationConfig updatedConfig = client.updateNotificationConfig(configToUpdate, fieldMask);
 
-      System.out.println(String.format("Notification config: %s", updatedConfig));
+      System.out.printf("Notification config: %s%n", updatedConfig);
       return updatedConfig;
     }
   }
-  // [END securitycenter_update_notification_config]
 }
+// [END securitycenter_update_notification_config]

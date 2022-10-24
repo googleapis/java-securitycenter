@@ -21,27 +21,38 @@ import com.google.cloud.securitycenter.v1.NotificationConfigName;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
 
-/** Snippets for how to Delete NotificationConfigs. */
-final class DeleteNotificationConfigSnippets {
-  private DeleteNotificationConfigSnippets() {}
+public class DeleteNotificationConfigSnippets {
 
-  public static boolean deleteNotificationConfig(String organizationId, String notificationConfigId)
+  public static void main(String[] args) throws IOException {
+    // parentId: must be in one of the following formats:
+    //    "organizations/{organization_id}"
+    //    "projects/{project_id}"
+    //    "folders/{folder_id}"
+    String parentId = String.format("organizations/%s", "ORG_ID");
+
+    String notificationConfigId = "{config-id}";
+
+    deleteNotificationConfig(parentId, notificationConfigId);
+  }
+
+  // Delete a notification config.
+  public static boolean deleteNotificationConfig(String parentId, String notificationConfigId)
       throws IOException {
-    // String organizationId = "{your-org-id}";
-    // String notificationConfigId = "{config-id}";
-
-    NotificationConfigName notificationConfigName =
-        NotificationConfigName.newBuilder()
-            .setOrganization(organizationId)
-            .setNotificationConfig(notificationConfigId)
-            .build();
-
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
+
+      NotificationConfigName notificationConfigName =
+          NotificationConfigName.newBuilder()
+              .setOrganization(parentId)
+              .setNotificationConfig(notificationConfigId)
+              .build();
+
       client.deleteNotificationConfig(notificationConfigName);
 
-      System.out.println(String.format("Deleted Notification config: %s", notificationConfigName));
+      System.out.printf("Deleted Notification config: %s%n", notificationConfigName);
     }
-
     return true;
   }
 }

@@ -23,30 +23,36 @@ import com.google.cloud.securitycenter.v1.NotificationConfig.StreamingConfig;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
 
-// [END securitycenter_create_notification_config]
+public class CreateNotificationConfigSnippets {
 
-/** Create NotificationConfig Snippet. */
-final class CreateNotificationConfigSnippets {
-  private CreateNotificationConfigSnippets() {}
+  public static void main(String[] args) throws IOException {
+    // parentId: must be in one of the following formats:
+    //    "organizations/{organization_id}"
+    //    "projects/{project_id}"
+    //    "folders/{folder_id}"
+    String parentId = String.format("organizations/%s", "ORG_ID");
+    String notificationConfigId = "{config-id}";
+    String projectId = "{your-project}";
+    String topicName = "{your-topic}";
 
-  // [START securitycenter_create_notification_config]
+    createNotificationConfig(parentId, notificationConfigId, projectId, topicName);
+  }
+
+  // Crete a notification config.
   public static NotificationConfig createNotificationConfig(
-      String organizationId, String notificationConfigId, String projectId, String topicName)
+      String parentId, String notificationConfigId, String projectId, String topicName)
       throws IOException {
-    // String organizationId = "{your-org-id}";
-    // String notificationConfigId = {"your-unique-id"};
-    // String projectId = "{your-project}"";
-    // String topicName = "{your-topic}";
-
-    String orgName = String.format("organizations/%s", organizationId);
-
-    // Ensure this ServiceAccount has the "pubsub.topics.setIamPolicy" permission on the topic.
-    String pubsubTopic = String.format("projects/%s/topics/%s", projectId, topicName);
-
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
+
+      // Ensure this ServiceAccount has the "pubsub.topics.setIamPolicy" permission on the topic.
+      String pubsubTopic = String.format("projects/%s/topics/%s", projectId, topicName);
+
       CreateNotificationConfigRequest request =
           CreateNotificationConfigRequest.newBuilder()
-              .setParent(orgName)
+              .setParent(parentId)
               .setConfigId(notificationConfigId)
               .setNotificationConfig(
                   NotificationConfig.newBuilder()
@@ -58,9 +64,9 @@ final class CreateNotificationConfigSnippets {
               .build();
 
       NotificationConfig response = client.createNotificationConfig(request);
-      System.out.println(String.format("Notification config was created: %s", response));
+      System.out.printf("Notification config was created: %s%n", response);
       return response;
     }
   }
-  // [END securitycenter_create_notification_config]
 }
+// [END securitycenter_create_notification_config]

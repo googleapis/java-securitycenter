@@ -22,30 +22,37 @@ import com.google.cloud.securitycenter.v1.NotificationConfigName;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
 
-// [END securitycenter_get_notification_config]
+public class GetNotificationConfigSnippets {
 
-/** Snippets for how to GetNotificationConfig. */
-final class GetNotificationConfigSnippets {
-  private GetNotificationConfigSnippets() {}
+  public static void main(String[] args) throws IOException {
+    // parentId: must be in one of the following formats:
+    //    "organizations/{organization_id}"
+    //    "projects/{project_id}"
+    //    "folders/{folder_id}"
+    String parentId = String.format("organizations/%s", "ORG_ID");
 
-  // [START securitycenter_get_notification_config]
+    String notificationConfigId = "{config-id}";
+
+    getNotificationConfig(parentId, notificationConfigId);
+  }
+
+  // Retrieve an existing notification config.
   public static NotificationConfig getNotificationConfig(
-      String organizationId, String notificationConfigId) throws IOException {
-
-    // String organizationId = "{your-org-id}";
-    // String notificationConfigId = "{config-id}";
-
+      String parentId, String notificationConfigId) throws IOException {
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
       NotificationConfig response =
           client.getNotificationConfig(
               NotificationConfigName.newBuilder()
-                  .setOrganization(organizationId)
+                  .setOrganization(parentId)
                   .setNotificationConfig(notificationConfigId)
                   .build());
 
-      System.out.println(String.format("Notification config: %s", response));
+      System.out.printf("Notification config: %s%n", response);
       return response;
     }
   }
-  // [END securitycenter_get_notification_config]
 }
+// [END securitycenter_get_notification_config]

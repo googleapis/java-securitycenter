@@ -25,7 +25,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/** Smoke tests for {@link NotificationConfigSnippets} */
 @RunWith(JUnit4.class)
 public class NotificationConfigSnippetTests {
 
@@ -34,7 +33,7 @@ public class NotificationConfigSnippetTests {
     String configId = String.format("java-config-%s", UUID.randomUUID().toString());
     assertNotNull(
         CreateNotificationConfigSnippets.createNotificationConfig(
-            getOrganizationId(), configId, getProject(), getTopicName()));
+            String.format("organizations/%s", getOrganizationId()), configId, getProject(), getTopicName()));
 
     deleteConfig(configId);
   }
@@ -45,7 +44,7 @@ public class NotificationConfigSnippetTests {
     createConfig(configId);
 
     assertTrue(
-        DeleteNotificationConfigSnippets.deleteNotificationConfig(getOrganizationId(), configId));
+        DeleteNotificationConfigSnippets.deleteNotificationConfig(String.format("organizations/%s", getOrganizationId()), configId));
   }
 
   @Test
@@ -53,7 +52,7 @@ public class NotificationConfigSnippetTests {
     String configId = String.format("java-config-%s", UUID.randomUUID().toString());
     createConfig(configId);
 
-    assertNotNull(ListNotificationConfigSnippets.listNotificationConfigs(getOrganizationId()));
+    assertNotNull(ListNotificationConfigSnippets.listNotificationConfigs(String.format("organizations/%s", getOrganizationId())));
 
     deleteConfig(configId);
   }
@@ -64,7 +63,7 @@ public class NotificationConfigSnippetTests {
     createConfig(configId);
 
     assertNotNull(
-        GetNotificationConfigSnippets.getNotificationConfig(getOrganizationId(), configId));
+        GetNotificationConfigSnippets.getNotificationConfig(String.format("organizations/%s", getOrganizationId()), configId));
 
     deleteConfig(configId);
   }
@@ -76,19 +75,19 @@ public class NotificationConfigSnippetTests {
 
     assertNotNull(
         UpdateNotificationConfigSnippets.updateNotificationConfig(
-            getOrganizationId(), configId, getProject(), getTopicName()));
+            String.format("organizations/%s", getOrganizationId()), configId, getProject(), getTopicName()));
 
     deleteConfig(configId);
   }
 
   private static void createConfig(String configId) throws IOException {
     CreateNotificationConfigSnippets.createNotificationConfig(
-        getOrganizationId(), configId, getProject(), getTopicName());
+        String.format("organizations/%s", getOrganizationId()), configId, getProject(), getTopicName());
   }
 
   private static void deleteConfig(String configId) throws IOException {
     assertTrue(
-        DeleteNotificationConfigSnippets.deleteNotificationConfig(getOrganizationId(), configId));
+        DeleteNotificationConfigSnippets.deleteNotificationConfig(String.format("organizations/%s", getOrganizationId()), configId));
   }
 
   private static String getOrganizationId() {

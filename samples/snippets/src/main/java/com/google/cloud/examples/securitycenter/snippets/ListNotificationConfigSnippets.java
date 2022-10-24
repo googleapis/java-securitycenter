@@ -24,30 +24,36 @@ import com.google.cloud.securitycenter.v1.SecurityCenterClient.ListNotificationC
 import com.google.common.collect.ImmutableList;
 import java.io.IOException;
 
-// [END securitycenter_list_notification_configs]
+public class ListNotificationConfigSnippets {
 
-/** Snippets for how to ListNotificationConfig. */
-final class ListNotificationConfigSnippets {
-  private ListNotificationConfigSnippets() {}
+  public static void main(String[] args) throws IOException {
+    // parentId: must be in one of the following formats:
+    //    "organizations/{organization_id}"
+    //    "projects/{project_id}"
+    //    "folders/{folder_id}"
+    String parentId = String.format("organizations/%s", "ORG_ID");
 
-  // [START securitycenter_list_notification_configs]
-  public static ImmutableList<NotificationConfig> listNotificationConfigs(String organizationId)
+    listNotificationConfigs(parentId);
+  }
+
+  // List notification configs present in the given parent.
+  public static ImmutableList<NotificationConfig> listNotificationConfigs(String parentId)
       throws IOException {
-    // String organizationId = "{your-org-id}";
-
-    OrganizationName orgName =
-        OrganizationName.newBuilder().setOrganization(organizationId).build();
-
+    // Initialize client that will be used to send requests. This client only needs to be created
+    // once, and can be reused for multiple requests. After completing all of your requests, call
+    // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
+      OrganizationName orgName =
+          OrganizationName.newBuilder().setOrganization(parentId).build();
+
       ListNotificationConfigsPagedResponse response = client.listNotificationConfigs(orgName);
 
       ImmutableList<NotificationConfig> notificationConfigs =
           ImmutableList.copyOf(response.iterateAll());
-      System.out.println(
-          String.format("List notifications response: %s", response.getPage().getValues()));
+
+      System.out.printf("List notifications response: %s%n", response.getPage().getValues());
       return notificationConfigs;
     }
   }
-  // [END securitycenter_list_notification_configs]
-
 }
+// [END securitycenter_list_notification_configs]
