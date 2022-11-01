@@ -18,7 +18,6 @@ package com.google.cloud.examples.securitycenter.snippets;
 
 // [START securitycenter_get_notification_config]
 import com.google.cloud.securitycenter.v1.NotificationConfig;
-import com.google.cloud.securitycenter.v1.NotificationConfigName;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
 
@@ -44,11 +43,8 @@ public class GetNotificationConfigSnippets {
     // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
       NotificationConfig response =
-          client.getNotificationConfig(
-              NotificationConfigName.newBuilder()
-                  .setOrganization(parentId)
-                  .setNotificationConfig(notificationConfigId)
-                  .build());
+          client.getNotificationConfig(String.format("%s/notificationConfigs/%s",
+              parentId, notificationConfigId));
 
       System.out.printf("Notification config: %s%n", response);
       return response;

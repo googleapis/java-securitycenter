@@ -38,7 +38,9 @@ public class UpdateNotificationConfigSnippets {
     updateNotificationConfig(parentId, notificationConfigId, projectId, topicName);
   }
 
-  // Update an exiting notification config.
+  // Update an existing notification config.
+  // If updating a Pubsub Topic, ensure the ServiceAccount has the
+  // "pubsub.topics.setIamPolicy" permission on the new topic.
   public static NotificationConfig updateNotificationConfig(
       String parentId, String notificationConfigId, String projectId, String topicName)
       throws IOException {

@@ -39,6 +39,7 @@ public class CreateNotificationConfigSnippets {
   }
 
   // Crete a notification config.
+  // Ensure the ServiceAccount has the "pubsub.topics.setIamPolicy" permission on the new topic.
   public static NotificationConfig createNotificationConfig(
       String parentId, String notificationConfigId, String projectId, String topicName)
       throws IOException {

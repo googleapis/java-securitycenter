@@ -18,7 +18,6 @@ package com.google.cloud.examples.securitycenter.snippets;
 
 // [START securitycenter_list_notification_configs]
 import com.google.cloud.securitycenter.v1.NotificationConfig;
-import com.google.cloud.securitycenter.v1.OrganizationName;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient.ListNotificationConfigsPagedResponse;
 import com.google.common.collect.ImmutableList;
@@ -43,10 +42,8 @@ public class ListNotificationConfigSnippets {
     // once, and can be reused for multiple requests. After completing all of your requests, call
     // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
-      OrganizationName orgName =
-          OrganizationName.newBuilder().setOrganization(parentId).build();
 
-      ListNotificationConfigsPagedResponse response = client.listNotificationConfigs(orgName);
+      ListNotificationConfigsPagedResponse response = client.listNotificationConfigs(parentId);
 
       ImmutableList<NotificationConfig> notificationConfigs =
           ImmutableList.copyOf(response.iterateAll());

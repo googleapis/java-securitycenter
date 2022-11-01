@@ -17,7 +17,6 @@
 package com.google.cloud.examples.securitycenter.snippets;
 
 // [START securitycenter_delete_notification_config]
-import com.google.cloud.securitycenter.v1.NotificationConfigName;
 import com.google.cloud.securitycenter.v1.SecurityCenterClient;
 import java.io.IOException;
 
@@ -43,15 +42,10 @@ public class DeleteNotificationConfigSnippets {
     // the "close" method on the client to safely clean up any remaining background resources.
     try (SecurityCenterClient client = SecurityCenterClient.create()) {
 
-      NotificationConfigName notificationConfigName =
-          NotificationConfigName.newBuilder()
-              .setOrganization(parentId)
-              .setNotificationConfig(notificationConfigId)
-              .build();
+      client.deleteNotificationConfig(String.format("%s/notificationConfigs/%s",
+          parentId, notificationConfigId));
 
-      client.deleteNotificationConfig(notificationConfigName);
-
-      System.out.printf("Deleted Notification config: %s%n", notificationConfigName);
+      System.out.printf("Deleted Notification config: %s%n", notificationConfigId);
     }
     return true;
   }
