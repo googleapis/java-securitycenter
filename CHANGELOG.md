@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.0](https://github.com/googleapis/java-securitycenter/compare/v2.11.1...v2.12.0) (2023-07-06)
+
+
+### Features
+
+* Adding project/folder level parents to notification configs in SCC ([#949](https://github.com/googleapis/java-securitycenter/issues/949)) ([c583646](https://github.com/googleapis/java-securitycenter/commit/c5836462cfcd45ea62d28376ad55f7d26590836a))
+
 ## [2.11.1](https://github.com/googleapis/java-securitycenter/compare/v2.11.0...v2.11.1) (2022-10-07)
 
 
